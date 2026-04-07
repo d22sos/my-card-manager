@@ -1,0 +1,33 @@
+name: 每日更新信用卡活动
+
+on:
+  schedule:
+    - cron: '0 0 * * *'     # 每天北京时间早上 8 点自动运行
+  workflow_dispatch:        # 允许手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖
+        run: pip install feedparser requests
+
+      - name: 运行抓取脚本
+        run: python fetch_rss.py
+
+      - name: 提交更新
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add rss_data.json card-tracker.html
+          git commit -m "🤖 自动更新信用卡活动" || echo "无新内容，跳过提交"
+          git push
