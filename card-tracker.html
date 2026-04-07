@@ -7,110 +7,31 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
 :root {
-  --bg: #0f0f11;
-  --bg2: #16161a;
-  --bg3: #1e1e24;
-  --bg4: #26262e;
-  --border: rgba(255,255,255,0.08);
-  --text: #f0eff4;
-  --text2: #9998a8;
-  --text3: #5e5d6e;
-  --accent: #7c6af7;
-  --accent2: #a594f9;
-  --green: #3dd68c;
-  --red: #f76c6c;
-  --amber: #f5a623;
-  --blue: #5ab4f5;
-  --teal: #3ecfb2;
-  --r: 12px;
-  --r2: 8px;
+  --bg: #0f0f11; --bg2: #16161a; --bg3: #1e1e24; --bg4: #26262e;
+  --border: rgba(255,255,255,0.08); --text: #f0eff4; --text2: #9998a8; --text3: #5e5d6e;
+  --accent: #7c6af7; --accent2: #a594f9; --green: #3dd68c; --red: #f76c6c;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 15px; line-height: 1.5; }
-body { display: flex; flex-direction: column; max-width: 480px; margin: 0 auto; }
-.topbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 8px; }
-.topbar h1 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; }
-.topbar .subtitle { font-size: 12px; color: var(--text3); font-family: 'DM Mono', monospace; }
-.tabs { display: flex; gap: 2px; padding: 0 16px 8px; }
-.tab { flex: 1; padding: 8px 4px; text-align: center; font-size: 13px; color: var(--text3); cursor: pointer; border-radius: var(--r2); transition: all .15s; }
-.tab.active { background: var(--bg3); color: var(--text); font-weight: 500; }
-.content { flex: 1; overflow-y: auto; padding: 8px 16px 100px; }
-.section-head { display: flex; justify-content: space-between; align-items: center; margin: 16px 0 10px; }
-.section-label { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--text3); }
-.btn-sm { font-size: 12px; color: var(--accent2); background: none; border: none; cursor: pointer; padding: 4px 8px; border-radius: 6px; font-family: inherit; }
-.card-chip { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 16px; margin-bottom: 10px; position: relative; overflow: hidden; }
-.card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-.card-name { font-size: 15px; font-weight: 500; }
-.card-bank { font-size: 12px; color: var(--text3); margin-top: 2px; }
-.status-badge { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
-.s-ok { background: rgba(61,214,140,0.12); color: var(--green); }
-.s-warn { background: rgba(245,166,35,0.12); color: var(--amber); }
-.s-late { background: rgba(247,108,108,0.12); color: var(--red); }
-.s-done { background: rgba(90,180,245,0.12); color: var(--blue); }
-.progress-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
-.prog-label { font-size: 12px; color: var(--text3); }
-.prog-num { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--text2); }
-.bar { height: 4px; background: var(--bg4); border-radius: 2px; overflow: hidden; margin-bottom: 10px; }
-.bar-fill { height: 4px; border-radius: 2px; transition: width .3s; }
-.card-footer { display: flex; justify-content: space-between; align-items: center; }
-.card-meta { font-size: 11px; color: var(--text3); }
-.card-actions { display: flex; gap: 4px; }
-.btn-icon { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg3); color: var(--text2); font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-.analysis-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 16px; margin-bottom: 10px; }
-.metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-.metric { background: var(--bg3); border-radius: var(--r2); padding: 10px; text-align: center; }
-.metric-val { font-size: 16px; font-weight: 500; font-family: 'DM Mono', monospace; }
-.metric-lbl { font-size: 10px; color: var(--text3); margin-top: 2px; }
-.verdict { border-radius: var(--r2); padding: 10px 12px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
-.verdict-keep { background: rgba(61,214,140,0.08); border: 1px solid rgba(61,214,140,0.2); color: var(--green); }
-.verdict-cancel { background: rgba(247,108,108,0.08); border: 1px solid rgba(247,108,108,0.2); color: var(--red); }
-.verdict-neutral { background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.2); color: var(--amber); }
-.merchants-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
-.merch-tag { font-size: 11px; padding: 2px 8px; background: var(--bg4); border-radius: 4px; color: var(--text2); }
-.log-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
-.log-item:last-child { border-bottom: none; }
-.log-left { display: flex; align-items: center; gap: 10px; }
-.log-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
-.log-title { font-size: 14px; }
-.log-sub { font-size: 12px; color: var(--text3); }
-.log-amount { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; }
-.log-cashback { font-size: 11px; color: var(--green); text-align: right; }
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 100; display: flex; align-items: flex-end; opacity: 0; pointer-events: none; transition: opacity .2s; }
-.overlay.open { opacity: 1; pointer-events: all; }
-.sheet { background: var(--bg2); border-radius: 20px 20px 0 0; padding: 20px 20px 40px; width: 100%; max-width: 480px; margin: 0 auto; transform: translateY(100%); transition: transform .25s cubic-bezier(.32,.72,0,1); max-height: 90vh; overflow-y: auto; }
-.overlay.open .sheet { transform: translateY(0); }
-.sheet-handle { width: 36px; height: 4px; background: var(--bg4); border-radius: 2px; margin: 0 auto 20px; }
-.sheet-title { font-size: 17px; font-weight: 500; margin-bottom: 20px; }
-label { display: block; font-size: 12px; color: var(--text3); margin-bottom: 5px; margin-top: 14px; letter-spacing: .03em; }
-input, select, textarea { width: 100%; padding: 10px 12px; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r2); color: var(--text); font-size: 14px; font-family: inherit; outline: none; }
-input:focus, select:focus { border-color: var(--accent); }
-select option { background: var(--bg2); }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-.btn-main { width: 100%; padding: 14px; background: var(--accent); color: #fff; border: none; border-radius: var(--r); font-size: 15px; font-weight: 500; cursor: pointer; margin-top: 20px; font-family: inherit; transition: opacity .15s; }
-.btn-outline { width: 100%; padding: 12px; background: transparent; color: var(--text2); border: 1px solid var(--border); border-radius: var(--r); font-size: 14px; cursor: pointer; margin-top: 8px; font-family: inherit; }
-.merch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 6px 0 14px; }
-.merch-btn { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r2); padding: 10px 4px; text-align: center; cursor: pointer; font-size: 12px; color: var(--text2); transition: all .12s; }
-.merch-btn.selected, .merch-btn:hover { background: var(--bg4); border-color: var(--accent); color: var(--accent2); }
-.merch-icon { font-size: 20px; margin-bottom: 3px; }
-.fab { position: fixed; bottom: 28px; right: 20px; width: 52px; height: 52px; background: var(--accent); border-radius: 50%; border: none; color: #fff; font-size: 24px; cursor: pointer; box-shadow: 0 4px 20px rgba(124,106,247,.45); display: flex; align-items: center; justify-content: center; z-index: 50; transition: transform .15s; max-width: calc(480px - 40px); }
-.bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; background: var(--bg2); border-top: 1px solid var(--border); display: flex; padding: 8px 0 20px; z-index: 40; }
-.nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; color: var(--text3); cursor: pointer; padding: 4px; transition: color .15s; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); max-width: 480px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column; }
+.topbar { padding: 16px 20px 8px; display: flex; justify-content: space-between; }
+.tabs { display: flex; padding: 0 16px; gap: 4px; }
+.tab { flex: 1; padding: 10px; text-align: center; border-radius: 8px; font-size: 14px; }
+.tab.active { background: var(--bg3); font-weight: 500; }
+.content { flex: 1; overflow-y: auto; padding: 12px 16px 80px; }
+.card-chip { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.section-head { display: flex; justify-content: space-between; align-items: center; margin: 20px 0 12px; font-size: 13px; color: var(--text3); }
+.merch-btn { padding: 10px 12px; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; margin: 4px; font-size: 13px; }
+.status-badge { padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+.fab { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: var(--accent); color: white; border-radius: 50%; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(124,106,247,0.4); }
+.bottom-nav { position: fixed; bottom: 0; width: 100%; max-width: 480px; background: var(--bg2); border-top: 1px solid var(--border); display: flex; padding: 8px 0; }
+.nav-item { flex: 1; text-align: center; font-size: 12px; }
 .nav-item.active { color: var(--accent2); }
-.nav-icon { font-size: 20px; line-height: 1; }
-.empty-state { text-align: center; padding: 40px 20px; color: var(--text3); }
-.empty-state .emoji { font-size: 32px; margin-bottom: 10px; }
-.empty-state p { font-size: 14px; }
-.divider { height: 1px; background: var(--border); margin: 8px 0; }
-.tag { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 4px; margin-right: 4px; }
-.summary-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 13px; }
-.summary-row .lbl { color: var(--text3); }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <div><h1>信用卡管家</h1><div class="subtitle">本地存储 · 自动推荐</div></div>
+  <h1>信用卡管家</h1>
 </div>
 
 <div class="tabs">
@@ -125,186 +46,109 @@ select option { background: var(--bg2); }
 <button class="fab" id="fab" onclick="openFab()">＋</button>
 
 <div class="bottom-nav">
-  <div class="nav-item active" id="nav-cards" onclick="showTab('cards')"><div class="nav-icon">💳</div><span>卡片</span></div>
-  <div class="nav-item" id="nav-log" onclick="showTab('log')"><div class="nav-icon">📋</div><span>记录</span></div>
-  <div class="nav-item" id="nav-analysis" onclick="showTab('analysis')"><div class="nav-icon">📊</div><span>分析</span></div>
-  <div class="nav-item" id="nav-activities" onclick="showTab('activities')"><div class="nav-icon">🎯</div><span>活动</span></div>
+  <div class="nav-item active" onclick="showTab('cards')">💳 卡片</div>
+  <div class="nav-item" onclick="showTab('log')">📋 记录</div>
+  <div class="nav-item" onclick="showTab('analysis')">📊 分析</div>
+  <div class="nav-item" onclick="showTab('activities')">🎯 活动</div>
 </div>
 
-<!-- 所有 Sheet（添加卡片、消费、刷卡、FAB菜单）保持和原来完全一样，这里省略以节省篇幅，但实际复制时请保留你原来的全部 overlay 部分 -->
-
 <script>
-const MERCHANTS = [
-  { key: 'taobao', label: '淘宝/天猫', icon: '🛍️' },
-  { key: 'pdd', label: '拼多多', icon: '🏪' },
-  { key: 'didi', label: '滴滴出行', icon: '🚕' },
-  { key: 'meituan', label: '美团', icon: '🍜' },
-  { key: 'hotel', label: '酒店预订', icon: '🏨' },
-  { key: 'supermarket', label: '超市便利', icon: '🛒' },
-  { key: 'fuel', label: '加油', icon: '⛽' },
-  { key: 'other', label: '其他', icon: '💰' },
-];
-
+// ==================== 核心数据 ====================
 let state = JSON.parse(localStorage.getItem('cardmgr') || '{"cards":[],"txs":[],"savedActivities":[]}');
 let currentTab = 'cards';
-let editingCardId = null;
-let selectedMerchant = 'other';
 
 function save() { localStorage.setItem('cardmgr', JSON.stringify(state)); }
-function showTab(tab) { /* 原有 showTab 代码保持不变 */ 
+function showTab(tab) {
   currentTab = tab;
-  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['cards','log','analysis','activities'][i] === tab));
-  document.querySelectorAll('.nav-item').forEach((n,i) => n.classList.toggle('active', ['cards','log','analysis','activities'][i] === tab));
-  document.getElementById('fab').style.display = tab === 'activities' ? 'none' : '';
+  document.querySelectorAll('.tab, .nav-item').forEach(el => el.classList.toggle('active', false));
+  document.querySelectorAll('.tab, .nav-item')[['cards','log','analysis','activities'].indexOf(tab)*2].classList.add('active'); // 简化处理
+  document.getElementById('fab').style.display = (tab === 'activities') ? 'none' : 'flex';
   render();
 }
+
 function render() {
   const el = document.getElementById('content');
-  if (currentTab === 'cards') el.innerHTML = renderCards();
-  else if (currentTab === 'log') el.innerHTML = renderLog();
-  else if (currentTab === 'analysis') el.innerHTML = renderAnalysis();
-  else el.innerHTML = renderActivities();
-}
-
-/* ==================== 升级核心：快速推荐 + 酒店专区 + 智能注销 ==================== */
-const CHANNEL_TAGS = {
-  "滴滴": "滴滴", "美团": "美团", "淘宝": "淘宝", "京东": "京东",
-  "拼多多": "拼多多", "酒店": "酒店", "锦江": "锦江汇", "IHG": "IHG优悦会",
-  "优悦": "IHG优悦会", "雅高": "雅高心悦界", "Accor": "雅高心悦界",
-  "心悦界": "雅高心悦界", "ALL": "雅高心悦界", "云闪付": "云闪付"
-};
-
-function recommendCard(merchantKey, amount = 300) {
-  const cards = state.cards;
-  const rss = window.RSS_DATA ? window.RSS_DATA.items : [];
-  return cards.map(card => {
-    const baseRate = (card.benefits || {})[merchantKey] || (card.benefits || {}).other || 0;
-    let extraRate = 0;
-    const matchingDeals = rss.filter(item => 
-      (item.tags || []).some(t => (card.bank || card.name || '').includes(t)) &&
-      (item.tags || []).some(t => t === CHANNEL_TAGS[merchantKey] || merchantKey === 'hotel')
-    );
-    if (matchingDeals.length) extraRate = 8;
-    const totalRate = baseRate + extraRate;
-    const cashback = (amount * totalRate / 100).toFixed(2);
-    const progress = card.waiverType === 'amount' 
-      ? (card.currentAmount || 0) / (card.waiverVal || 1)
-      : (card.currentSwipes || 0) / (card.waiverVal || 1);
-    const difficulty = (1 - Math.min(1, progress)) * (card.annualFee || 0) / 50;
-    const score = totalRate * 15 - difficulty * 3;
-    return {
-      cardName: card.name,
-      bank: card.bank || '',
-      rate: totalRate.toFixed(1),
-      cashback: parseFloat(cashback),
-      difficulty: difficulty.toFixed(1),
-      net: (parseFloat(cashback) - difficulty).toFixed(1),
-      score: Math.round(score),
-      recommend: score > 70 ? '🚀强烈推荐' : score > 40 ? '✅推荐' : '一般'
-    };
-  }).sort((a, b) => b.score - a.score);
+  if (currentTab === 'activities') el.innerHTML = renderActivities();
+  else if (currentTab === 'cards') el.innerHTML = renderCards();
+  else el.innerHTML = `<div style="padding:40px;text-align:center;color:#666">该页面暂未完善</div>`;
 }
 
 function renderActivities() {
-  const rss = window.RSS_DATA;
-  const saved = state.savedActivities || [];
-  let html = '';
+  const rss = window.RSS_DATA || {items:[]};
+  let html = `<div class="section-head"><span class="section-label">🎯 推荐给你的卡</span></div>`;
 
-  // 已收藏
-  if (saved.length) {
-    html += `<div class="section-head"><span class="section-label">已收藏活动 (${saved.length})</span><button class="btn-sm" onclick="clearSaved()">清空</button></div>`;
-    saved.forEach((a, idx) => {
-      const daysLeft = a.deadline ? Math.ceil((new Date(a.deadline) - new Date()) / 86400000) : null;
-      const urgent = daysLeft !== null && daysLeft <= 7;
-      html += `<div class="card-chip" style="${urgent?'border-color:rgba(247,108,108,0.4)':''}">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
-          <div style="font-size:14px;font-weight:500;flex:1;margin-right:8px">${a.title}</div>
-          ${daysLeft !== null ? `<span class="status-badge ${urgent?'s-late':'s-warn'}">${daysLeft <= 0 ? '已截止' : daysLeft+'天后截止'}</span>` : ''}
-        </div>
-        <div style="font-size:12px;color:var(--text3);margin-bottom:8px">${a.source||'手动添加'}${a.date?' · '+a.date:''}</div>
-        ${a.tags&&a.tags.length?`<div class="merchants-row">${a.tags.map(t=>`<span class="merch-tag">${t}</span>`).join('')}</div>`:''}
-        <div style="display:flex;gap:6px;margin-top:10px">
-          ${a.link?`<a href="${a.link}" style="font-size:12px;color:var(--accent2);text-decoration:none">查看原文 →</a>`:''}
-          <button class="btn-sm" style="margin-left:auto;color:var(--red)" onclick="removeSaved(${idx})">删除</button>
-        </div>
-      </div>`;
-    });
-  }
+  const myCards = state.cards || [];
+  let recommendCount = 0;
 
-  // 快速选卡推荐（新增）
-  html += `<div class="section-head"><span class="section-label">🚀 快速选卡（淘宝/拼多多/美团/酒店）</span></div>`;
-  html += `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:12px;margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">`;
-  const common = [
-    {key:'taobao', label:'淘宝/天猫', icon:'🛍️'},
-    {key:'pdd', label:'拼多多', icon:'🏪'},
-    {key:'meituan', label:'美团/外卖', icon:'🍜'},
-    {key:'hotel', label:'酒店预订', icon:'🏨'}
-  ];
-  common.forEach(m => {
-    html += `<button onclick="quickRecommend('${m.key}')" style="padding:10px 14px;background:var(--bg3);border-radius:8px;border:1px solid var(--border);font-size:13px;margin:4px">${m.icon} ${m.label}</button>`;
-  });
-  html += `</div>`;
-
-  // 酒店专区（锦江/IHG/雅高）
-  html += `<div class="section-head"><span class="section-label">🏨 酒店支付专区（锦江汇 / IHG / 雅高）</span></div>`;
-  html += `<div style="display:flex;gap:8px;margin-bottom:16px">
-    <button onclick="hotelRecommend('jinjiang')" style="flex:1;padding:14px 8px;background:#e3f2fd;border-radius:8px;border:1px solid var(--border)">锦江汇</button>
-    <button onclick="hotelRecommend('ihg')" style="flex:1;padding:14px 8px;background:#e8f5e9;border-radius:8px;border:1px solid var(--border)">IHG优悦会</button>
-    <button onclick="hotelRecommend('accor')" style="flex:1;padding:14px 8px;background:#f3e5f5;border-radius:8px;border:1px solid var(--border)">雅高心悦界</button>
-  </div>`;
-
-  // RSS 订阅活动（原有逻辑）
-  if (!rss) {
-    html += `<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px">RSS数据未加载，运行 <code>c</code> 命令更新</div>`;
-    return html;
-  }
-  html += `<div class="section-head"><span class="section-label">订阅活动 (${rss.items.length})</span><span style="font-size:11px;color:var(--text3)">${rss.updated} 更新</span></div>`;
-  html += `<div id="rss-list">`;
   rss.items.forEach((item, idx) => {
-    html += `<div class="card-chip rss-item" data-tags="${item.tags.join(',')}" data-idx="${idx}">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px">
-        <div style="font-size:14px;font-weight:500;flex:1;margin-right:8px;line-height:1.4">${item.title}</div>
-        <button class="btn-icon" onclick="saveActivity(${idx})" style="flex-shrink:0">🔖</button>
-      </div>
-      <div style="font-size:12px;color:var(--text3);margin-bottom:6px">${item.source}${item.date?' · '+item.date:''}</div>
-      ${item.summary?`<div style="font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:6px">${item.summary}</div>`:''}
-      ${item.tags.length?`<div class="merchants-row">${item.tags.map(t=>`<span class="merch-tag">${t}</span>`).join('')}</div>`:''}
-      ${item.link?`<a href="${item.link}" style="display:block;margin-top:8px;font-size:12px;color:var(--accent2);text-decoration:none">查看原文 →</a>`:''}
-    </div>`;
+    const matching = myCards.filter(c => 
+      item.tags.some(t => (c.bank || c.name || '').includes(t))
+    );
+    if (matching.length > 0) {
+      recommendCount++;
+      html += `
+        <div class="card-chip">
+          <div style="font-weight:500;font-size:15px;margin-bottom:6px">${item.title}</div>
+          <div style="font-size:12px;color:#888">${item.source} · ${item.date}</div>
+          <div style="margin:10px 0 8px">
+            适合你的卡：${matching.map(c => `<span style="background:#3dd68c;color:#000;padding:2px 8px;border-radius:6px;font-size:13px">${c.name}</span>`).join(' ')}
+          </div>
+          ${item.link ? `<a href="${item.link}" target="_blank" style="color:#7c6af7;font-size:14px">立即查看报名 →</a>` : ''}
+        </div>`;
+    }
   });
-  html += `</div>`;
+
+  if (recommendCount === 0) {
+    html += `<div style="background:var(--bg2);padding:30px;border-radius:12px;text-align:center;color:#777">
+      添加你的卡片（填写银行名称）后，这里会自动推荐匹配的活动
+    </div>`;
+  }
+
+  html += `<div class="section-head"><span class="section-label">全部活动 (${rss.items.length})</span><span style="font-size:12px">${rss.updated||''}</span></div>`;
+
+  rss.items.forEach((item, idx) => {
+    html += `
+      <div class="card-chip">
+        <div style="font-weight:500">${item.title}</div>
+        <div style="font-size:12px;color:#888;margin:6px 0">${item.source} · ${item.date}</div>
+        ${item.tags.length ? `<div style="margin:8px 0">${item.tags.map(t=>`<span style="background:#333;padding:2px 8px;border-radius:4px;font-size:12px">${t}</span>`).join(' ')}</div>` : ''}
+        ${item.link ? `<a href="${item.link}" target="_blank" style="color:#7c6af7">查看原文 →</a>` : ''}
+      </div>`;
+  });
+
   return html;
 }
 
-function quickRecommend(key) {
-  const recs = recommendCard(key);
-  let msg = `【${key}】最优卡推荐（默认300元）\n\n`;
-  recs.slice(0,3).forEach(r => msg += `${r.cardName} ${r.bank} → 返¥${r.cashback} ${r.recommend}\n`);
-  alert(msg + '\n当前RSS活动已自动加成计算');
+function renderCards() {
+  if (!state.cards.length) return `<div style="text-align:center;padding:60px 20px;color:#666">还没有卡片<br>点击右下角 + 添加</div>`;
+  return state.cards.map(c => `
+    <div class="card-chip">
+      <div style="font-size:16px;font-weight:500">${c.name}</div>
+      <div style="color:#888;font-size:13px">${c.bank || ''}</div>
+    </div>
+  `).join('');
 }
 
-function hotelRecommend(type) {
-  const amountStr = prompt('请输入酒店金额（元）\n锦江汇 / IHG / 雅高 均适用', '800');
-  if (!amountStr) return;
-  const amount = parseFloat(amountStr) || 800;
-  const recs = recommendCard('hotel', amount);
-  let msg = `【${type.toUpperCase()} 酒店支付推荐】\n金额 ¥${amount}\n\n`;
-  recs.slice(0,3).forEach(r => msg += `${r.cardName} → 预计返 ¥${r.cashback}（${r.recommend}）\n`);
-  msg += '\n💡 支付建议：优先用推荐卡直付，或云闪付/微信绑定该卡';
-  alert(msg);
+// 添加卡片简化版
+function openFab() {
+  const name = prompt("卡片名称（如 招行经典白金）");
+  if (!name) return;
+  const bank = prompt("银行名称（如 招商银行）");
+  state.cards.push({id: Date.now().toString(), name, bank: bank || ''});
+  save();
+  render();
 }
 
-// 原有 renderCards / renderLog / renderAnalysis / saveActivity / removeSaved / clearSaved 等函数保持不变（为节省篇幅此处省略，但你复制时请把你原来 <script> 里的这些函数全部保留在上面）
-
-// Demo data（保持原有）
+// 初始化
 if (!state.cards.length) {
-  state.cards = [ /* 你原来的三张演示卡 */ ];
-  state.txs = [ /* 你原来的演示记录 */ ];
+  state.cards = [
+    {id:"1", name:"招行 Visa 经典白金", bank:"招商银行"},
+    {id:"2", name:"广发 多利卡", bank:"广发银行"},
+    {id:"3", name:"建行 龙卡", bank:"建设银行"}
+  ];
   save();
 }
-
 render();
 </script>
-<script id="rss-inject">window.RSS_DATA = {"updated": "2026-04-07 13:58", "items": []};</script>
 </body>
 </html>
