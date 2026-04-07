@@ -79,11 +79,18 @@ def main():
     with open("rss_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    if os.path.exists("card-tracker.html"):
+   if os.path.exists("card-tracker.html"):
         with open("card-tracker.html", "r", encoding="utf-8") as f:
             html = f.read()
+            
         script = f'<script id="rss-inject">window.RSS_DATA = {json.dumps(data, ensure_ascii=False)};</script>'
-        html = re.sub(r'<script id="rss-inject">.*?</script>', script, html, flags=re.DOTALL) or html.replace("</body>", script + "\n</body>")
+        
+        # 修复后的注入逻辑
+    if '<script id="rss-inject">' in html:
+            html = re.sub(r'<script id="rss-inject">.*?</script>', script, html, flags=re.DOTALL)
+        else:
+            html = html.replace("</body>", script + "\n</body>")
+            
         with open("card-tracker.html", "w", encoding="utf-8") as f:
             f.write(html)
         print(f"✅ 抓取 {len(unique)} 条活动并注入")
