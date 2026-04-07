@@ -13,11 +13,14 @@ try:
 except ImportError:
     sys.exit(1)
 
+# 帮你增加了更多飞客茶馆和我爱卡的源，覆盖更全
 FEEDS = [
     {"name": "什么值得买·信用卡", "url": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/feed/"},
     {"name": "什么值得买·银行活动", "url": "https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/feed/"},
     {"name": "飞客茶馆·信用卡", "url": "https://www.feeyo.com/rss/creditcard.xml"},
+    {"name": "飞客茶馆·酒店", "url": "https://www.feeyo.com/rss/hotel.xml"},
     {"name": "卡宝宝·活动", "url": "https://www.kababao.com/rss.xml"},
+    {"name": "我爱卡·资讯", "url": "https://news.51credit.com/rss.xml"},
 ]
 
 FILTER_KEYWORDS = ["报名","返现","立减","满减","折扣","优惠","积分","酒店","锦江","如家","IHG","优悦","雅高","心悦界","Accor","ALL","云闪付"]
@@ -79,14 +82,14 @@ def main():
     with open("rss_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-   if os.path.exists("card-tracker.html"):
+    # 已经修复的注入逻辑，保证每次都能成功写入
+    if os.path.exists("card-tracker.html"):
         with open("card-tracker.html", "r", encoding="utf-8") as f:
             html = f.read()
             
         script = f'<script id="rss-inject">window.RSS_DATA = {json.dumps(data, ensure_ascii=False)};</script>'
         
-        # 修复后的注入逻辑
-    if '<script id="rss-inject">' in html:
+        if '<script id="rss-inject">' in html:
             html = re.sub(r'<script id="rss-inject">.*?</script>', script, html, flags=re.DOTALL)
         else:
             html = html.replace("</body>", script + "\n</body>")
