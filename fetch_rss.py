@@ -21,6 +21,7 @@ FEEDS = [
     {"name": "飞客茶馆·酒店", "url": "https://www.feeyo.com/rss/hotel.xml"},
     {"name": "卡宝宝·活动", "url": "https://www.kababao.com/rss.xml"},
     {"name": "我爱卡·资讯", "url": "https://news.51credit.com/rss.xml"},
+    {"name": "X-Infinite 机酒卡", "url": "https://www.xinfinite.net/c/airlinehotelcard/6.rss"},
 ]
 
 FILTER_KEYWORDS = ["报名","返现","立减","满减","折扣","优惠","积分","酒店","锦江","如家","IHG","优悦","雅高","心悦界","Accor","ALL","云闪付"]
