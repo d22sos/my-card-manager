@@ -53,66 +53,76 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 </div>
 
 <script>
-// ==================== 核心数据 ====================
+// ==================== 核心逻辑修复版 ====================
 let state = JSON.parse(localStorage.getItem('cardmgr') || '{"cards":[],"txs":[],"savedActivities":[]}');
 let currentTab = 'cards';
 
 function save() { localStorage.setItem('cardmgr', JSON.stringify(state)); }
+
 function showTab(tab) {
   currentTab = tab;
+  // 切换导航高亮
   document.querySelectorAll('.tab, .nav-item').forEach(el => el.classList.toggle('active', false));
-  document.querySelectorAll('.tab, .nav-item')[['cards','log','analysis','activities'].indexOf(tab)*2].classList.add('active'); // 简化处理
+  const tabIndex = ['cards','log','analysis','activities'].indexOf(tab);
+  if(tabIndex > -1) {
+    document.querySelectorAll('.tab')[tabIndex].classList.add('active');
+    document.querySelectorAll('.nav-item')[tabIndex].classList.add('active');
+  }
   document.getElementById('fab').style.display = (tab === 'activities') ? 'none' : 'flex';
   render();
 }
 
 function render() {
   const el = document.getElementById('content');
-  if (currentTab === 'activities') el.innerHTML = renderActivities();
-  else if (currentTab === 'cards') el.innerHTML = renderCards();
-  else el.innerHTML = `<div style="padding:40px;text-align:center;color:#666">该页面暂未完善</div>`;
+  if (!el) return;
+  
+  if (currentTab === 'activities') {
+    el.innerHTML = renderActivities();
+  } else if (currentTab === 'cards') {
+    el.innerHTML = renderCards();
+  } else {
+    el.innerHTML = `<div style="padding:40px;text-align:center;color:#666">该页面暂未完善</div>`;
+  }
 }
 
 function renderActivities() {
-  const rss = window.RSS_DATA || {items:[]};
-  let html = `<div class="section-head"><span class="section-label">🎯 推荐给你的卡</span></div>`;
+  // 关键修复：如果数据还没注入，就给个空对象防止报错
+  const rss = window.RSS_DATA || { items: [] };
+  
+  if (!rss.items || rss.items.length === 0) {
+    return `<div style="padding:60px;text-align:center;color:#666">📭 暂无活动数据<br><small>请检查 GitHub Action 是否运行成功</small></div>`;
+  }
 
+  let html = `<div class="section-head"><span class="section-label">🎯 智能推荐</span></div>`;
   const myCards = state.cards || [];
-  let recommendCount = 0;
+  let recommendHtml = '';
 
-  rss.items.forEach((item, idx) => {
+  rss.items.forEach((item) => {
     const matching = myCards.filter(c => 
-      item.tags.some(t => (c.bank || c.name || '').includes(t))
+      item.tags && item.tags.some(t => (c.bank || '').includes(t) || (c.name || '').includes(t))
     );
     if (matching.length > 0) {
-      recommendCount++;
-      html += `
-        <div class="card-chip">
+      recommendHtml += `
+        <div class="card-chip" style="border-left: 4px solid var(--green)">
           <div style="font-weight:500;font-size:15px;margin-bottom:6px">${item.title}</div>
-          <div style="font-size:12px;color:#888">${item.source} · ${item.date}</div>
-          <div style="margin:10px 0 8px">
-            适合你的卡：${matching.map(c => `<span style="background:#3dd68c;color:#000;padding:2px 8px;border-radius:6px;font-size:13px">${c.name}</span>`).join(' ')}
+          <div style="margin:8px 0">
+            ${matching.map(c => `<span style="background:var(--green);color:#000;padding:2px 8px;border-radius:6px;font-size:12px;margin-right:5px">${c.name}</span>`).join('')}
           </div>
-          ${item.link ? `<a href="${item.link}" target="_blank" style="color:#7c6af7;font-size:14px">立即查看报名 →</a>` : ''}
+          <a href="${item.link}" target="_blank" style="color:var(--accent);text-decoration:none;font-size:13px">点击查看详情 →</a>
         </div>`;
     }
   });
 
-  if (recommendCount === 0) {
-    html += `<div style="background:var(--bg2);padding:30px;border-radius:12px;text-align:center;color:#777">
-      添加你的卡片（填写银行名称）后，这里会自动推荐匹配的活动
-    </div>`;
-  }
-
-  html += `<div class="section-head"><span class="section-label">全部活动 (${rss.items.length})</span><span style="font-size:12px">${rss.updated||''}</span></div>`;
-
-  rss.items.forEach((item, idx) => {
+  html += recommendHtml || `<div style="padding:15px;background:var(--bg2);border-radius:10px;font-size:13px;color:var(--text3)">暂无匹配你卡片的活动</div>`;
+  
+  html += `<div class="section-head"><span class="section-label">🌐 所有活动 (${rss.items.length})</span></div>`;
+  
+  rss.items.forEach((item) => {
     html += `
       <div class="card-chip">
-        <div style="font-weight:500">${item.title}</div>
-        <div style="font-size:12px;color:#888;margin:6px 0">${item.source} · ${item.date}</div>
-        ${item.tags.length ? `<div style="margin:8px 0">${item.tags.map(t=>`<span style="background:#333;padding:2px 8px;border-radius:4px;font-size:12px">${t}</span>`).join(' ')}</div>` : ''}
-        ${item.link ? `<a href="${item.link}" target="_blank" style="color:#7c6af7">查看原文 →</a>` : ''}
+        <div style="font-weight:500;font-size:14px">${item.title}</div>
+        <div style="font-size:12px;color:var(--text3);margin:6px 0">${item.source} · ${item.date}</div>
+        <a href="${item.link}" target="_blank" style="color:var(--text2);font-size:12px">阅读原文</a>
       </div>`;
   });
 
@@ -124,20 +134,25 @@ function renderCards() {
   return state.cards.map(c => `
     <div class="card-chip">
       <div style="font-size:16px;font-weight:500">${c.name}</div>
-      <div style="color:#888;font-size:13px">${c.bank || ''}</div>
+      <div style="color:var(--text3);font-size:13px">${c.bank || '未标注银行'}</div>
     </div>
   `).join('');
 }
 
-// 添加卡片简化版
 function openFab() {
-  const name = prompt("卡片名称（如 招行经典白金）");
+  const name = prompt("卡片名称（如：招行经典白）");
   if (!name) return;
-  const bank = prompt("银行名称（如 招商银行）");
+  const bank = prompt("所属银行关键字（如：招商）");
   state.cards.push({id: Date.now().toString(), name, bank: bank || ''});
   save();
   render();
 }
+
+// 关键修复：确保在页面所有元素（包括注入的数据）加载完后再运行
+window.onload = () => {
+  console.log("数据状态检查:", window.RSS_DATA);
+  render();
+};
 
 // 初始化
 if (!state.cards.length) {
