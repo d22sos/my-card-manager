@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-隐私支付管家 - RSS抓取器 V4 (突破信息茧房版)
-新增：RSSHub定向关键词追踪港卡/返利信息
+隐私支付管家 - RSS抓取器 V4.1 (稳定极速版)
+修复：移除导致 GitHub Action 超时卡死的公共 RSSHub 源，保留港卡优先算法
 """
 
 import json, re, sys, os
@@ -14,18 +14,16 @@ except ImportError:
     print("请先运行: pip install feedparser requests", file=sys.stderr)
     sys.exit(1)
 
-# 突破茧房：加入 RSSHub 对“什么值得买”的全局关键词定向监控
+# 恢复绝对稳定的原生 RSS 源，剔除容易被风控挂起的 rsshub.app
 FEEDS = [
-    {"name": "机酒卡资讯",     "url": "https://www.xinfinite.net/c/airlinehotelcard/6.rss"},
-    {"name": "全网监控·港卡",   "url": "https://rsshub.app/smzdm/keyword/港卡"},
-    {"name": "全网监控·汇丰",   "url": "https://rsshub.app/smzdm/keyword/汇丰Pulse"},
-    {"name": "全网监控·中信外卡", "url": "https://rsshub.app/smzdm/keyword/中信国际"},
-    {"name": "飞客茶馆·信用卡", "url": "https://www.feeyo.com/rss/creditcard.xml"},
-    {"name": "飞客茶馆·酒店",   "url": "https://www.feeyo.com/rss/hotel.xml"},
-    {"name": "什么值得买·好价", "url": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/feed/"},
+    {"name": "机酒卡资讯",       "url": "https://www.xinfinite.net/c/airlinehotelcard/6.rss"},
+    {"name": "什么值得买·信用卡", "url": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/feed/"},
+    {"name": "什么值得买·银行",   "url": "https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/feed/"},
+    {"name": "什么值得买·酒店",   "url": "https://www.smzdm.com/tag/%E9%85%92%E5%BA%97/feed/"},
+    {"name": "飞客茶馆·信用卡",   "url": "https://www.feeyo.com/rss/creditcard.xml"},
+    {"name": "飞客茶馆·酒店",     "url": "https://www.feeyo.com/rss/hotel.xml"},
 ]
 
-# 扩充了 ShopBack、万事达等高级别返利通道关键词
 FILTER_KEYWORDS = [
     "返现","立减","满减","优惠","积分","酒店","通兑","日历房",
     "锦江","如家","IHG","优悦","雅高","心悦界","万豪","希尔顿",
@@ -88,8 +86,8 @@ def main():
     all_items = []
     for feed in FEEDS:
         try:
-            # 增加超时时间和伪装，防止被封
-            resp = requests.get(feed["url"], headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}, timeout=20)
+            # 严格超时控制，防止 GitHub Action 卡死
+            resp = requests.get(feed["url"], headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
             resp.encoding = resp.apparent_encoding
             d = feedparser.parse(resp.text)
             for entry in d.entries[:25]:
@@ -117,7 +115,7 @@ def main():
                     "priority": detect_priority(text),
                 })
         except Exception as e:
-            print(f"[跳过] {feed['name']} 暂时无法访问", file=sys.stderr)
+            print(f"[跳过] {feed['name']} 暂时无法访问: {e}", file=sys.stderr)
 
     seen = set()
     unique = []
