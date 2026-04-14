@@ -2,288 +2,187 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>信用卡管家</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>省钱管家</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
-:root {
-  --bg: #0f0f11; --bg2: #16161a; --bg3: #1e1e24; --bg4: #26262e;
-  --border: rgba(255,255,255,0.08); --text: #f0eff4; --text2: #9998a8; --text3: #5e5d6e;
-  --accent: #7c6af7; --accent2: #a594f9; --green: #3dd68c; --red: #f76c6c;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); max-width: 480px; margin: 0 auto; height: 100vh; display: flex; flex-direction: column; }
-.topbar { padding: 16px 20px 8px; display: flex; justify-content: space-between; }
-.tabs { display: flex; padding: 0 16px; gap: 4px; }
-.tab { flex: 1; padding: 10px; text-align: center; border-radius: 8px; font-size: 14px; }
-.tab.active { background: var(--bg3); font-weight: 500; }
-.content { flex: 1; overflow-y: auto; padding: 12px 16px 80px; }
-.card-chip { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
-.section-head { display: flex; justify-content: space-between; align-items: center; margin: 20px 0 12px; font-size: 13px; color: var(--text3); }
-.merch-btn { padding: 10px 12px; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; margin: 4px; font-size: 13px; }
-.status-badge { padding: 4px 10px; border-radius: 999px; font-size: 12px; }
-.fab { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: var(--accent); color: white; border-radius: 50%; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(124,106,247,0.4); }
-.bottom-nav { position: fixed; bottom: 0; width: 100%; max-width: 480px; background: var(--bg2); border-top: 1px solid var(--border); display: flex; padding: 8px 0; }
-.nav-item { flex: 1; text-align: center; font-size: 12px; }
-.nav-item.active { color: var(--accent2); }
+:root{--bg:#0f0f12;--bg2:#18181e;--bg3:#22222a;--bg4:#2c2c38;--border:rgba(255,255,255,0.09);--text:#f0eff6;--text2:#9997aa;--text3:#5a5868;--accent:#7c6af7;--accent2:#a594f9;--green:#2ec97a;--red:#f76c6c;--amber:#f5a623;--blue:#4a9eff;--teal:#29c6b7;--hk:#ff4757}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;max-width:480px;margin:0 auto}
+.topbar{padding:14px 16px 6px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.topbar h1{font-size:18px;font-weight:600;letter-spacing:-.3px}
+.upd-badge{font-size:10px;background:var(--bg3);padding:3px 8px;border-radius:20px;color:var(--text3)}
+.chips{display:flex;gap:6px;padding:6px 16px 4px;overflow-x:auto;flex-shrink:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{padding:5px 12px;border-radius:20px;font-size:13px;white-space:nowrap;background:var(--bg3);color:var(--text2);border:1px solid var(--border);cursor:pointer}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip.hkc.active{background:var(--hk);border-color:var(--hk)}
+.content{flex:1;overflow-y:auto;padding:6px 12px 72px;-webkit-overflow-scrolling:touch}
+.a-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:9px}
+.a-card.hkp{border-left:4px solid var(--hk);background:linear-gradient(100deg,rgba(255,71,87,.05) 0%,transparent 50%)}
+.a-card.match{border-left:3px solid var(--green)}
+.a-card.hotel-card{border-left:3px solid var(--teal)}
+.a-card.warn{border-left:3px solid var(--amber)}
+.a-title{font-size:14px;font-weight:500;line-height:1.5;margin-bottom:5px;color:var(--text)}
+.a-sum{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:7px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.a-meta{display:flex;align-items:center;justify-content:space-between}
+.a-src{font-size:11px;color:var(--text3)}
+.a-link{font-size:12px;color:var(--accent2);text-decoration:none;padding:3px 10px;border:1px solid rgba(165,148,249,.4);border-radius:6px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.tag{font-size:11px;padding:2px 8px;border-radius:5px;background:var(--bg4);color:var(--text2)}
+.tag.hkt{background:rgba(255,71,87,.15);color:var(--hk);font-weight:600}
+.tag.mt{background:rgba(46,201,122,.15);color:var(--green)}
+.tag.ht{background:rgba(41,198,183,.12);color:var(--teal)}
+.tag.pt{background:rgba(74,158,255,.12);color:var(--blue);font-weight:500}
+.tag.wt{background:rgba(245,166,35,.15);color:var(--amber)}
+.warn-box{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.25);border-radius:8px;padding:7px 10px;font-size:12px;color:var(--amber);margin-bottom:7px;line-height:1.5}
+.sec-head{font-size:12px;color:var(--text3);padding:8px 0 5px;letter-spacing:.04em}
+.ac{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:11px 14px;margin-bottom:7px;display:flex;align-items:center;justify-content:space-between}
+.ac.hka{border-left:3px solid var(--hk)}
+.ac.hoa{border-left:3px solid var(--teal)}
+.ac .n{font-size:14px;font-weight:500}
+.ac .b{font-size:12px;color:var(--text3);margin-top:1px}
+.db{background:transparent;border:none;color:var(--text3);font-size:18px;padding:2px 8px;cursor:pointer;line-height:1}
+.db:active{color:var(--red)}
+.add-area{background:var(--bg2);border:1px dashed rgba(255,255,255,.12);border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.add-area input,.add-area select{flex:1;min-width:100px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-size:13px}
+.add-area select option{background:var(--bg3)}
+.add-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+.sp{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px}
+.sp h3{font-size:13px;font-weight:600;margin-bottom:10px;color:var(--text2)}
+.pt2{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.pt2:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.tb{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.t1 .tb{background:var(--hk);color:#fff}
+.t2 .tb{background:rgba(74,158,255,.2);color:var(--blue)}
+.t3 .tb{background:var(--bg4);color:var(--text3)}
+.t4 .tb{background:rgba(246,108,108,.15);color:var(--red)}
+.ti{font-size:13px;font-weight:500;margin-bottom:2px;line-height:1.3}
+.td{font-size:12px;color:var(--text3);line-height:1.5}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--bg2);border-top:1px solid var(--border);display:flex;padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:100}
+.ni{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10px;color:var(--text3);cursor:pointer;padding:3px 0}
+.ni.active{color:var(--accent2)}
+.nicon{font-size:20px;line-height:1.2}
+.empty{text-align:center;padding:60px 20px;color:var(--text3);font-size:14px;line-height:2}
 </style>
 </head>
 <body>
-
-<div class="topbar">
-  <h1>信用卡管家</h1>
-</div>
-
-<div class="tabs">
-  <div class="tab active" onclick="showTab('cards')">卡片</div>
-  <div class="tab" onclick="showTab('log')">记录</div>
-  <div class="tab" onclick="showTab('analysis')">分析</div>
-  <div class="tab" onclick="showTab('activities')">活动</div>
-</div>
-
+<div class="topbar"><h1>省钱管家</h1><span class="upd-badge" id="upd">加载中…</span></div>
+<div class="chips" id="chips"></div>
 <div class="content" id="content"></div>
-
-<button class="fab" id="fab" onclick="openFab()">＋</button>
-
-<div class="bottom-nav">
-  <div class="nav-item active" onclick="showTab('cards')">💳 卡片</div>
-  <div class="nav-item" onclick="showTab('log')">📋 记录</div>
-  <div class="nav-item" onclick="showTab('analysis')">📊 分析</div>
-  <div class="nav-item" onclick="showTab('activities')">🎯 活动</div>
-</div>
-
+<nav class="bottom-nav">
+  <div class="ni active" id="nav-recommend" onclick="goTab('recommend')"><span class="nicon">⭐</span>推荐</div>
+  <div class="ni" id="nav-hotel" onclick="goTab('hotel')"><span class="nicon">🏨</span>酒店</div>
+  <div class="ni" id="nav-daily" onclick="goTab('daily')"><span class="nicon">🛒</span>日常</div>
+  <div class="ni" id="nav-mycards" onclick="goTab('mycards')"><span class="nicon">💳</span>资产</div>
+</nav>
 <script>
-// ==================== 核心逻辑修复版 ====================
-let state = JSON.parse(localStorage.getItem('cardmgr') || '{"cards":[],"txs":[],"savedActivities":[]}');
-let currentTab = 'cards';
-
-function save() { localStorage.setItem('cardmgr', JSON.stringify(state)); }
-
-function showTab(tab) {
-  currentTab = tab;
-  // 切换导航高亮
-  document.querySelectorAll('.tab, .nav-item').forEach(el => el.classList.toggle('active', false));
-  const tabIndex = ['cards','log','analysis','activities'].indexOf(tab);
-  if(tabIndex > -1) {
-    document.querySelectorAll('.tab')[tabIndex].classList.add('active');
-    document.querySelectorAll('.nav-item')[tabIndex].classList.add('active');
-  }
-  document.getElementById('fab').style.display = (tab === 'activities') ? 'none' : 'flex';
-  render();
-}
-
-function render() {
-  const el = document.getElementById('content');
-  if (!el) return;
-  
-  if (currentTab === 'activities') {
-    el.innerHTML = renderActivities();
-  } else if (currentTab === 'cards') {
-    el.innerHTML = renderCards();
-  } else {
-    el.innerHTML = `<div style="padding:40px;text-align:center;color:#666">该页面暂未完善</div>`;
-  }
-}
-
-function renderActivities() {
-  // 关键修复：如果数据还没注入，就给个空对象防止报错
-  const rss = window.RSS_DATA || { items: [] };
-  
-  if (!rss.items || rss.items.length === 0) {
-    return `<div style="padding:60px;text-align:center;color:#666">📭 暂无活动数据<br><small>请检查 GitHub Action 是否运行成功</small></div>`;
-  }
-
-  let html = `<div class="section-head"><span class="section-label">🎯 智能推荐</span></div>`;
-  const myCards = state.cards || [];
-  let recommendHtml = '';
-
-  rss.items.forEach((item) => {
-    const matching = myCards.filter(c => 
-      item.tags && item.tags.some(t => (c.bank || '').includes(t) || (c.name || '').includes(t))
-    );
-    if (matching.length > 0) {
-      recommendHtml += `
-        <div class="card-chip" style="border-left: 4px solid var(--green)">
-          <div style="font-weight:500;font-size:15px;margin-bottom:6px">${item.title}</div>
-          <div style="margin:8px 0">
-            ${matching.map(c => `<span style="background:var(--green);color:#000;padding:2px 8px;border-radius:6px;font-size:12px;margin-right:5px">${c.name}</span>`).join('')}
-          </div>
-          <a href="${item.link}" target="_blank" style="color:var(--accent);text-decoration:none;font-size:13px">点击查看详情 →</a>
-        </div>`;
-    }
-  });
-
-  html += recommendHtml || `<div style="padding:15px;background:var(--bg2);border-radius:10px;font-size:13px;color:var(--text3)">暂无匹配你卡片的活动</div>`;
-  
-  html += `<div class="section-head"><span class="section-label">🌐 所有活动 (${rss.items.length})</span></div>`;
-  
-  rss.items.forEach((item) => {
-    html += `
-      <div class="card-chip">
-        <div style="font-weight:500;font-size:14px">${item.title}</div>
-        <div style="font-size:12px;color:var(--text3);margin:6px 0">${item.source} · ${item.date}</div>
-        <a href="${item.link}" target="_blank" style="color:var(--text2);font-size:12px">阅读原文</a>
-      </div>`;
-  });
-
-  return html;
-}
-
-function renderCards() {
-  if (!state.cards.length) return `<div style="text-align:center;padding:60px 20px;color:#666">还没有卡片<br>点击右下角 + 添加</div>`;
-  return state.cards.map(c => `
-    <div class="card-chip">
-      <div style="font-size:16px;font-weight:500">${c.name}</div>
-      <div style="color:var(--text3);font-size:13px">${c.bank || '未标注银行'}</div>
-    </div>
-  `).join('');
-}
-
-function openFab() {
-  const name = prompt("卡片名称（如：招行经典白）");
-  if (!name) return;
-  const bank = prompt("所属银行关键字（如：招商）");
-  state.cards.push({id: Date.now().toString(), name, bank: bank || ''});
-  save();
-  render();
-}
-
-// 关键修复：确保在页面所有元素（包括注入的数据）加载完后再运行
-window.onload = () => {
-  console.log("数据状态检查:", window.RSS_DATA);
-  render();
+const DEF=[
+  {id:"hk1",name:"汇丰 Pulse (HK)",bank:"汇丰Pulse",type:"hk"},
+  {id:"hk2",name:"中信国际 GBA",bank:"中信国际",type:"hk"},
+  {id:"hk3",name:"HK版云闪付",bank:"云闪付",type:"hk"},
+  {id:"h1",name:"雅高 ALL 白金",bank:"雅高ALL",type:"hotel"},
+  {id:"h2",name:"IHG 优悦会 钻石",bank:"IHG优悦会",type:"hotel"},
+  {id:"h3",name:"锦江荟 白金",bank:"锦江汇",type:"hotel"},
+  {id:"h4",name:"如家 钻石卡",bank:"如家",type:"hotel"},
+  {id:"c1",name:"招行 白金",bank:"招行",type:"credit"},
+  {id:"c2",name:"广发 信用卡",bank:"广发",type:"credit"},
+  {id:"p1",name:"内地云闪付",bank:"云闪付",type:"pay"},
+];
+let S=JSON.parse(localStorage.getItem('cmv3')||'null');
+if(!S||!S.cards){S={cards:DEF};save();}
+function save(){localStorage.setItem('cmv3',JSON.stringify(S));}
+let TAB='recommend',FIL='all';
+const FILTERS={
+  recommend:[{id:'all',label:'全部'},{id:'hk',label:'🔥 港卡/境外优先',cls:'hkc'},{id:'match',label:'匹配我的卡'},{id:'hotel',label:'酒店优惠'}],
+  hotel:[{id:'all',label:'全部酒店'},{id:'accor',label:'雅高ALL'},{id:'ihg',label:'IHG优悦会'},{id:'marriott',label:'万豪'},{id:'jinjiang',label:'锦江汇'},{id:'safe',label:'✅安全区域'},{id:'cheap',label:'💰低价⚠️'}],
+  daily:[{id:'all',label:'全部日常'},{id:'hk',label:'🔥 境外消费/港卡',cls:'hkc'},{id:'cloud',label:'云闪付'},{id:'meituan',label:'美团'},{id:'pdd',label:'拼多多'},{id:'taobao',label:'淘宝'}],
+  mycards:[]
 };
-
-// 初始化
-if (!state.cards.length) {
-  state.cards = [
-    {id:"1", name:"招行 Visa 经典白金", bank:"招商银行"},
-    {id:"2", name:"广发 多利卡", bank:"广发银行"},
-    {id:"3", name:"建行 龙卡", bank:"建设银行"}
-  ];
-  save();
+function goTab(t){TAB=t;FIL='all';document.querySelectorAll('.ni').forEach(e=>e.classList.remove('active'));document.getElementById('nav-'+t).classList.add('active');rChips();render();}
+function rChips(){const f=FILTERS[TAB]||[];document.getElementById('chips').innerHTML=f.map(x=>`<div class="chip${x.cls?' '+x.cls:''}${FIL===x.id?' active':''}" onclick="FIL='${x.id}';rChips();render()">${x.label}</div>`).join('');}
+function myTags(){return S.cards.map(c=>c.bank);}
+function fItems(items){
+  let p=items;
+  if(TAB==='hotel')p=items.filter(i=>i.category==='hotel');
+  if(TAB==='daily')p=items.filter(i=>i.category==='daily'||i.category==='card');
+  const mt=myTags();
+  if(FIL==='hk')p=p.filter(i=>i.priority===2);
+  else if(FIL==='match')p=p.filter(i=>(i.tags||[]).some(t=>mt.includes(t)));
+  else if(FIL==='hotel')p=p.filter(i=>i.category==='hotel');
+  else if(FIL==='accor')p=p.filter(i=>(i.tags||[]).includes('雅高ALL'));
+  else if(FIL==='ihg')p=p.filter(i=>(i.tags||[]).includes('IHG优悦会'));
+  else if(FIL==='marriott')p=p.filter(i=>(i.tags||[]).includes('万豪'));
+  else if(FIL==='jinjiang')p=p.filter(i=>(i.tags||[]).includes('锦江汇'));
+  else if(FIL==='safe')p=p.filter(i=>i.safeArea===true);
+  else if(FIL==='cheap')p=p.filter(i=>i.price&&i.price<150);
+  else if(FIL==='cloud')p=p.filter(i=>(i.tags||[]).includes('云闪付'));
+  else if(FIL==='meituan')p=p.filter(i=>(i.tags||[]).includes('美团'));
+  else if(FIL==='pdd')p=p.filter(i=>(i.tags||[]).includes('拼多多'));
+  else if(FIL==='taobao')p=p.filter(i=>(i.tags||[]).includes('淘宝'));
+  return p.sort((a,b)=>{const d=(b.priority||0)-(a.priority||0);return d||((b.date||'').localeCompare(a.date||''));});
 }
-render();
+function e(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function rCard(item){
+  const mt=myTags(),isHK=item.priority===2,isM=(item.tags||[]).some(t=>mt.includes(t)),isH=item.category==='hotel',hasW=(item.warnings||[]).length>0;
+  let cls='a-card';
+  if(isHK)cls+=' hkp';else if(hasW)cls+=' warn';else if(isM)cls+=' match';else if(isH)cls+=' hotel-card';
+  const HT=['IHG优悦会','雅高ALL','万豪','希尔顿','锦江汇','如家','华住','亚朵'];
+  let tgs='';
+  if(isHK)tgs+=`<span class="tag hkt">🔥 港卡/境外高返</span>`;
+  (item.tags||[]).forEach(t=>{tgs+=`<span class="tag${mt.includes(t)?' mt':HT.includes(t)?' ht':''}">${e(t)}</span>`;});
+  if(item.price)tgs+=`<span class="tag pt">¥${item.price}/晚</span>`;
+  if(item.safeArea===false&&isH)tgs+=`<span class="tag wt">📍待核查</span>`;
+  const wb=hasW?`<div class="warn-box">⚠️ ${(item.warnings||[]).map(e).join(' · ')}</div>`:'';
+  const src=(item.source||'').replace('X-Infinite ','');
+  return `<div class="${cls}"><div class="a-title">${e(item.title)}</div>${tgs?`<div class="tags">${tgs}</div>`:''}${wb}<div class="a-sum">${e(item.summary)}</div><div class="a-meta"><span class="a-src">${e(src)} · ${(item.date||'').slice(5)}</span>${item.link?`<a class="a-link" href="${e(item.link)}" target="_blank" rel="noopener">查看 →</a>`:''}</div></div>`;
+}
+function rMyCards(){
+  const hkC=S.cards.filter(c=>c.type==='hk'),hoC=S.cards.filter(c=>c.type==='hotel'),crC=S.cards.filter(c=>c.type==='credit'),paC=S.cards.filter(c=>c.type==='pay');
+  const list=(cards,x)=>cards.map(c=>`<div class="ac ${x}"><div><div class="n">${e(c.name)}</div><div class="b">${e(c.bank)}</div></div><button class="db" onclick="delCard('${c.id}')">×</button></div>`).join('');
+  return `<div class="sp"><h3>支付优先级策略</h3>
+<div class="pt2 t1"><div class="tb">1</div><div><div class="ti">港卡/境外卡（HK云闪付 → 汇丰Pulse → 中信GBA）</div><div class="td">内地消费记为境外交易，高额返现；保护内地实名数据不暴露。</div></div></div>
+<div class="pt2 t2"><div class="tb">2</div><div><div class="ti">内地云闪付（绑内地卡）</div><div class="td">港卡不被接受时次选；相对控制数据暴露范围。</div></div></div>
+<div class="pt2 t3"><div class="tb">3</div><div><div class="ti">内地信用卡直刷</div><div class="td">云闪付不通时使用，尽量选含积分/返现的卡。</div></div></div>
+<div class="pt2 t4"><div class="tb">4</div><div><div class="ti">微信/支付宝/美团/拼多多支付</div><div class="td">迫不得已才用。这些渠道开通实名后风险最高，已有大量绑卡诱发网贷的案例记录。</div></div></div>
+</div>
+<div class="sec-head">🔥 港卡 / 境外卡（第一梯队）</div>${list(hkC,'hka')}
+<div class="sec-head">🏨 酒店会籍</div>${list(hoC,'hoa')}
+<div class="sec-head">💳 内地信用卡</div>${list(crC,'')}
+<div class="sec-head">📱 支付渠道</div>${list(paC,'')}
+<div class="sec-head" style="margin-top:14px">添加卡片 / 会籍</div>
+<div class="add-area">
+  <input id="iN" placeholder="名称（如：招行航空联名）">
+  <input id="iB" placeholder="标签（如：招行 / 汇丰Pulse）">
+  <select id="iT"><option value="hk">港卡/境外</option><option value="hotel">酒店会籍</option><option value="credit">内地信用卡</option><option value="pay">支付渠道</option></select>
+  <button class="add-btn" onclick="addCard()">添加</button>
+</div>
+<div style="font-size:12px;color:var(--text3);padding:10px 4px;line-height:1.8">标签影响活动匹配，建议填：汇丰Pulse / 中信国际 / 云闪付 / 雅高ALL / IHG优悦会 / 锦江汇 / 如家 / 招行 / 广发 等</div>`;
+}
+function addCard(){const n=document.getElementById('iN')?.value.trim(),b=document.getElementById('iB')?.value.trim(),t=document.getElementById('iT')?.value||'credit';if(!n||!b){alert('名称和标签不能为空');return;}S.cards.push({id:Date.now().toString(),name:n,bank:b,type:t});save();render();}
+function delCard(id){S.cards=S.cards.filter(c=>c.id!==id);save();render();}
+function render(){
+  const el=document.getElementById('content');
+  if(!el)return;
+  if(TAB==='mycards'){el.innerHTML=rMyCards();return;}
+  const rss=window.RSS_DATA;
+  if(!rss||!rss.items){el.innerHTML='<div class="empty">📭 数据未加载<br><small>请检查 GitHub Action 是否运行成功</small></div>';return;}
+  document.getElementById('upd').textContent='更新 '+(rss.updated||'').slice(5);
+  const items=fItems(rss.items);
+  if(!items.length){el.innerHTML='<div class="empty">暂无匹配活动<br><small>换个筛选条件试试</small></div>';return;}
+  const hkN=items.filter(i=>i.priority===2).length;
+  const lbl=hkN>0?`${items.length} 条（含 <span style="color:var(--hk);font-weight:600">${hkN} 条港卡/境外</span>）`:`${items.length} 条活动`;
+  el.innerHTML=`<div class="sec-head">${lbl}</div>`+items.map(rCard).join('');
+}
+function boot(){
+  if(window.RSS_DATA)document.getElementById('upd').textContent='更新 '+(window.RSS_DATA.updated||'').slice(5);
+  rChips();render();
+  fetch('rss_data.json?t='+Date.now()).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.items){window.RSS_DATA=d;document.getElementById('upd').textContent='更新 '+(d.updated||'').slice(5);render();}}).catch(()=>{});
+}
+document.readyState==='loading'?document.addEventListener('DOMContentLoaded',boot):boot();
 </script>
-<script id="rss-inject">window.RSS_DATA = {"updated": "2026-04-14 01:26", "items": [{"title": "广发银行信用卡大调整：免年费返现卡“凉凉”，里程兑换比例略有提升", "summary": "广发银行信用卡大调整：免年费返现卡遭重创，仅剩美团可用，里程兑换比例小幅提升。
-    
-    
-        原文标题：卡 | 免年费的都凉凉，无脑返现不再有
-        原文作者：社会主义羊毛
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw==&amp;mid=2654368578&amp;idx=1&amp;sn=d8c2d7df0", "link": "https://www.xinfinite.net/t/topic/18800", "date": "2026-04-13", "source": "X-Infinite 机酒卡", "tags": ["广发", "美团"]}, {"title": "雅高酒店集团：春季活动及终身会籍获取攻略", "summary": "想快速升级雅高会员？本文介绍雅高最新活动、终身会籍获取方式，教你玩转雅高酒店集团。
-    
-    
-        原文标题：酒店 | 雅高春季活动 如何获取雅高终身会员
-        原文作者：青蛙飞旅
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ==&amp;mid=2247495376&amp;idx=1&amp;sn=651baf", "link": "https://www.xinfinite.net/t/topic/18786", "date": "2026-04-13", "source": "X-Infinite 机酒卡", "tags": ["酒店", "雅高心悦界"]}, {"title": "万豪&其他酒店五一不加价套餐来袭，速囤速约！", "summary": "万豪等酒店五一不加价促销来袭！速囤通兑套餐，享受假期优惠，更多酒店选择，总有一款适合你。
-    
-    
-        原文标题：又整狠活，万豪出手解决刚需
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518488&amp;idx=1&amp;sn=83aeb1f9fa44", "link": "https://www.xinfinite.net/t/topic/18781", "date": "2026-04-13", "source": "X-Infinite 机酒卡", "tags": ["酒店"]}, {"title": "信用卡权益调整与优惠活动：中信IHG联名卡暂停申请、百夫长贵宾厅规则变动、境外消费返现及南航里程加赠", "summary": "本周信用卡行业动态：IHG联名卡暂停，百夫长权益调整，境外消费返现及南航里程加赠。五一出行注意航班变动。
-    
-    
-        原文标题：翼周刊｜这些白金卡贵宾厅权益将有调整，南航里程70%加赠来了，境外线下单笔满1000返100记得报名。
-        原文作者：蓝翼说
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIxMDAyMzc5MA==&amp", "link": "https://www.xinfinite.net/t/topic/18780", "date": "2026-04-12", "source": "X-Infinite 机酒卡", "tags": ["中信", "IHG优悦会"]}, {"title": "飞猪酒店日历房通兑券攻略：万豪、希尔顿、华住、锦江优惠汇总，最高立减140元！", "summary": "飞猪酒店日历房通兑券来袭！万豪海南立减130元，江浙沪立减100元，预订灵活，可免费取消，更有积分奖励！
-    
-    
-        原文标题：万豪立减130！神券真的多！
-        原文作者：爱生活的燃烧
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&amp;mid=2247694425&amp;idx=1&amp;sn=c", "link": "https://www.xinfinite.net/t/topic/18766", "date": "2026-04-12", "source": "X-Infinite 机酒卡", "tags": ["锦江汇", "酒店"]}, {"title": "万豪Q1闪促叠加飞猪红包：酒店价格倒贴，速冲！", "summary": "万豪Q1闪促遇上飞猪红包，部分酒店惊现“倒贴价”！江浙沪、海南多地酒店活动，手慢无！
-    
-    
-        原文标题：万豪太疯狂了，傲途格倒贴25元，万枫倒贴30元... 随时拉闸！
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518427&amp;idx=1&am", "link": "https://www.xinfinite.net/t/topic/18765", "date": "2026-04-12", "source": "X-Infinite 机酒卡", "tags": ["酒店"]}, {"title": "广发信用卡 & 飞猪旅行最新优惠：国际机票返现攻略与酒店日历房券", "summary": "广发信用卡权益或调整，飞猪国际机票有返现活动，万豪、希尔顿、华住、锦江等酒店集团在飞猪上有日历房通兑券活动。
-    
-    
-        原文标题：广发2个小道消息，国际机票笔笔返200/400！
-        原文作者：爱生活的燃烧
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&amp;mid=2247694416&amp;id", "link": "https://www.xinfinite.net/t/topic/18762", "date": "2026-04-11", "source": "X-Infinite 机酒卡", "tags": ["广发", "锦江汇", "酒店"]}, {"title": "避坑指南：杭州西湖玉泉美居（雅高旗下）入住体验及雅高会员权益解读", "summary": "杭州西湖玉泉美居酒店被曝区别对待雅高白金会员，作者分享入住体验及权益受损经历，同时推荐雅高最新会员活动，可快速升级白金并获得积分奖励。
-    
-    
-        原文标题：疯了吗？白金无效，连早餐都不给了
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518345&amp", "link": "https://www.xinfinite.net/t/topic/18738", "date": "2026-04-10", "source": "X-Infinite 机酒卡", "tags": ["酒店", "雅高心悦界"]}, {"title": "中行卓悦PLUS白金卡权益缩水！叠加飞猪万豪日历房闪促薅羊毛", "summary": "中行卓悦PLUS白金卡权益缩水，叠加飞猪万豪日历房闪促，预订酒店享额外积分！
-    
-    
-        原文标题：麻了，今年刚上线就砍贵宾厅
-        原文作者：爱生活的燃烧
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&amp;mid=2247694385&amp;idx=1&amp;sn=61e68785665c0e8f", "link": "https://www.xinfinite.net/t/topic/18726", "date": "2026-04-10", "source": "X-Infinite 机酒卡", "tags": ["酒店"]}, {"title": "警惕！海鲜市场购买IHG房晚及会员速升服务或致封号风险", "summary": "海鲜市场IHG双倍房晚+速升白金有风险！通过非官方渠道注册小心被封号，贪小便宜易吃大亏！
-    
-    
-        原文标题：封号拉黑，这么玩是真的危险
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518266&amp;idx=1&amp;sn=0fbd194c3c10", "link": "https://www.xinfinite.net/t/topic/18689", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": ["IHG优悦会"]}, {"title": "中信优悦会联名卡下架及近期IHG、美团酒店优惠信息汇总", "summary": "中信优悦会联名卡再下架，IHG多重活动进行中，美团精选多地酒店套餐，五一可用！
-    
-    
-        原文标题：那张酒店入门好卡又下架了
-        原文作者：爱生活的燃烧
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&amp;mid=2247694349&amp;idx=1&amp;sn=9ad807571c58fca3", "link": "https://www.xinfinite.net/t/topic/18684", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": ["中信", "美团", "酒店", "IHG优悦会"]}, {"title": "万豪Q1活动倒计时：抓住最后机会，低成本保级冲钛攻略", "summary": "万豪Q1活动倒计时！最后机会，教你如何抓住闪促末班车，低成本保级冲钛，叠加各种优惠，薅羊毛攻略！
-    
-    
-        原文标题：末班车，万豪Q1提前毕业了
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518255&amp;idx=1&amp;sn=158ea40f", "link": "https://www.xinfinite.net/t/topic/18672", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": []}, {"title": "IHG联名卡突遭下架！酒店联名卡风波再起，万豪、希尔顿会受影响吗？", "summary": "中信IHG联名卡突遭下架，疑因会员条款问题。万豪、希尔顿或受牵连。推荐万豪精逸白金卡及中信新户返现卡。
-    
-    
-        原文标题：刚上线就下架，联名卡突发大事件
-        原文作者：帅帅说卡
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ==&amp;mid=2247540415&amp;idx=1&amp;sn=227", "link": "https://www.xinfinite.net/t/topic/18673", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": ["中信", "酒店", "IHG优悦会"]}, {"title": "IHG中信联名卡暂停申请：酒店集团仲裁条款引争议，其他联名卡会受影响吗？", "summary": "中信IHG联名卡暂停申请，或波及万豪、希尔顿等酒店集团联名卡。国际酒店集团仲裁、诉讼地条款引争议。
-    
-    
-        原文标题：突发 | 中信ihg联名卡暂停申请 会影响其他酒店卡吗
-        原文作者：青蛙飞旅
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ==&amp;mid=2247495301&amp;idx=1&", "link": "https://www.xinfinite.net/t/topic/18670", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": ["中信", "酒店", "IHG优悦会"]}, {"title": "中信IHG联名卡暂停申请：事件影响与后续分析", "summary": "中信IHG联名卡暂停申请，疑似IHG被约谈后连锁反应。已上车用户可继续参与活动，未上车用户建议观望。
-    
-    
-        原文标题：凉了？IHG被约谈的后果是立竿见影啊
-        原文作者：聪明旅行
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&amp;mid=2247518218&amp;idx=1&amp;sn=f", "link": "https://www.xinfinite.net/t/topic/18666", "date": "2026-04-09", "source": "X-Infinite 机酒卡", "tags": ["中信", "IHG优悦会"]}, {"title": "浦发AE白“换新”上线：不消费也能享贵宾厅，境外消费返现成亮点", "summary": "浦发AE白权益更新，境外消费返现需领资格。另有超白金卡、Safari卡等可选，速览了解详情。
-    
-    
-        原文标题：卡 | 这张已淡忘的卡，到账２点贵宾室
-        原文作者：社会主义羊毛
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw==&amp;mid=2654368564&amp;idx=1&amp;sn=9e", "link": "https://www.xinfinite.net/t/topic/18660", "date": "2026-04-08", "source": "X-Infinite 机酒卡", "tags": ["浦发"]}, {"title": "五一不涨价！精选酒店套餐限时抢购", "summary": "美团“必住榜”酒店套餐限时抢购！五一不涨价，速来预订！
-    
-    
-        原文标题：全部五一不加价！就今天！
-        原文作者：爱生活的燃烧
-        
-            原文链接：
-            http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&amp;mid=2247694322&amp;idx=1&amp;sn=3223b50054bed36fa34c179f8cfb", "link": "https://www.xinfinite.net/t/topic/18693", "date": "2026-04-08", "source": "X-Infinite 机酒卡", "tags": ["美团", "酒店"]}]};</script>
+<script id="rss-inject">window.RSS_DATA={"updated":"2026-04-14 01:26","items":[{"title":"广发银行信用卡大调整：免年费返现卡凉凉，里程兑换比例略有提升","summary":"广发银行信用卡大调整：免年费返现卡遭重创，仅剩美团可用，里程兑换比例小幅提升。","link":"https://www.xinfinite.net/t/topic/18800","date":"2026-04-13","source":"X-Infinite 机酒卡","tags":["广发","美团"],"category":"daily","price":null,"warnings":[],"safeArea":true,"priority":0},{"title":"雅高酒店集团：春季活动及终身会籍获取攻略","summary":"想快速升级雅高会员？本文介绍雅高最新活动、终身会籍获取方式，教你玩转雅高酒店集团。","link":"https://www.xinfinite.net/t/topic/18786","date":"2026-04-13","source":"X-Infinite 机酒卡","tags":["酒店","雅高ALL"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"万豪五一不加价套餐来袭，速囤速约！","summary":"万豪等酒店五一不加价促销来袭！速囤通兑套餐，享受假期优惠，更多酒店选择，总有一款适合你。","link":"https://www.xinfinite.net/t/topic/18781","date":"2026-04-13","source":"X-Infinite 机酒卡","tags":["酒店","万豪"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"信用卡权益调整：中信IHG联名卡暂停申请、百夫长规则变动","summary":"本周信用卡行业动态：IHG联名卡暂停，百夫长权益调整，境外消费返现及南航里程加赠。","link":"https://www.xinfinite.net/t/topic/18780","date":"2026-04-12","source":"X-Infinite 机酒卡","tags":["中信","IHG优悦会"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"飞猪酒店日历房通兑券：万豪希尔顿华住锦江优惠汇总，最高立减140元！","summary":"飞猪酒店日历房通兑券来袭！万豪海南立减130元，江浙沪立减100元，预订灵活，可免费取消，更有积分奖励！","link":"https://www.xinfinite.net/t/topic/18766","date":"2026-04-12","source":"X-Infinite 机酒卡","tags":["锦江汇","酒店","万豪","希尔顿"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"万豪Q1闪促叠加飞猪红包：酒店价格倒贴，速冲！","summary":"万豪Q1闪促遇上飞猪红包，部分酒店惊现倒贴价！江浙沪海南多地酒店活动，手慢无！","link":"https://www.xinfinite.net/t/topic/18765","date":"2026-04-12","source":"X-Infinite 机酒卡","tags":["酒店","万豪"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"广发信用卡飞猪旅行最新优惠：机票返现与酒店日历房券","summary":"广发信用卡权益调整，飞猪国际机票有返现活动，万豪希尔顿华住锦江等在飞猪上有日历房通兑券活动。","link":"https://www.xinfinite.net/t/topic/18762","date":"2026-04-11","source":"X-Infinite 机酒卡","tags":["广发","锦江汇","酒店"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"避坑：杭州美居雅高白金权益受损经历及会员权益解读","summary":"杭州西湖玉泉美居酒店被曝区别对待雅高白金会员，作者分享入住体验及权益受损经历，同时推荐雅高最新会员活动。","link":"https://www.xinfinite.net/t/topic/18738","date":"2026-04-10","source":"X-Infinite 机酒卡","tags":["酒店","雅高ALL"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"警惕！海鲜市场购买IHG房晚及会员速升服务或致封号风险","summary":"海鲜市场IHG双倍房晚+速升白金有风险！通过非官方渠道注册小心被封号，贪小便宜易吃大亏！","link":"https://www.xinfinite.net/t/topic/18689","date":"2026-04-09","source":"X-Infinite 机酒卡","tags":["IHG优悦会"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"中信优悦会联名卡下架及近期IHG美团酒店优惠信息汇总","summary":"中信优悦会联名卡再下架，IHG多重活动进行中，美团精选多地酒店套餐，五一可用！","link":"https://www.xinfinite.net/t/topic/18684","date":"2026-04-09","source":"X-Infinite 机酒卡","tags":["中信","美团","酒店","IHG优悦会"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"IHG联名卡突遭下架，酒店联名卡风波再起","summary":"中信IHG联名卡突遭下架，疑因会员条款问题。万豪希尔顿或受牵连。推荐万豪精逸白金卡及中信新户返现卡。","link":"https://www.xinfinite.net/t/topic/18673","date":"2026-04-09","source":"X-Infinite 机酒卡","tags":["中信","酒店","IHG优悦会"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0},{"title":"浦发AE白升级：境外消费返现成亮点","summary":"浦发AE白权益更新，境外消费返现需领资格。另有超白金卡等可选。","link":"https://www.xinfinite.net/t/topic/18660","date":"2026-04-08","source":"X-Infinite 机酒卡","tags":["浦发"],"category":"card","price":null,"warnings":[],"safeArea":true,"priority":0},{"title":"五一不涨价！精选酒店套餐限时抢购","summary":"美团必住榜酒店套餐限时抢购！五一不涨价，速来预订！","link":"https://www.xinfinite.net/t/topic/18693","date":"2026-04-08","source":"X-Infinite 机酒卡","tags":["美团","酒店"],"category":"hotel","price":null,"warnings":[],"safeArea":false,"priority":0}]};</script>
 </body>
 </html>
