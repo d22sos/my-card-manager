@@ -1,65 +1,20 @@
 {
-  "updated": "2026-04-18 09:36",
+  "updated": "2026-04-18 09:45",
   "items": [
     {
-      "title": "🚫 什么值得买·信用卡 - 自动抓取被拦截",
-      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
-      "link": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
-      "date": "2026-04-18",
-      "source": "系统提示",
+      "title": "农行万事达卡Apple Pay首发：境外消费返现攻略再升级！",
+      "summary": "农行万事达卡Apple Pay首发，境外消费享多重返现！绑卡即享高达11美元返现，叠加笔笔1%返现及多重优惠，境外支付更便捷！ 原文标题：万事达Apple Pay首发！农行更夯了 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540626 idx=1 sn=b312300d15b6afd4b8e03c4a0b1d9823 冷月清谈： 文章介绍了农业银行万事达全球支付白金卡在Apple Pay上的首发，并详细解读了该卡的多重境外返现福利。首先，绑定Apple Pay即可享受前三笔境外支付高达11美",
+      "link": "https://www.xinfinite.net/t/topic/18874",
+      "date": "2026-04-17",
+      "source": "机酒卡资讯",
       "tags": [
-        "需手动访问"
+        "万事达环球赏"
       ],
-      "category": "card",
-      "priority": 3
-    },
-    {
-      "title": "🚫 什么值得买·银行 - 自动抓取被拦截",
-      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
-      "link": "https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/",
-      "date": "2026-04-18",
-      "source": "系统提示",
-      "tags": [
-        "需手动访问"
-      ],
-      "category": "card",
-      "priority": 3
-    },
-    {
-      "title": "🚫 什么值得买·酒店 - 自动抓取被拦截",
-      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
-      "link": "https://www.smzdm.com/tag/%E9%85%92%E5%BA%97/",
-      "date": "2026-04-18",
-      "source": "系统提示",
-      "tags": [
-        "需手动访问"
-      ],
-      "category": "card",
-      "priority": 3
-    },
-    {
-      "title": "🚫 飞客茶馆·信用卡 - 自动抓取被拦截",
-      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/creditcard.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7fed7deb9160>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))）。请在[资产]页面手动点击直达网址查阅。",
-      "link": "https://www.feeyo.com/creditcard.xml",
-      "date": "2026-04-18",
-      "source": "系统提示",
-      "tags": [
-        "需手动访问"
-      ],
-      "category": "card",
-      "priority": 3
-    },
-    {
-      "title": "🚫 飞客茶馆·酒店 - 自动抓取被拦截",
-      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/hotel.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7fed7debb260>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))）。请在[资产]页面手动点击直达网址查阅。",
-      "link": "https://www.feeyo.com/hotel.xml",
-      "date": "2026-04-18",
-      "source": "系统提示",
-      "tags": [
-        "需手动访问"
-      ],
-      "category": "card",
-      "priority": 3
+      "category": "daily",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 2
     },
     {
       "title": "华夏南航联名卡重磅来袭：权益、里程、联名卡全方位解读",
@@ -93,7 +48,7 @@
     },
     {
       "title": "万事达卡现已支持Apple Pay，境外消费更便捷！",
-      "summary": "万事达卡也支持Apple Pay啦！境外消费更方便安全，还能薅羊毛！农行、中行、中信、浦发先行支持，速速绑定！ 原文标题：上线了！万事达Apple Pay，羊腿速撸 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540621 idx=1 sn=59f7f5e1140e458c5329e979bd99f43d 冷月清谈： 境内发行的万事达卡现在也支持Apple Pay啦！首批支持的银行包括农业银行、中国银行、中信银行和浦发银行。绑定过程简单快捷，只需在银行APP中操作即可。虽然目前仅限境外消费使用",
+      "summary": "境内万事达卡上线Apple Pay啦！境外消费更方便、安全，还有银行绑卡福利等你拿！ 原文标题：上线了！万事达Apple Pay，羊腿速撸 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540621 idx=1 sn=59f7f5e1140e458c5329e979bd99f43d 冷月清谈： 境内发行的万事达卡终于上线Apple Pay！目前农业银行、中国银行、中信银行和浦发银行率先支持。绑定方法简单，通过银行App即可操作。虽然目前仅限境外消费使用，但各家银行都推出了相应的绑卡活动，例如首绑",
       "link": "https://www.xinfinite.net/t/topic/18872",
       "date": "2026-04-16",
       "source": "机酒卡资讯",
@@ -209,7 +164,7 @@
     },
     {
       "title": "香港众安银行ZA Bank：数字银行开户薅羊毛全攻略",
-      "summary": "香港ZA Bank数字银行开户薅羊毛攻略！亮点：开户便捷、福利多、返现高。教你玩转ZA Card，避开消费陷阱，更有最新开户福利等你来拿！ 原文标题：必申的小神卡，还有这张！ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540566 idx=1 sn=b38143e95edc6d90733340dab5d3edf1 冷月清谈： 本文介绍了香港众安银行（ZA Bank），一家领先的数字银行，具有开户体验好、开户福利丰厚、消费回馈高等优点。文章详细讲解了ZA Bank的亮点、基础玩法，包括ZA C",
+      "summary": "香港众安银行(ZA Bank)攻略：线上开户超便捷，福利多多羊毛满满！教你玩转ZA Card，消费返现高达200%，更有投资礼包等你拿！ 原文标题：必申的小神卡，还有这张！ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540566 idx=1 sn=b38143e95edc6d90733340dab5d3edf1 冷月清谈： 本文详细介绍了香港众安银行(ZA Bank)的开户体验、福利和使用技巧。ZA Bank作为香港领先的数字银行，具有开户便捷、福利丰富、消费回馈高等优点。文章从开户流程、福",
       "link": "https://www.xinfinite.net/t/topic/18848",
       "date": "2026-04-15",
       "source": "机酒卡资讯",
