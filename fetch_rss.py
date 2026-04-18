@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-隐私支付管家 - RSS抓取器 V4.2 (防屏蔽加强版)
-修复：增加浏览器级别 UA 伪装，添加异常日志
+隐私支付管家 - RSS抓取器 V4.3 (反爬虫感知与直达版)
+特色：被墙的网站将直接生成置顶提示卡片，提供一键直达入口
 """
 
 import json, re, sys, os
@@ -28,7 +28,7 @@ FILTER_KEYWORDS = [
     "锦江","如家","IHG","优悦","雅高","心悦界","万豪","希尔顿",
     "云闪付","飞猪","汇丰","Pulse","中信国际","GBA","大湾区","港卡",
     "外卡","境外消费","境外返现","HK版","ShopBack","万事达环球赏","Visa",
-    "活动", "羊毛", "神卡", "免年费" # 稍微放宽了过滤条件
+    "活动", "羊毛", "神卡", "免年费"
 ]
 
 BANK_TAGS = {
@@ -53,7 +53,6 @@ CHEAP_HOTEL_THRESHOLD = 150
 RISKY_LOCATION_KEYWORDS = ["城中村", "郊区", "偏远", "工业区", "远郊"]
 SAFE_AREA_KEYWORDS = ["福田", "南山", "深圳湾", "科技园", "香港", "西九龙", "广州南", "天河"]
 
-# 伪装成真实的桌面端浏览器
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Accept": "application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8",
@@ -98,10 +97,12 @@ def main():
             resp.encoding = resp.apparent_encoding
             
             if resp.status_code != 200:
-                print(f"[警告] {feed['name']} 返回状态码 {resp.status_code}，可能被反爬屏蔽")
-                continue
+                raise Exception(f"HTTP {resp.status_code} 被反爬屏蔽")
                 
             d = feedparser.parse(resp.text)
+            if not d.entries:
+                raise Exception("未解析到条目内容")
+
             raw_entries_count = len(d.entries)
             valid_entries = 0
             
@@ -130,13 +131,28 @@ def main():
                     "safeArea": any(kw in text for kw in SAFE_AREA_KEYWORDS),
                     "priority": detect_priority(text),
                 })
-            print(f"[成功] {feed['name']}: 抓取到 {raw_entries_count} 条，匹配关键字保留 {valid_entries} 条")
+            print(f"[成功] {feed['name']}: 抓取到 {raw_entries_count} 条，保留 {valid_entries} 条")
+            
         except Exception as e:
-            print(f"[错误] {feed['name']} 访问异常: {e}", file=sys.stderr)
+            print(f"[失败拦截] {feed['name']} 访问异常: {e}")
+            # 生成一条拦截提示卡片，优先级设为最高（3），保证出现在网页最上面
+            all_items.append({
+                "title": f"🚫 {feed['name']} - 自动抓取被拦截",
+                "summary": f"错误: {e}。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+                "link": feed["url"].replace("/feed/", "/").replace("/rss/", "/"), # 尽量转换为普通网页地址
+                "date": datetime.now().strftime("%Y-%m-%d"),
+                "source": "系统提示",
+                "tags": ["反爬拦截", "需手动访问"],
+                "category": "card", 
+                "price": None,
+                "warnings": ["自动更新失败"],
+                "safeArea": False,
+                "priority": 3, 
+            })
 
     seen = set()
     unique = []
-    for item in sorted(all_items, key=lambda x: x["date"], reverse=True):
+    for item in sorted(all_items, key=lambda x: (x["priority"], x["date"]), reverse=True):
         key = item["title"][:40]
         if key not in seen:
             seen.add(key)
@@ -147,7 +163,6 @@ def main():
     with open("rss_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    # 兼容你的 HTML 文件名，请确保你使用的 HTML 文件名是下面的其中一个
     target_html = None
     for filename in ["card-tracker.html", "index.html"]:
         if os.path.exists(filename):
@@ -165,9 +180,7 @@ def main():
         with open(target_html, "w", encoding="utf-8") as f: f.write(html)
         print(f"✅ 成功将数据注入前端文件：{target_html}")
     else:
-        print("⚠️ 未找到 index.html 或 card-tracker.html，已生成 rss_data.json 数据文件。")
-
-    print(f"🎉 任务完成：总共筛选出 {len(unique)} 条匹配信息。")
+        print("⚠️ 未找到 HTML 文件，仅生成数据文件。")
 
 if __name__ == "__main__":
     main()
