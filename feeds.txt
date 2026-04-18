@@ -1,7 +1,2 @@
 机酒卡资讯,https://www.xinfinite.net/c/airlinehotelcard/6.rss
 非常旅客,https://www.verylvke.com/feed/
-什么值得买·信用卡,https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/feed/
-什么值得买·银行,https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/feed/
-什么值得买·酒店,https://www.smzdm.com/tag/%E9%85%92%E5%BA%97/feed/
-飞客茶馆·信用卡,https://www.feeyo.com/rss/creditcard.xml
-飞客茶馆·酒店,https://www.feeyo.com/rss/hotel.xml
