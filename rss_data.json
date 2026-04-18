@@ -1,6 +1,96 @@
 {
-  "updated": "2026-04-18 07:07",
+  "updated": "2026-04-18 07:55",
   "items": [
+    {
+      "title": "🚫 什么值得买·信用卡 - 自动抓取被拦截",
+      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "link": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
+      "date": "2026-04-18",
+      "source": "系统提示",
+      "tags": [
+        "反爬拦截",
+        "需手动访问"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [
+        "自动更新失败"
+      ],
+      "safeArea": false,
+      "priority": 3
+    },
+    {
+      "title": "🚫 什么值得买·银行 - 自动抓取被拦截",
+      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "link": "https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/",
+      "date": "2026-04-18",
+      "source": "系统提示",
+      "tags": [
+        "反爬拦截",
+        "需手动访问"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [
+        "自动更新失败"
+      ],
+      "safeArea": false,
+      "priority": 3
+    },
+    {
+      "title": "🚫 什么值得买·酒店 - 自动抓取被拦截",
+      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "link": "https://www.smzdm.com/tag/%E9%85%92%E5%BA%97/",
+      "date": "2026-04-18",
+      "source": "系统提示",
+      "tags": [
+        "反爬拦截",
+        "需手动访问"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [
+        "自动更新失败"
+      ],
+      "safeArea": false,
+      "priority": 3
+    },
+    {
+      "title": "🚫 飞客茶馆·信用卡 - 自动抓取被拦截",
+      "summary": "错误: HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/creditcard.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7f096cea59a0>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "link": "https://www.feeyo.com/creditcard.xml",
+      "date": "2026-04-18",
+      "source": "系统提示",
+      "tags": [
+        "反爬拦截",
+        "需手动访问"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [
+        "自动更新失败"
+      ],
+      "safeArea": false,
+      "priority": 3
+    },
+    {
+      "title": "🚫 飞客茶馆·酒店 - 自动抓取被拦截",
+      "summary": "错误: HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/hotel.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7f096c627650>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "link": "https://www.feeyo.com/hotel.xml",
+      "date": "2026-04-18",
+      "source": "系统提示",
+      "tags": [
+        "反爬拦截",
+        "需手动访问"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [
+        "自动更新失败"
+      ],
+      "safeArea": false,
+      "priority": 3
+    },
     {
       "title": "华夏南航联名卡重磅来袭：权益、里程、联名卡全方位解读",
       "summary": "华夏南航联名卡正式上线，里程累积加速！多银行南航联名卡对比，助你玩转常旅客计划。 原文标题：常旅客 | 华夏南航联名卡正式上线 华夏联名卡盘点 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495418 idx=1 sn=9584ac16c22ff0b6bf454c65d7941d0a 冷月清谈： 华夏银行重磅推出南航联名信用卡，包含金卡、世界卡、超白金卡三档，提供新户里程赠送、积分兑换里程、境外返现、高端特权等多重权益。其中，积分兑换里程比例最高可达8:1。同时，南航也推出了动态里程票机制，为",
@@ -24,6 +114,37 @@
         "招行",
         "浦发",
         "万事达环球赏"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 2
+    },
+    {
+      "title": "中行境外消费返现活动：小额消费者的福音",
+      "summary": "中行境外线下消费笔笔返活动回归！最高3%返现，叠加留学卡可达4%，小额高频消费者的福音！ 原文标题：惠 | 买的不多还挑剔，这个返现适合我 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368586 idx=1 sn=0667ad2494d6703eb7bd903b0f4e7ca0 冷月清谈： 本文介绍了中国银行针对境外及港澳台线下消费推出的“环球精彩”笔笔返现活动，该活动提供Visa、万事达和银联三种渠道的返现，比例高达3%，非常适合境外消费金额不大但频率较高的用户。同时，文章还介绍了中行",
+      "link": "https://www.xinfinite.net/t/topic/18829",
+      "date": "2026-04-14",
+      "source": "机酒卡资讯",
+      "tags": [
+        "万事达环球赏",
+        "Visa Offers"
+      ],
+      "category": "daily",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 2
+    },
+    {
+      "title": "国航终白新航线：里程累积神票？叠加美卡高效回血攻略",
+      "summary": "国航终白新航线里程累积高，但需注意新加坡停留和海关风险。善用美卡Amex、汇丰、Chase可实现高效回血。 原文标题：常旅客 | 国航终白新航线来了 要飞的话叠加这些可以回血 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495379 idx=1 sn=1d3999fb261b76d2ae94203e453ba208 冷月清谈： 本文介绍了国航一条新的终白航线，该航线以较高的里程累积率（1:5）吸引眼球，约20万人民币即可达到终白标准(100万定级里程)。文章分析了该航线的优缺点，包括需要在新加",
+      "link": "https://www.xinfinite.net/t/topic/18807",
+      "date": "2026-04-14",
+      "source": "机酒卡资讯",
+      "tags": [
+        "汇丰银行"
       ],
       "category": "card",
       "price": null,
@@ -129,22 +250,6 @@
       "priority": 0
     },
     {
-      "title": "中行境外消费返现活动：小额消费者的福音",
-      "summary": "中行境外线下消费笔笔返活动回归！最高3%返现，叠加留学卡可达4%，小额高频消费者的福音！ 原文标题：惠 | 买的不多还挑剔，这个返现适合我 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368586 idx=1 sn=0667ad2494d6703eb7bd903b0f4e7ca0 冷月清谈： 本文介绍了中国银行针对境外及港澳台线下消费推出的“环球精彩”笔笔返现活动，该活动提供Visa、万事达和银联三种渠道的返现，比例高达3%，非常适合境外消费金额不大但频率较高的用户。同时，文章还介绍了中行",
-      "link": "https://www.xinfinite.net/t/topic/18829",
-      "date": "2026-04-14",
-      "source": "机酒卡资讯",
-      "tags": [
-        "万事达环球赏",
-        "Visa Offers"
-      ],
-      "category": "daily",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 2
-    },
-    {
       "title": "国航商旅金卡挑战重启：快速升金，尊享接送机与升舱券",
       "summary": "国航商旅金卡挑战重磅来袭！快速升金，解锁接送机与升舱券，商旅人士不容错过！ 原文标题：常旅客 | 国航快速升金 商旅客户金卡挑战又来了 权益新增接送机升舱券 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495388 idx=1 sn=1700585eb6f7297c99600aa23d75ea87 冷月清谈： 国航再次推出商旅客户专属的金卡挑战活动，为经常乘坐国航航班的旅客提供了快速升级至金卡的机会。本次活动报名截止至2026年6月30日，成功报名后90天内，只需达到12000定级里程即可升级",
       "link": "https://www.xinfinite.net/t/topic/18833",
@@ -200,21 +305,6 @@
       "warnings": [],
       "safeArea": false,
       "priority": 0
-    },
-    {
-      "title": "国航终白新航线：里程累积神票？叠加美卡高效回血攻略",
-      "summary": "国航终白新航线里程累积高，但需注意新加坡停留和海关风险。善用美卡Amex、汇丰、Chase可实现高效回血。 原文标题：常旅客 | 国航终白新航线来了 要飞的话叠加这些可以回血 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495379 idx=1 sn=1d3999fb261b76d2ae94203e453ba208 冷月清谈： 本文介绍了国航一条新的终白航线，该航线以较高的里程累积率（1:5）吸引眼球，约20万人民币即可达到终白标准(100万定级里程)。文章分析了该航线的优缺点，包括需要在新加",
-      "link": "https://www.xinfinite.net/t/topic/18807",
-      "date": "2026-04-14",
-      "source": "机酒卡资讯",
-      "tags": [
-        "汇丰银行"
-      ],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 2
     },
     {
       "title": "五一出行省钱攻略：智行火车票88元无门槛券+万豪酒店不加价通兑/飞猪日历房闪促",
