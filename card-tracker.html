@@ -14,221 +14,100 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;ba
 .topbar{padding:14px 16px 6px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .topbar h1{font-size:18px;font-weight:600;letter-spacing:-.3px}
 .upd-badge{font-size:10px;background:var(--bg3);padding:3px 8px;border-radius:20px;color:var(--text3)}
-.chips{display:flex;gap:6px;padding:6px 16px 4px;overflow-x:auto;flex-shrink:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{padding:5px 12px;border-radius:20px;font-size:13px;white-space:nowrap;background:var(--bg3);color:var(--text2);border:1px solid var(--border);cursor:pointer}
-.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.chip.hkc.active{background:var(--hk);border-color:var(--hk)}
 .content{flex:1;overflow-y:auto;padding:6px 12px 72px;-webkit-overflow-scrolling:touch}
-.a-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:9px}
-.a-card.hkp{border-left:4px solid var(--hk);background:linear-gradient(100deg,rgba(255,71,87,.05) 0%,transparent 50%)}
-.a-card.match{border-left:3px solid var(--green)}
-.a-card.hotel-card{border-left:3px solid var(--teal)}
-.a-card.warn{border-left:3px solid var(--amber)}
-.a-title{font-size:14px;font-weight:500;line-height:1.5;margin-bottom:5px;color:var(--text)}
-.a-sum{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:7px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
-.a-meta{display:flex;align-items:center;justify-content:space-between}
-.a-src{font-size:11px;color:var(--text3)}
-.a-link{font-size:12px;color:var(--accent2);text-decoration:none;padding:3px 10px;border:1px solid rgba(165,148,249,.4);border-radius:6px}
-.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
-.tag{font-size:11px;padding:2px 8px;border-radius:5px;background:var(--bg4);color:var(--text2)}
-.tag.hkt{background:rgba(255,71,87,.15);color:var(--hk);font-weight:600}
-.tag.mt{background:rgba(46,201,122,.15);color:var(--green)}
-.tag.ht{background:rgba(41,198,183,.12);color:var(--teal)}
-.tag.pt{background:rgba(74,158,255,.12);color:var(--blue);font-weight:500}
-.tag.wt{background:rgba(245,166,35,.15);color:var(--amber)}
-.warn-box{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.25);border-radius:8px;padding:7px 10px;font-size:12px;color:var(--amber);margin-bottom:7px;line-height:1.5}
-.sec-head{font-size:12px;color:var(--text3);padding:12px 0 5px;letter-spacing:.04em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
-.ac{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:11px 14px;margin-bottom:7px;display:flex;align-items:center;justify-content:space-between}
-.ac.hka{border-left:3px solid var(--hk)}
-.ac.hoa{border-left:3px solid var(--teal)}
-.ac.linka{border-left:3px solid var(--blue)}
-.ac .n{font-size:14px;font-weight:500}
-.ac .b{font-size:12px;color:var(--text3);margin-top:2px;word-break:break-all}
-.db{background:transparent;border:none;color:var(--text3);font-size:18px;padding:2px 8px;cursor:pointer;line-height:1}
-.db:active{color:var(--red)}
-.add-area{background:var(--bg2);border:1px dashed rgba(255,255,255,.12);border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;margin-bottom:12px}
-.add-area input,.add-area select{flex:1;min-width:100px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-size:13px}
-.add-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;}
-.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
-.source-btn{background:var(--bg3); color:var(--text); border:1px solid var(--border); border-radius:8px; padding:12px 10px; font-size:13px; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px;}
 
-.sop-box{background:linear-gradient(145deg, var(--bg2), var(--bg3));border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px}
-.sop-box h3{font-size:14px;font-weight:600;margin-bottom:10px;color:var(--hk);display:flex;align-items:center;gap:6px}
-.sop-step{margin-bottom:12px;position:relative;padding-left:20px}
-.sop-step::before{content:"";position:absolute;left:4px;top:6px;width:6px;height:6px;background:var(--accent);border-radius:50%}
-.sop-step:last-child{margin-bottom:0}
-.sop-ti{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
-.sop-td{font-size:12px;color:var(--text3);line-height:1.5}
-.sop-highlight{color:var(--green);font-weight:500}
+/* 官方导航格子样式 */
+.bank-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px;}
+.bank-btn {background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 14px 12px; text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; transition: background 0.2s;}
+.bank-btn:active {background: var(--bg3);}
+.bank-btn.hk {border-left: 3px solid var(--hk); background: linear-gradient(120deg, rgba(255,71,87,.08) 0%, transparent 60%);}
+.bank-btn.mainland {border-left: 3px solid var(--blue);}
+.b-name {font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; display: flex; align-items: center; gap: 4px;}
+.b-desc {font-size: 11px; color: var(--text3); line-height: 1.4;}
+
+.sec-head{font-size:13px;color:var(--text3);padding:18px 0 10px;letter-spacing:.04em;font-weight:600;display:flex;align-items:center;gap:6px;}
 
 .bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--bg2);border-top:1px solid var(--border);display:flex;padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:100}
 .ni{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10px;color:var(--text3);cursor:pointer;padding:3px 0}
 .ni.active{color:var(--accent2)}
 .nicon{font-size:20px;line-height:1.2}
-.empty{text-align:center;padding:60px 20px;color:var(--text3);font-size:14px;line-height:2}
 </style>
 </head>
 <body>
-<div class="topbar"><h1>隐私支付管家</h1><span class="upd-badge" id="upd">加载中…</span></div>
-<div class="chips" id="chips"></div>
-<div class="content" id="content"></div>
+<div class="topbar"><h1>隐私支付管家</h1><span class="upd-badge" id="upd">纯净官网直达版</span></div>
+
+<div class="content" id="content">
+  <div class="sec-head">🔥 境外及港卡专区 (高阶返现/免手续费)</div>
+  <div class="bank-grid">
+    <a href="https://www.hsbc.com.hk/zh-cn/credit-cards/offers/" target="_blank" class="bank-btn hk">
+      <div class="b-name">🇭🇰 香港汇丰</div>
+      <div class="b-desc">RewardCash 奖赏钱及最红优惠</div>
+    </a>
+    <a href="https://www.cncbinternational.com/personal/credit-cards/promotions/sc/index.jsp" target="_blank" class="bank-btn hk">
+      <div class="b-name">🇭🇰 中信国际(CNCBI)</div>
+      <div class="b-desc">GBA大湾区 / Motion卡迎新及返现</div>
+    </a>
+    <a href="https://www.boc.cn/bcservice/bi3/" target="_blank" class="bank-btn hk">
+      <div class="b-name">🌐 中国银行</div>
+      <div class="b-desc">卓隽卡 / 境外消费笔笔返现</div>
+    </a>
+    <a href="https://www.hsbc.com.cn/" target="_blank" class="bank-btn hk">
+      <div class="b-name">🇨🇳 汇丰中国</div>
+      <div class="b-desc">Pulse卡 / 高端酒店餐饮及里程</div>
+    </a>
+  </div>
+
+  <div class="sec-head">💳 境内主力银行活动库 (日历房/日常立减)</div>
+  <div class="bank-grid">
+    <a href="https://ccc.spdb.com.cn/news/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">浦发银行</div>
+      <div class="b-desc">全国优惠 / 锦江支付 / 日常立减</div>
+    </a>
+    <a href="https://www.abchina.com/cn/CreditCard/Special0ffers/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">农业银行</div>
+      <div class="b-desc">美团首绑减 / 分期满减等大毛</div>
+    </a>
+    <a href="https://www.ccb.com/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">建设银行</div>
+      <div class="b-desc">龙卡星期六 / 综合满减优惠</div>
+    </a>
+    <a href="https://www.icbc.com.cn/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">工商银行</div>
+      <div class="b-desc">爱购周末 / 微信支付宝立减金</div>
+    </a>
+    <a href="https://www.bankcomm.com/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">交通银行</div>
+      <div class="b-desc">最红星期五 / 买单吧专区</div>
+    </a>
+    <a href="https://www.cgbchina.com.cn/" target="_blank" class="bank-btn mainland">
+      <div class="b-name">广发银行</div>
+      <div class="b-desc">超级广发日 / 废钻里程兑换</div>
+    </a>
+  </div>
+
+  <div class="sec-head">🗂️ 备用卡池查阅</div>
+  <div class="bank-grid">
+    <a href="https://www.citicbank.com/" target="_blank" class="bank-btn">
+      <div class="b-name">中信银行</div><div class="b-desc">9积分兑换 / 精彩365</div>
+    </a>
+    <a href="https://www.psbc.com/" target="_blank" class="bank-btn">
+      <div class="b-name">邮储银行</div><div class="b-desc">日常消费打折及立减</div>
+    </a>
+    <a href="https://www.cebbank.com/" target="_blank" class="bank-btn">
+      <div class="b-name">光大银行</div><div class="b-desc">光大十元惠及旅游出行</div>
+    </a>
+    <a href="https://www.cmbc.com.cn/" target="_blank" class="bank-btn">
+      <div class="b-name">民生银行</div><div class="b-desc">全民616及餐饮特惠</div>
+    </a>
+  </div>
+</div>
+
 <nav class="bottom-nav">
-  <div class="ni active" id="nav-recommend" onclick="goTab('recommend')"><span class="nicon">⭐</span>推荐</div>
-  <div class="ni" id="nav-hotel" onclick="goTab('hotel')"><span class="nicon">🏨</span>酒店</div>
-  <div class="ni" id="nav-daily" onclick="goTab('daily')"><span class="nicon">🛒</span>日常</div>
-  <div class="ni" id="nav-mycards" onclick="goTab('mycards')"><span class="nicon">💳</span>资产</div>
+  <div class="ni active"><span class="nicon">🏛️</span>官方优惠直达</div>
 </nav>
+
 <script>
-const DEF_CARDS=[
-  {id:"hk1",name:"汇丰 Pulse (HK)",bank:"汇丰Pulse",type:"hk"},
-  {id:"hk2",name:"中信国际 GBA",bank:"中信国际",type:"hk"},
-  {id:"hk3",name:"HK版云闪付",bank:"云闪付",type:"hk"},
-  {id:"h1",name:"雅高 ALL 白金",bank:"雅高ALL",type:"hotel"},
-  {id:"h2",name:"IHG 优悦会 钻石",bank:"IHG优悦会",type:"hotel"},
-  {id:"c1",name:"招行 白金",bank:"招行",type:"credit"}
-];
-const DEF_LINKS=[
-  {id:"l1",name:"值得买·信用卡",url:"https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/"},
-  {id:"l2",name:"飞客·机酒卡",url:"https://www.xinfinite.net/c/airlinehotelcard/"}
-];
-
-let S=JSON.parse(localStorage.getItem('cmv5')||'null');
-if(!S||!S.cards){S={cards:DEF_CARDS, links:DEF_LINKS};save();}
-// 兼容老用户数据结构
-if(!S.links){S.links=DEF_LINKS;save();}
-
-function save(){localStorage.setItem('cmv5',JSON.stringify(S));}
-let TAB='recommend',FIL='all';
-
-const FILTERS={
-  recommend:[{id:'all',label:'全部'},{id:'hk',label:'🔥 港卡/高级返利',cls:'hkc'},{id:'match',label:'匹配我的卡'}],
-  hotel:[{id:'all',label:'全部酒店'},{id:'safe',label:'✅安全区域'},{id:'cheap',label:'💰低价过渡⚠️'},{id:'accor',label:'雅高ALL'},{id:'ihg',label:'IHG优悦会'}],
-  daily:[{id:'all',label:'全部'},{id:'hk',label:'🔥 境外/港卡',cls:'hkc'},{id:'cloud',label:'云闪付'},{id:'taobao',label:'飞猪/淘宝'}],
-  mycards:[]
-};
-
-function goTab(t){TAB=t;FIL='all';document.querySelectorAll('.ni').forEach(e=>e.classList.remove('active'));document.getElementById('nav-'+t).classList.add('active');rChips();render();}
-function rChips(){const f=FILTERS[TAB]||[];document.getElementById('chips').innerHTML=f.map(x=>`<div class="chip${x.cls?' '+x.cls:''}${FIL===x.id?' active':''}" onclick="FIL='${x.id}';rChips();render()">${x.label}</div>`).join('');}
-function myTags(){return S.cards.map(c=>c.bank);}
-
-function fItems(items){
-  let p=items;
-  if(TAB==='hotel')p=items.filter(i=>i.category==='hotel' || i.priority===3); // 保留报错信息
-  if(TAB==='daily')p=items.filter(i=>i.category==='daily'||i.category==='card');
-  const mt=myTags();
-  if(FIL==='hk')p=p.filter(i=>i.priority>=2);
-  else if(FIL==='match')p=p.filter(i=>(i.tags||[]).some(t=>mt.includes(t)) || i.priority===3);
-  else if(FIL==='accor')p=p.filter(i=>(i.tags||[]).includes('雅高ALL'));
-  else if(FIL==='ihg')p=p.filter(i=>(i.tags||[]).includes('IHG优悦会'));
-  else if(FIL==='safe')p=p.filter(i=>i.safeArea===true);
-  else if(FIL==='cheap')p=p.filter(i=>i.price&&i.price<150);
-  else if(FIL==='cloud')p=p.filter(i=>(i.tags||[]).includes('云闪付'));
-  else if(FIL==='taobao')p=p.filter(i=>(i.tags||[]).includes('淘宝')||(i.tags||[]).includes('飞猪'));
-  
-  return p.sort((a,b)=>{const d=(b.priority||0)-(a.priority||0);return d||((b.date||'').localeCompare(a.date||''));});
-}
-
-function e(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-function rCard(item){
-  const mt=myTags(),isErr=item.priority===3,isHK=item.priority===2,isM=(item.tags||[]).some(t=>mt.includes(t)),isH=item.category==='hotel',hasW=(item.warnings||[]).length>0;
-  let cls='a-card';
-  if(isErr)cls+=' hkp'; // 错误信息也标红
-  else if(isHK)cls+=' hkp';
-  else if(hasW)cls+=' warn';
-  else if(isM)cls+=' match';
-  else if(isH)cls+=' hotel-card';
-  
-  const HT=['IHG优悦会','雅高ALL','万豪','希尔顿','锦江汇','如家'];
-  let tgs='';
-  if(isErr)tgs+=`<span class="tag hkt">⚠️ 状态异常</span>`;
-  else if(isHK)tgs+=`<span class="tag hkt">🔥 港卡/高阶返利</span>`;
-  
-  (item.tags||[]).forEach(t=>{if(!isErr||t!=='需手动访问')tgs+=`<span class="tag${mt.includes(t)?' mt':HT.includes(t)?' ht':''}">${e(t)}</span>`;});
-  if(item.price)tgs+=`<span class="tag pt">¥${item.price}/晚</span>`;
-  if(item.safeArea===false&&isH)tgs+=`<span class="tag wt">📍待核查</span>`;
-  
-  const wb=hasW?`<div class="warn-box">⚠️ ${(item.warnings||[]).map(e).join(' · ')}</div>`:'';
-  const src=(item.source||'').replace('全网监控·','全网:').replace('什么值得买·','SMZDM:');
-  
-  return `<div class="${cls}"><div class="a-title">${e(item.title)}</div>${tgs?`<div class="tags">${tgs}</div>`:''}${wb}<div class="a-sum">${e(item.summary)}</div><div class="a-meta"><span class="a-src">${e(src)} · ${(item.date||'').slice(5)}</span>${item.link?`<a class="a-link" href="${e(item.link)}" target="_blank" rel="noopener">查阅直达 →</a>`:''}</div></div>`;
-}
-
-function rMyCards(){
-  const hkC=S.cards.filter(c=>c.type==='hk'),hoC=S.cards.filter(c=>c.type==='hotel'),crC=S.cards.filter(c=>c.type==='credit');
-  const cardList=(cards,x)=>cards.map(c=>`<div class="ac ${x}"><div><div class="n">${e(c.name)}</div><div class="b">${e(c.bank)}</div></div><button class="db" onclick="delCard('${c.id}')">×</button></div>`).join('');
-  const linkList=S.links.map(l=>`<div class="ac linka"><a href="${e(l.url)}" target="_blank" style="text-decoration:none;color:inherit;flex:1"><div class="n">${e(l.name)}</div><div class="b">${e(l.url)}</div></a><button class="db" onclick="delLink('${l.id}')">×</button></div>`).join('');
-  
-  const linkBtns=S.links.map(l=>`<a href="${e(l.url)}" target="_blank" class="source-btn">🔗 ${e(l.name)}</a>`).join('');
-
-  return `
-<div class="sop-box">
-  <h3>🛡️ 酒店预订防吸血 SOP</h3>
-  <div class="sop-step">
-    <div class="sop-ti">外卡返利 (无Cookie风险)</div>
-    <div class="sop-td">用中信外卡绑定 <span class="sop-highlight">万事达/Visa Offers</span>，或查汇丰立减。</div>
-  </div>
-  <div class="sop-step">
-    <div class="sop-ti">ShopBack HK</div>
-    <div class="sop-td">挂节点走 <span class="sop-highlight">FPS(转数快)提现</span> 避开 PayPal。</div>
-  </div>
-</div>
-
-<div class="sec-head">🌐 自定义博客/监控源直达</div>
-<div class="source-grid">${linkBtns}</div>
-
-<div class="sec-head" style="margin-top:14px">管理书签源站 (添加好博主)</div>
-<div class="add-area">
-  <input id="iLinkName" placeholder="博主或网站名称" style="flex:1;min-width:100px;">
-  <input id="iLinkUrl" placeholder="https://..." style="flex:2;min-width:180px;">
-  <button class="add-btn" onclick="addLink()" style="width:100%">添加为直达书签</button>
-</div>
-${linkList}
-
-<div class="sec-head" style="margin-top:20px">💳 第一防线：港卡与境外</div>${cardList(hkC,'hka')}
-<div class="sec-head">🏨 第二防线：酒店会籍</div>${cardList(hoC,'hoa')}
-<div class="sec-head">💳 备用防线：内地卡</div>${cardList(crC,'')}
-<div class="sec-head" style="margin-top:14px">添加新资产标签</div>
-<div class="add-area">
-  <input id="iN" placeholder="资产名称">
-  <input id="iB" placeholder="监控匹配词">
-  <select id="iT"><option value="hk">港卡/境外</option><option value="hotel">酒店会籍</option><option value="credit">内地卡</option></select>
-  <button class="add-btn" onclick="addCard()">添加</button>
-</div>`;
-}
-
-function addCard(){const n=document.getElementById('iN')?.value.trim(),b=document.getElementById('iB')?.value.trim(),t=document.getElementById('iT')?.value||'credit';if(!n||!b){alert('信息不能为空');return;}S.cards.push({id:Date.now().toString(),name:n,bank:b,type:t});save();render();}
-function delCard(id){S.cards=S.cards.filter(c=>c.id!==id);save();render();}
-
-function addLink(){const n=document.getElementById('iLinkName')?.value.trim(),u=document.getElementById('iLinkUrl')?.value.trim();if(!n||!u){alert('名称和网址不能为空');return;}if(!u.startsWith('http')){alert('网址必须以 http 或 https 开头');return;}S.links.push({id:Date.now().toString(),name:n,url:u});save();render();}
-function delLink(id){S.links=S.links.filter(l=>l.id!==id);save();render();}
-
-function render(){
-  const el=document.getElementById('content');
-  if(!el)return;
-  if(TAB==='mycards'){el.innerHTML=rMyCards();return;}
-  const rss=window.RSS_DATA;
-  if(!rss||!rss.items){el.innerHTML='<div class="empty">📭 数据未加载</div>';return;}
-  document.getElementById('upd').textContent='更新 '+(rss.updated||'').slice(5);
-  const items=fItems(rss.items);
-  if(!items.length){el.innerHTML='<div class="empty">无匹配内容，请到 [资产] 页面手动点击源站查阅。</div>';return;}
-  
-  const errN=items.filter(i=>i.priority===3).length;
-  const hkN=items.filter(i=>i.priority===2).length;
-  let lbl = `共 ${items.length} 条`;
-  if(errN>0) lbl += ` <span style="color:var(--hk);font-weight:600">(${errN}条反爬拦截)</span>`;
-  else if(hkN>0) lbl += ` (置顶 <span style="color:var(--hk);font-weight:600">${hkN}</span> 条高阶返利)`;
-  
-  el.innerHTML=`<div class="sec-head">${lbl}</div>`+items.map(rCard).join('');
-}
-function boot(){
-  if(window.RSS_DATA)document.getElementById('upd').textContent='更新 '+(window.RSS_DATA.updated||'').slice(5);
-  rChips();render();
-  fetch('rss_data.json?t='+Date.now()).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.items){window.RSS_DATA=d;render();}}).catch(()=>{});
-}
-document.readyState==='loading'?document.addEventListener('DOMContentLoaded',boot):boot();
+// 这里因为彻底转为直达站，移除了原有的RSS加载和复杂匹配逻辑，追求极致的清爽和隐私安全。
 </script>
-<script id="rss-inject">window.RSS_DATA={"updated": "2026-04-18 09:45", "items": [{"title": "农行万事达卡Apple Pay首发：境外消费返现攻略再升级！", "summary": "农行万事达卡Apple Pay首发，境外消费享多重返现！绑卡即享高达11美元返现，叠加笔笔1%返现及多重优惠，境外支付更便捷！ 原文标题：万事达Apple Pay首发！农行更夯了 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540626 idx=1 sn=b312300d15b6afd4b8e03c4a0b1d9823 冷月清谈： 文章介绍了农业银行万事达全球支付白金卡在Apple Pay上的首发，并详细解读了该卡的多重境外返现福利。首先，绑定Apple Pay即可享受前三笔境外支付高达11美", "link": "https://www.xinfinite.net/t/topic/18874", "date": "2026-04-17", "source": "机酒卡资讯", "tags": ["万事达环球赏"], "category": "daily", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "华夏南航联名卡重磅来袭：权益、里程、联名卡全方位解读", "summary": "华夏南航联名卡正式上线，里程累积加速！多银行南航联名卡对比，助你玩转常旅客计划。 原文标题：常旅客 | 华夏南航联名卡正式上线 华夏联名卡盘点 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495418 idx=1 sn=9584ac16c22ff0b6bf454c65d7941d0a 冷月清谈： 华夏银行重磅推出南航联名信用卡，包含金卡、世界卡、超白金卡三档，提供新户里程赠送、积分兑换里程、境外返现、高端特权等多重权益。其中，积分兑换里程比例最高可达8:1。同时，南航也推出了动态里程票机制，为", "link": "https://www.xinfinite.net/t/topic/18870", "date": "2026-04-16", "source": "机酒卡资讯", "tags": [], "category": "daily", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "国内万事达卡现已支持绑定Apple Pay，附带最新优惠活动一览", "summary": "国内万事达卡终于支持Apple Pay啦！叠加银行活动，境外消费更便捷！ 原文标题：省钱| 国内万事达卡开放绑定apple pay，活动速览 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495411 idx=1 sn=78d416a570c90379ea8b996859e19add 冷月清谈： Apple Pay 现已支持绑定国内发行的万事达信用卡，结束了此前仅支持银联卡的历史。首批支持的银行包括但不限于中国银行、交通银行、招商银行、浦发银行、兴业银行等。万事达卡组织也推出了充值西瓜卡等优惠活", "link": "https://www.xinfinite.net/t/topic/18869", "date": "2026-04-16", "source": "机酒卡资讯", "tags": ["招行", "浦发", "万事达环球赏"], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "万事达卡现已支持Apple Pay，境外消费更便捷！", "summary": "境内万事达卡上线Apple Pay啦！境外消费更方便、安全，还有银行绑卡福利等你拿！ 原文标题：上线了！万事达Apple Pay，羊腿速撸 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540621 idx=1 sn=59f7f5e1140e458c5329e979bd99f43d 冷月清谈： 境内发行的万事达卡终于上线Apple Pay！目前农业银行、中国银行、中信银行和浦发银行率先支持。绑定方法简单，通过银行App即可操作。虽然目前仅限境外消费使用，但各家银行都推出了相应的绑卡活动，例如首绑", "link": "https://www.xinfinite.net/t/topic/18872", "date": "2026-04-16", "source": "机酒卡资讯", "tags": ["中信", "浦发", "万事达环球赏"], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "中行境外消费返现活动：小额消费者的福音", "summary": "中行境外线下消费笔笔返活动回归！最高3%返现，叠加留学卡可达4%，小额高频消费者的福音！ 原文标题：惠 | 买的不多还挑剔，这个返现适合我 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368586 idx=1 sn=0667ad2494d6703eb7bd903b0f4e7ca0 冷月清谈： 本文介绍了中国银行针对境外及港澳台线下消费推出的“环球精彩”笔笔返现活动，该活动提供Visa、万事达和银联三种渠道的返现，比例高达3%，非常适合境外消费金额不大但频率较高的用户。同时，文章还介绍了中行", "link": "https://www.xinfinite.net/t/topic/18829", "date": "2026-04-14", "source": "机酒卡资讯", "tags": ["万事达环球赏", "Visa Offers"], "category": "daily", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "国航终白新航线：里程累积神票？叠加美卡高效回血攻略", "summary": "国航终白新航线里程累积高，但需注意新加坡停留和海关风险。善用美卡Amex、汇丰、Chase可实现高效回血。 原文标题：常旅客 | 国航终白新航线来了 要飞的话叠加这些可以回血 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495379 idx=1 sn=1d3999fb261b76d2ae94203e453ba208 冷月清谈： 本文介绍了国航一条新的终白航线，该航线以较高的里程累积率（1:5）吸引眼球，约20万人民币即可达到终白标准(100万定级里程)。文章分析了该航线的优缺点，包括需要在新加", "link": "https://www.xinfinite.net/t/topic/18807", "date": "2026-04-14", "source": "机酒卡资讯", "tags": ["汇丰银行"], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 2}, {"title": "阿提哈德航空一飞升金活动", "summary": "阿提哈德刚刚推出了一个“一飞升金”活动，可以关注一下： 必须在活动页面上注册新会员或者登记活动；需乘坐阿提哈德执飞的EY代码航班，往返都必须在阿布扎比中转或起止。 你的现有等级必须低于挑战等级，也就是&#46;&#46;&#46; The post 阿提哈德航空一飞升金活动 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/17/etihad-fast-track-gold-silver/", "date": "2026-04-17", "source": "非常旅客", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "雅高双倍积分，IHG度假酒店住三付二", "summary": "雅高 前两天写了雅高All Signature的疑似房晚福利，刚刚得到了官方确认：订阅后每获得200点定级积分就可以同时获得1个等级房晚。一般来说大家都买最贵的Absolute计划，每个月可以获得5个&#46;&#46;&#46; The post 雅高双倍积分，IHG度假酒店住三付二 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/16/accor-double-points-ihg-3-for-2/", "date": "2026-04-16", "source": "非常旅客", "tags": ["IHG优悦会", "雅高ALL"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "悦榕集团榕行卡重磅升级：一张卡两种选择，高品质酒店周末节假日轻松住", "summary": "悦榕集团榕行卡升级，解决高品质酒店节假日住宿痛点。奢享版适合深度游，悦享版满足短途需求。另有888元踏青券包限时领。 原文标题：1张卡片，2种选择，这次说是神卡真不过分！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694624 idx=1 sn=bb4c72928a5dca11a727935f0810b1ed 冷月清谈： 文章介绍了悦榕集团榕行卡一周年之际的重磅升级，该卡旨在解决用户在周末和节假日入住高品质酒店时面临的价格痛点。榕行卡分为悦享版和奢享版，分别针对不同需求的旅行者。奢享版适", "link": "https://www.xinfinite.net/t/topic/18871", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "国泰航空周年庆大放送：轻松完成任务，狂揽高达4380亚万里程！", "summary": "国泰航空周年庆大放送！完成六项任务，轻松赚取高达4380里数。新用户更有高达7000里数迎新奖励！ 原文标题：ber，每个月都加赠？这次又送4000多！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694609 idx=1 sn=b906becef342bc3ae84ba10df7d1d6e7 冷月清谈： 国泰航空推出周年庆活动，用户在2026年5月31日前注册并完成六项简单任务，即可累积高达4380里数。任务主要围绕六大类别：航班、购物、旅游、餐饮、支付、身心健旅。文章详细介绍了各项任务", "link": "https://www.xinfinite.net/t/topic/18847", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "凯悦会员日重磅来袭：全年福利放送，房卡解锁多重惊喜！", "summary": "凯悦会员日开启！消费达标赚积分和房卡，房卡兑换丰富好礼，更有新老会员限时福利，速来参与！ 原文标题：住 | 可无缝衔接 Q1，凯悦会员日上新 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368595 idx=1 sn=83c5161085642e0508437f746cc95c4d 冷月清谈： 凯悦天地会员日活动从4月15日持续到年底，每周三通过凯悦微信小程序或APP预订酒店或购买券类产品，根据消费金额可获得奖励积分和“房卡”。消费满800元起即可获得积分，满1600元起可获得积分和房卡，", "link": "https://www.xinfinite.net/t/topic/18849", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "香港众安银行ZA Bank：数字银行开户薅羊毛全攻略", "summary": "香港众安银行(ZA Bank)攻略：线上开户超便捷，福利多多羊毛满满！教你玩转ZA Card，消费返现高达200%，更有投资礼包等你拿！ 原文标题：必申的小神卡，还有这张！ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540566 idx=1 sn=b38143e95edc6d90733340dab5d3edf1 冷月清谈： 本文详细介绍了香港众安银行(ZA Bank)的开户体验、福利和使用技巧。ZA Bank作为香港领先的数字银行，具有开户便捷、福利丰富、消费回馈高等优点。文章从开户流程、福", "link": "https://www.xinfinite.net/t/topic/18848", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "daily", "price": null, "warnings": [], "safeArea": true, "priority": 0}, {"title": "国航严查商旅账户：权益升级与封号风险并存", "summary": "国航疑似严查商旅账户，新增接送机和升舱券或成诱因。关注金卡挑战活动，谨慎购买商旅账户。 原文标题：常旅客 | 国航疑似大批量封禁不合格商旅账户 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495395 idx=1 sn=c8a199de4650b6238f7d356b0b402669 冷月清谈： 近期，国航疑似开始大批量封禁不合格的商旅账户，这可能与国航商旅权益越来越好有关，例如新增了接送机和升舱券。文章介绍了国航商旅账户的金卡挑战活动，通常面向大型企业员工开放，可以通过公司邮箱注册或联系公司", "link": "https://www.xinfinite.net/t/topic/18840", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "万豪白金会籍“平民化”？多渠道挑战分析与福利攻略", "summary": "万豪白金会籍获取难度降低，美团等渠道挑战价格创新低。叠加日历房红包，可低价入住万豪酒店，是时候上车了！ 原文标题：万豪赢麻了，白金被彻底玩坏？ 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247518526 idx=1 sn=ab2eb7ef9b8cfd2264e1e8024d98bb65 冷月清谈： 本文指出万豪白金会籍的获取门槛因多渠道合作而降低，如飞猪、美团等平台均提供白金挑战机会。美团渠道的挑战价格已降至历史新低，且通过任何渠道预订，只要有SNP即可激活挑战。文章还介绍了如何通过美团注册万豪", "link": "https://www.xinfinite.net/t/topic/18839", "date": "2026-04-15", "source": "机酒卡资讯", "tags": ["飞猪", "美团", "万豪"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "凯悦天地2026年「周三会员日」活动：亮点解读与参与攻略", "summary": "凯悦天地2026年周三会员日活动来袭！门槛降低，奖励加码，更有房卡等你拿！速来了解活动详情和参与攻略。 原文标题：常旅客 | 凯悦天地 2026 年「周三会员日」活动解读 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495393 idx=1 sn=b516bc9ad75b740958f53abb7e7b4f7d 冷月清谈： 本文详细解读了凯悦天地2026年周三会员日活动的规则、亮点与参与建议。活动时间为2026年4月15日至12月30日，每周三在凯悦微信小程序和iOS APP上进行。活动范围包", "link": "https://www.xinfinite.net/t/topic/18834", "date": "2026-04-15", "source": "机酒卡资讯", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "UeePay - 优易付投流专用卡 BIN，低费率高返现，支持 U 多链充值，支持白标代理商及 API 集成", "summary": "优易付是与国际知名卡组织及发卡行联合推出的多币种企业支付卡，全量覆盖 Visa / Mastercard / Discover® Global Network 线上线下消费全场景。一卡即可打通广告投放、平台店租、货品采购、仓储物流、在线航旅等多场景跨境支付需求，让企业在全球范围内低成本、高效率完成付款。 注册链接： Loading 飞机客服: Telegram: Contact @ukao 平台特性 支持实体卡和虚拟卡（超多独享卡BIN） 实时开卡，最多支持无限卡位 支持 AVS / 3DS / 校验 支持 Apple Pay 和 Google Pay 支持线下 POS 刷卡消费 支持全球 A", "link": "https://www.xinfinite.net/t/topic/18825", "date": "2026-04-15", "source": "机酒卡资讯", "tags": ["Visa Offers"], "category": "daily", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "国航商旅金卡挑战重启：快速升金，尊享接送机与升舱券", "summary": "国航商旅金卡挑战重磅来袭！快速升金，解锁接送机与升舱券，商旅人士不容错过！ 原文标题：常旅客 | 国航快速升金 商旅客户金卡挑战又来了 权益新增接送机升舱券 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495388 idx=1 sn=1700585eb6f7297c99600aa23d75ea87 冷月清谈： 国航再次推出商旅客户专属的金卡挑战活动，为经常乘坐国航航班的旅客提供了快速升级至金卡的机会。本次活动报名截止至2026年6月30日，成功报名后90天内，只需达到12000定级里程即可升级", "link": "https://www.xinfinite.net/t/topic/18833", "date": "2026-04-14", "source": "机酒卡资讯", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "凯悦天地微信会员日重磅回归：更低门槛，更高奖励，双平台同享！", "summary": "凯悦天地微信会员日升级回归！门槛更低，奖励更丰厚，覆盖更广，双平台消费累计，更有房卡商城超值兑换！ 原文标题：王牌会员日回归！门槛更低，奖励更好！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694592 idx=1 sn=d81f75f52439fca2c7353f8639aa27a0 冷月清谈： 凯悦天地微信会员日迎来全面升级，活动时间为4月15日至12月底的每周三。本次活动亮点包括： 1. **更低的消费门槛和更丰厚的奖励**：消费满800元即可获得500积分，满1600元可获得12", "link": "https://www.xinfinite.net/t/topic/18828", "date": "2026-04-14", "source": "机酒卡资讯", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "香格里拉酒店集团专场促销：无需挑战会籍，豪华阁礼遇轻松享", "summary": "美团香格里拉专场促销，无需挑战会籍，多款酒店套餐直接送豪华阁礼遇！覆盖全国50+酒店，有效期至6月30日，春季出行好选择。 原文标题：拿下钻石太累？豪华阁直接安排到位 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247518498 idx=1 sn=40c4c7297c1ca49ee03316e8b976d393 冷月清谈： 本文介绍了美团酒店香格里拉集团专场促销活动，重点推荐多款包含豪华阁礼遇的酒店套餐，无需累积高等级会员即可享受尊贵体验。套餐覆盖全国50多家酒店，从经典老牌到新晋奢华酒店均有涵盖", "link": "https://www.xinfinite.net/t/topic/18810", "date": "2026-04-14", "source": "机酒卡资讯", "tags": ["美团"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "星巴克星钻会员直升飞猪F4：快速开启万豪白金挑战", "summary": "飞猪与星巴克合作，星钻会员可匹配飞猪F4，方便开启万豪白挑。低成本获取白金会员，有效期至2028年。 原文标题：直升飞猪F4？这可能是最省事的办法 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694584 idx=1 sn=a13787e380856eda95ca064eb03cde10 冷月清谈： 飞猪与星巴克官宣合作，星巴克星钻会员现在可以直接匹配飞猪F4会员，这可能是目前最便捷地获得飞猪F4会员的方式。通过这种方式获得飞猪F4后，最重要的价值在于可以开启万豪白金挑战。建议注册飞猪账号", "link": "https://www.xinfinite.net/t/topic/18811", "date": "2026-04-14", "source": "机酒卡资讯", "tags": ["飞猪", "万豪"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "五一出行省钱攻略：智行火车票88元无门槛券+万豪酒店不加价通兑/飞猪日历房闪促", "summary": "五一出行想省钱？智行火车票新客立减88，万豪酒店不加价，更有飞猪万豪日历房等你来薅羊毛！ 原文标题：速度！火车票88元无门槛券！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694535 idx=1 sn=49735ac9971f693acebb2b44fc56bfe6 冷月清谈： 文章介绍了五一期间出行如何省钱的攻略。首先推荐智行火车票APP的新客户优惠活动，提供88元无门槛立减券，以及51元、30元的阶梯补贴。强调了智行在抢票方面的专业性以及客服服务的完善性。此外，文章还推荐了万豪酒店", "link": "https://www.xinfinite.net/t/topic/18806", "date": "2026-04-14", "source": "机酒卡资讯", "tags": ["飞猪", "万豪"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "蓝翔和芬航的会籍匹配活动", "summary": "今天说两个会籍匹配活动。 法航荷航 蓝翔（法航荷航）的会籍匹配活动已经进行了很长时间，最近逐渐放宽条件，给大家再介绍介绍。 支持航司： 具体对应标准可参考网页上的表格。美国和加拿大居民最高可匹配至金卡&#46;&#46;&#46; The post 蓝翔和芬航的会籍匹配活动 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/14/flying-blue-finnair-status-match/", "date": "2026-04-14", "source": "非常旅客", "tags": [], "category": "card", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "广发银行信用卡大调整：免年费返现卡“凉凉”，里程兑换比例略有提升", "summary": "广发银行信用卡大调整：免年费返现卡遭重创，仅剩美团可用，里程兑换比例小幅提升。 原文标题：卡 | 免年费的都凉凉，无脑返现不再有 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368578 idx=1 sn=d8c2d7df04c167e9ad9532d4c0775358 冷月清谈： 广发银行于2024年4月对其信用卡政策进行了重大调整。免年费返现卡遭受重创，不仅取消了指定商户的10%返现，仅保留微信、支付宝、云闪付和美团的1%返现，而且返现券的使用范围也大幅缩减至仅限美团。犀利卡则将固定比", "link": "https://www.xinfinite.net/t/topic/18800", "date": "2026-04-13", "source": "机酒卡资讯", "tags": ["广发", "云闪付", "美团"], "category": "daily", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "All Signature 76折卖分，送等级房晚？", "summary": "雅高All Signature的促销活动又来了： All Signature我们介绍过许多遍，简单来说它是雅高的一个付费订阅计划，可间接购买雅高的定级积分和兑换积分。以最昂贵的Absolute计划为例&#46;&#46;&#46; The post All Signature 76折卖分，送等级房晚？ first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/13/all-signature-sale-and-status-nights/", "date": "2026-04-13", "source": "非常旅客", "tags": ["雅高ALL"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "Currensea希尔顿卡改进，送定级房晚", "summary": "半年之前希尔顿重回英国市场、和Currensea合作推出了一张联名卡。个人对该卡片的评价是破烂一张，果然近期要升级了，看一看瞧一瞧吧。 首先是开卡奖励的变化： 5月29日之前有促销，高卡的开卡奖励翻倍&#46;&#46;&#46; The post Currensea希尔顿卡改进，送定级房晚 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/12/currensea-hilton-improvement/", "date": "2026-04-12", "source": "非常旅客", "tags": ["希尔顿"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "运通砍休息室，国泰买机票送里程", "summary": "首先一则提醒：IHG的三倍积分闪促今天是预订的最后一天，抓紧时间哦！配合各种活动回报丰厚美滋滋，但注意中国地区的酒店不参与活动。 国泰航空 国泰航空最近有两个还不错的新活动，可以关注一下。 活动一： &#46;&#46;&#46; The post 运通砍休息室，国泰买机票送里程 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/11/amex-lounge-access-cut-cathay-pacfiic-offers/", "date": "2026-04-11", "source": "非常旅客", "tags": ["IHG优悦会"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "【酒店体验】首尔朝昕威斯汀酒店", "summary": "第一次来韩国，在首尔体验三天！因为完全人生地不熟，也不打算折腾刷房了，找一家综合条件不错的酒店蹲着吧。于是敲定了这家威斯汀，三天五千块钱的公司协议价还蛮划算——其实类似价位的还有君悦，风评也很不错，不&#46;&#46;&#46; The post 【酒店体验】首尔朝昕威斯汀酒店 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/10/stay-westin-josun-seoul/", "date": "2026-04-10", "source": "非常旅客", "tags": [], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}, {"title": "雅高新活动，送8个房晚或者2,500分", "summary": "雅高的新活动来了，有送房晚和送积分两个版本，按需取用哦！ 两个版本的基本规则相同： 区别在于针对不同等级会员： 注意必须订不可取消的预付价才能激活奖励，可以在活动页面上搜索酒店，有着粉红色Specia&#46;&#46;&#46; The post 雅高新活动，送8个房晚或者2,500分 first appeared on 飞常旅客 VERYLVKE .", "link": "https://www.verylvke.com/2026/04/09/accor-double-advantage-offer/", "date": "2026-04-09", "source": "非常旅客", "tags": ["雅高ALL"], "category": "hotel", "price": null, "warnings": [], "safeArea": false, "priority": 0}]};</script>
 </body>
 </html>
