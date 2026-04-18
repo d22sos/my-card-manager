@@ -48,7 +48,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;ba
 .db:active{color:var(--red)}
 .add-area{background:var(--bg2);border:1px dashed rgba(255,255,255,.12);border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .add-area input,.add-area select{flex:1;min-width:100px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-size:13px}
-.add-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+.add-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer; text-align:center; text-decoration:none; display:inline-block;}
+/* 额外入口样式 */
+.source-btn{background:var(--bg3); color:var(--text2); border:1px solid var(--border); border-radius:8px; padding:10px; font-size:13px; text-align:center; text-decoration:none; display:block; flex:1;}
 
 /* SOP指南专属样式 */
 .sop-box{background:linear-gradient(145deg, var(--bg2), var(--bg3));border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:12px}
@@ -95,7 +97,7 @@ function save(){localStorage.setItem('cmv4',JSON.stringify(S));}
 let TAB='recommend',FIL='all';
 const FILTERS={
   recommend:[{id:'all',label:'全部'},{id:'hk',label:'🔥 港卡/高级返利',cls:'hkc'},{id:'match',label:'匹配我的卡'}],
-  hotel:[{id:'all',label:'全部酒店'},{id:'safe',label:'✅安全区域(福田/南山)'},{id:'cheap',label:'💰低价过渡⚠️'},{id:'accor',label:'雅高ALL'},{id:'ihg',label:'IHG优悦会'}],
+  hotel:[{id:'all',label:'全部酒店'},{id:'safe',label:'✅安全区域'},{id:'cheap',label:'💰低价过渡⚠️'},{id:'accor',label:'雅高ALL'},{id:'ihg',label:'IHG优悦会'}],
   daily:[{id:'all',label:'全部'},{id:'hk',label:'🔥 境外/港卡',cls:'hkc'},{id:'cloud',label:'云闪付'},{id:'taobao',label:'飞猪/淘宝'}],
   mycards:[]
 };
@@ -145,11 +147,14 @@ function rMyCards(){
     <div class="sop-ti">第二选择：ShopBack HK (彻底替代 TCB)</div>
     <div class="sop-td">必须挂香港节点。返现通过 <span class="sop-highlight">FPS (转数快) 秒提现</span> 到香港账户，零汇兑损耗，无 PayPal 剥削。</div>
   </div>
-  <div class="sop-step">
-    <div class="sop-ti">第三选择：飞猪/通兑 叠加 HK版云闪付</div>
-    <div class="sop-td">在内地平台购买通兑券时，走云闪付唤起汇丰Pulse支付，判定为 <span class="sop-highlight">境外消费</span> 拿 4.4% 返现。</div>
-  </div>
 </div>
+
+<div class="sec-head">🌐 监控源直达 (手动查阅入口)</div>
+<div style="display:flex; gap:8px; margin-bottom:14px;">
+  <a href="https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/" target="_blank" class="source-btn">🔗 值得买·信用卡</a>
+  <a href="https://www.xinfinite.net/c/airlinehotelcard/" target="_blank" class="source-btn">🔗 飞客·机酒卡</a>
+</div>
+
 <div class="sec-head">🔥 第一防线：港卡与境外支付</div>${list(hkC,'hka')}
 <div class="sec-head">🏨 第二防线：酒店会籍 (洗积分/隐私隔离)</div>${list(hoC,'hoa')}
 <div class="sec-head">💳 备用防线：内地信用卡</div>${list(crC,'')}
@@ -171,7 +176,7 @@ function render(){
   if(!rss||!rss.items){el.innerHTML='<div class="empty">📭 数据未加载</div>';return;}
   document.getElementById('upd').textContent='更新 '+(rss.updated||'').slice(5);
   const items=fItems(rss.items);
-  if(!items.length){el.innerHTML='<div class="empty">暂无匹配活动</div>';return;}
+  if(!items.length){el.innerHTML='<div class="empty">暂无匹配活动，可能源站尚未更新。可前往 [资产] 页面手动查看源站。</div>';return;}
   const hkN=items.filter(i=>i.priority===2).length;
   const lbl=hkN>0?`共 ${items.length} 条 (置顶 <span style="color:var(--hk);font-weight:600">${hkN}</span> 条港卡/高级返利)`:`共 ${items.length} 条`;
   el.innerHTML=`<div class="sec-head">${lbl}</div>`+items.map(rCard).join('');
