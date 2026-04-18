@@ -35,7 +35,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue"
 .chip.active{background:var(--acc);color:#fff;border-color:var(--acc)}
 
 /* ── scroll content ── */
-.content{flex:1;overflow-y:auto;padding:6px 12px 76px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.content{flex:1;overflow-y:auto;padding:6px 12px 100px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 
 /* ── news card ── */
 .a-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:8px;position:relative}
@@ -192,7 +192,7 @@ const SCENARIOS = [
       {cls:"dir", href:"https://all.accor.com", label:"官网直订"},
     ],
     cards: [
-      {name:"汇丰 Pulse（港卡）", why:"境外消费最高6%返现，官网直付无手续费", rate:"6%", rank:1},
+      {name:"汇丰 Pulse（港卡）", why:"港外消费赚RewardCash积分，可换里程；云闪付或直刷，无外汇费", rate:"积分", rank:1},
       {name:"中信国际 GBA / Moin", why:"港刷返现2-3%，叠加Moin享餐旅加速", rate:"3%", rank:2},
       {name:"ZA Bank Visa（港卡）", why:"指定消费高达200%返现期间优先", rate:"2%", rank:3},
     ],
@@ -209,7 +209,7 @@ const SCENARIOS = [
       {cls:"off", href:"https://www.ihg.com/hotels/cn/zh/find-hotels/hotel/rate-type", label:"IHG官网"},
     ],
     cards: [
-      {name:"汇丰 Pulse（港卡）", why:"境外刷卡返现，优悦积分同步计入", rate:"6%", rank:1},
+      {name:"汇丰 Pulse（港卡）", why:"港外消费赚RewardCash，配合里程兑换；直刷或云闪付，无外汇手续费", rate:"积分", rank:1},
       {name:"中信国际 Moin", why:"酒店类消费加速积分", rate:"3%", rank:2},
       {name:"农行万事达（境内）", why:"Apple Pay绑卡首笔返现，新活动见推荐", rate:"活动", rank:3},
     ],
@@ -281,7 +281,7 @@ const SCENARIOS = [
     badge: "境外",
     portals: [],
     cards: [
-      {name:"汇丰 Pulse（港卡）", why:"境外消费返现最高，无外汇手续费", rate:"6%", rank:1},
+      {name:"汇丰 Pulse（港卡）", why:"港外消费（香港以外）赚积分；须直刷或云闪付；积分配合里程卡换兑", rate:"积分", rank:1},
       {name:"中信国际 Moin / GBA", why:"港澳境外消费返现2-3%，无手续费", rate:"3%", rank:2},
       {name:"ZA Bank Visa（港卡）", why:"活动期最高200%返现，常态1%+", rate:"1%+", rank:3},
     ],
@@ -361,7 +361,13 @@ function renderNews(el) {
     });
   }
 
-  if(!items.length) { el.innerHTML='<div class="empty">📭 当前筛选无内容</div>'; return; }
+  if(!items.length) {
+    el.innerHTML='<div class="empty" style="text-align:center;padding:30px 16px">📭 暂无内容<br><br>' +
+      '<span style="font-size:12px;color:var(--text3);line-height:1.8">' +
+      '首次部署后需 GitHub Actions 运行一次才有数据。<br>' +
+      '请到仓库 → Actions → 手动触发工作流。</span></div>';
+    return;
+  }
 
   el.innerHTML = items.map(item => {
     const fullTxt = (item.title+item.summary).toLowerCase();
@@ -506,7 +512,8 @@ function renderAssets(el) {
     </div>
     <div id="link-editor"></div>
     <button class="cfg-btn" style="background:var(--bg4);color:var(--text2);margin-top:6px" onclick="addBankLink()">＋ 添加新链接</button>
-    <button class="cfg-btn" style="margin-top:8px" onclick="saveBankLinks()">💾 保存所有链接</button>
+    <button class="cfg-btn" style="margin-top:8px;margin-bottom:20px" onclick="saveBankLinks()">💾 保存所有链接</button>
+    <div style="height:30px"></div>
   `;
   renderLinkEditor();
 }
