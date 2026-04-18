@@ -1,94 +1,64 @@
 {
-  "updated": "2026-04-18 07:55",
+  "updated": "2026-04-18 09:36",
   "items": [
     {
       "title": "🚫 什么值得买·信用卡 - 自动抓取被拦截",
-      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
       "link": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
       "date": "2026-04-18",
       "source": "系统提示",
       "tags": [
-        "反爬拦截",
         "需手动访问"
       ],
       "category": "card",
-      "price": null,
-      "warnings": [
-        "自动更新失败"
-      ],
-      "safeArea": false,
       "priority": 3
     },
     {
       "title": "🚫 什么值得买·银行 - 自动抓取被拦截",
-      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
       "link": "https://www.smzdm.com/tag/%E9%93%B6%E8%A1%8C/",
       "date": "2026-04-18",
       "source": "系统提示",
       "tags": [
-        "反爬拦截",
         "需手动访问"
       ],
       "category": "card",
-      "price": null,
-      "warnings": [
-        "自动更新失败"
-      ],
-      "safeArea": false,
       "priority": 3
     },
     {
       "title": "🚫 什么值得买·酒店 - 自动抓取被拦截",
-      "summary": "错误: HTTP 202 被反爬屏蔽。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTP 202）。请在[资产]页面手动点击直达网址查阅。",
       "link": "https://www.smzdm.com/tag/%E9%85%92%E5%BA%97/",
       "date": "2026-04-18",
       "source": "系统提示",
       "tags": [
-        "反爬拦截",
         "需手动访问"
       ],
       "category": "card",
-      "price": null,
-      "warnings": [
-        "自动更新失败"
-      ],
-      "safeArea": false,
       "priority": 3
     },
     {
       "title": "🚫 飞客茶馆·信用卡 - 自动抓取被拦截",
-      "summary": "错误: HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/creditcard.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7f096cea59a0>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/creditcard.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7fed7deb9160>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))）。请在[资产]页面手动点击直达网址查阅。",
       "link": "https://www.feeyo.com/creditcard.xml",
       "date": "2026-04-18",
       "source": "系统提示",
       "tags": [
-        "反爬拦截",
         "需手动访问"
       ],
       "category": "card",
-      "price": null,
-      "warnings": [
-        "自动更新失败"
-      ],
-      "safeArea": false,
       "priority": 3
     },
     {
       "title": "🚫 飞客茶馆·酒店 - 自动抓取被拦截",
-      "summary": "错误: HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/hotel.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7f096c627650>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))。该网站开启了严厉的反爬虫机制，导致 GitHub 服务器无法获取内容。请点击右下角按钮直接去原网站查看。",
+      "summary": "该源目前无法通过 GitHub 服务器自动抓取（错误:HTTPSConnectionPool(host='www.feeyo.com', port=443): Max retries exceeded with url: /rss/hotel.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.feeyo.com', port=443) at 0x7fed7debb260>, 'Connection to www.feeyo.com timed out. (connect timeout=15)'))）。请在[资产]页面手动点击直达网址查阅。",
       "link": "https://www.feeyo.com/hotel.xml",
       "date": "2026-04-18",
       "source": "系统提示",
       "tags": [
-        "反爬拦截",
         "需手动访问"
       ],
       "category": "card",
-      "price": null,
-      "warnings": [
-        "自动更新失败"
-      ],
-      "safeArea": false,
       "priority": 3
     },
     {
@@ -112,6 +82,23 @@
       "source": "机酒卡资讯",
       "tags": [
         "招行",
+        "浦发",
+        "万事达环球赏"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 2
+    },
+    {
+      "title": "万事达卡现已支持Apple Pay，境外消费更便捷！",
+      "summary": "万事达卡也支持Apple Pay啦！境外消费更方便安全，还能薅羊毛！农行、中行、中信、浦发先行支持，速速绑定！ 原文标题：上线了！万事达Apple Pay，羊腿速撸 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540621 idx=1 sn=59f7f5e1140e458c5329e979bd99f43d 冷月清谈： 境内发行的万事达卡现在也支持Apple Pay啦！首批支持的银行包括农业银行、中国银行、中信银行和浦发银行。绑定过程简单快捷，只需在银行APP中操作即可。虽然目前仅限境外消费使用",
+      "link": "https://www.xinfinite.net/t/topic/18872",
+      "date": "2026-04-16",
+      "source": "机酒卡资讯",
+      "tags": [
+        "中信",
         "浦发",
         "万事达环球赏"
       ],
@@ -153,6 +140,48 @@
       "priority": 2
     },
     {
+      "title": "阿提哈德航空一飞升金活动",
+      "summary": "阿提哈德刚刚推出了一个“一飞升金”活动，可以关注一下： 必须在活动页面上注册新会员或者登记活动；需乘坐阿提哈德执飞的EY代码航班，往返都必须在阿布扎比中转或起止。 你的现有等级必须低于挑战等级，也就是&#46;&#46;&#46; The post 阿提哈德航空一飞升金活动 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/17/etihad-fast-track-gold-silver/",
+      "date": "2026-04-17",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "雅高双倍积分，IHG度假酒店住三付二",
+      "summary": "雅高 前两天写了雅高All Signature的疑似房晚福利，刚刚得到了官方确认：订阅后每获得200点定级积分就可以同时获得1个等级房晚。一般来说大家都买最贵的Absolute计划，每个月可以获得5个&#46;&#46;&#46; The post 雅高双倍积分，IHG度假酒店住三付二 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/16/accor-double-points-ihg-3-for-2/",
+      "date": "2026-04-16",
+      "source": "非常旅客",
+      "tags": [
+        "IHG优悦会",
+        "雅高ALL"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "悦榕集团榕行卡重磅升级：一张卡两种选择，高品质酒店周末节假日轻松住",
+      "summary": "悦榕集团榕行卡升级，解决高品质酒店节假日住宿痛点。奢享版适合深度游，悦享版满足短途需求。另有888元踏青券包限时领。 原文标题：1张卡片，2种选择，这次说是神卡真不过分！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694624 idx=1 sn=bb4c72928a5dca11a727935f0810b1ed 冷月清谈： 文章介绍了悦榕集团榕行卡一周年之际的重磅升级，该卡旨在解决用户在周末和节假日入住高品质酒店时面临的价格痛点。榕行卡分为悦享版和奢享版，分别针对不同需求的旅行者。奢享版适",
+      "link": "https://www.xinfinite.net/t/topic/18871",
+      "date": "2026-04-15",
+      "source": "机酒卡资讯",
+      "tags": [],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
       "title": "国泰航空周年庆大放送：轻松完成任务，狂揽高达4380亚万里程！",
       "summary": "国泰航空周年庆大放送！完成六项任务，轻松赚取高达4380里数。新用户更有高达7000里数迎新奖励！ 原文标题：ber，每个月都加赠？这次又送4000多！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694609 idx=1 sn=b906becef342bc3ae84ba10df7d1d6e7 冷月清谈： 国泰航空推出周年庆活动，用户在2026年5月31日前注册并完成六项简单任务，即可累积高达4380里数。任务主要围绕六大类别：航班、购物、旅游、餐饮、支付、身心健旅。文章详细介绍了各项任务",
       "link": "https://www.xinfinite.net/t/topic/18847",
@@ -180,12 +209,12 @@
     },
     {
       "title": "香港众安银行ZA Bank：数字银行开户薅羊毛全攻略",
-      "summary": "香港众安银行(ZA Bank)开户薅羊毛攻略：在线开户，福利满满，教你玩转ZA Card，避开消费陷阱，更有港澳开户攻略等你抄作业！ 原文标题：必申的小神卡，还有这张！ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540566 idx=1 sn=b38143e95edc6d90733340dab5d3edf1 冷月清谈： 本文详细介绍了香港众安银行(ZA Bank)的开户流程、亮点福利和使用技巧。ZA Bank作为香港首家虚拟银行，提供便捷的线上开户体验，无开户费、账户管理费和最低存款要求。文",
+      "summary": "香港ZA Bank数字银行开户薅羊毛攻略！亮点：开户便捷、福利多、返现高。教你玩转ZA Card，避开消费陷阱，更有最新开户福利等你来拿！ 原文标题：必申的小神卡，还有这张！ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540566 idx=1 sn=b38143e95edc6d90733340dab5d3edf1 冷月清谈： 本文介绍了香港众安银行（ZA Bank），一家领先的数字银行，具有开户体验好、开户福利丰厚、消费回馈高等优点。文章详细讲解了ZA Bank的亮点、基础玩法，包括ZA C",
       "link": "https://www.xinfinite.net/t/topic/18848",
       "date": "2026-04-15",
       "source": "机酒卡资讯",
       "tags": [],
-      "category": "card",
+      "category": "daily",
       "price": null,
       "warnings": [],
       "safeArea": true,
@@ -264,12 +293,12 @@
     },
     {
       "title": "凯悦天地微信会员日重磅回归：更低门槛，更高奖励，双平台同享！",
-      "summary": "凯悦天地会员日回归！门槛更低，奖励更高，有效期更长，海外酒店也参与。微信和APP双平台同享，叠加酒店套餐更划算！ 原文标题：王牌会员日回归！门槛更低，奖励更好！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694592 idx=1 sn=d81f75f52439fca2c7353f8639aa27a0 冷月清谈： 凯悦天地微信会员日再度来袭，活动时间从4月15日至12月底，每周三都是会员日。本次活动亮点颇多： 1. **双平台参与，覆盖更广：** 凯悦微信小程序和APP双平台均可参与，预订",
+      "summary": "凯悦天地微信会员日升级回归！门槛更低，奖励更丰厚，覆盖更广，双平台消费累计，更有房卡商城超值兑换！ 原文标题：王牌会员日回归！门槛更低，奖励更好！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694592 idx=1 sn=d81f75f52439fca2c7353f8639aa27a0 冷月清谈： 凯悦天地微信会员日迎来全面升级，活动时间为4月15日至12月底的每周三。本次活动亮点包括： 1. **更低的消费门槛和更丰厚的奖励**：消费满800元即可获得500积分，满1600元可获得12",
       "link": "https://www.xinfinite.net/t/topic/18828",
       "date": "2026-04-14",
       "source": "机酒卡资讯",
       "tags": [],
-      "category": "hotel",
+      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
@@ -308,7 +337,7 @@
     },
     {
       "title": "五一出行省钱攻略：智行火车票88元无门槛券+万豪酒店不加价通兑/飞猪日历房闪促",
-      "summary": "五一出行攻略：智行火车票88元无门槛券、万豪酒店不加价通兑和飞猪日历房闪促，省钱又省心！ 原文标题：速度！火车票88元无门槛券！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694535 idx=1 sn=49735ac9971f693acebb2b44fc56bfe6 冷月清谈： 文章介绍了五一期间的出行省钱攻略，重点推荐了智行火车票APP的88元无门槛立减券活动，以及万豪酒店的不加价通兑和飞猪日历房闪促活动。智行火车票APP提供大额补贴和出票保障，解决了用户抢票难、花费高的问题。万豪酒",
+      "summary": "五一出行想省钱？智行火车票新客立减88，万豪酒店不加价，更有飞猪万豪日历房等你来薅羊毛！ 原文标题：速度！火车票88元无门槛券！ 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247694535 idx=1 sn=49735ac9971f693acebb2b44fc56bfe6 冷月清谈： 文章介绍了五一期间出行如何省钱的攻略。首先推荐智行火车票APP的新客户优惠活动，提供88元无门槛立减券，以及51元、30元的阶梯补贴。强调了智行在抢票方面的专业性以及客服服务的完善性。此外，文章还推荐了万豪酒店",
       "link": "https://www.xinfinite.net/t/topic/18806",
       "date": "2026-04-14",
       "source": "机酒卡资讯",
@@ -317,6 +346,19 @@
         "万豪"
       ],
       "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "蓝翔和芬航的会籍匹配活动",
+      "summary": "今天说两个会籍匹配活动。 法航荷航 蓝翔（法航荷航）的会籍匹配活动已经进行了很长时间，最近逐渐放宽条件，给大家再介绍介绍。 支持航司： 具体对应标准可参考网页上的表格。美国和加拿大居民最高可匹配至金卡&#46;&#46;&#46; The post 蓝翔和芬航的会籍匹配活动 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/14/flying-blue-finnair-status-match/",
+      "date": "2026-04-14",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
@@ -340,11 +382,11 @@
       "priority": 0
     },
     {
-      "title": "雅高酒店集团：春季活动及终身会籍获取攻略",
-      "summary": "想快速成为雅高终身会员？本文介绍了雅高春季活动、臻享卡玩法以及通过持有股票获得金卡会籍的攻略。 原文标题：酒店 | 雅高春季活动 如何获取雅高终身会员 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495376 idx=1 sn=651bafbaa68749274745762f45c49edf 冷月清谈： 本文介绍了雅高酒店集团的最新春季活动，并重点介绍了如何通过购买臻享卡获取房晚，叠加活动快速升级到钻石会员。此外，文章还提到了雅高集团的终身会籍计划，包括收购费尔蒙时赠送的终身白金会籍以及持有1",
-      "link": "https://www.xinfinite.net/t/topic/18786",
+      "title": "All Signature 76折卖分，送等级房晚？",
+      "summary": "雅高All Signature的促销活动又来了： All Signature我们介绍过许多遍，简单来说它是雅高的一个付费订阅计划，可间接购买雅高的定级积分和兑换积分。以最昂贵的Absolute计划为例&#46;&#46;&#46; The post All Signature 76折卖分，送等级房晚？ first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/13/all-signature-sale-and-status-nights/",
       "date": "2026-04-13",
-      "source": "机酒卡资讯",
+      "source": "非常旅客",
       "tags": [
         "雅高ALL"
       ],
@@ -355,28 +397,56 @@
       "priority": 0
     },
     {
-      "title": "广发高端卡权益或将调整，百夫长白金卡贵宾厅权益缩水",
-      "summary": "广发高端卡贵宾厅权益或将调整，运通百夫长白金卡限制贵宾厅同行人数，农行APP上线信用卡权益展示，另有运通卡用户福利可领。 原文标题：抗不牢了？本周即将“温暖” 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247540492 idx=1 sn=ea1b41be513ac095add30a241e472620 冷月清谈： 本周广发银行或将调整800元年费及以下信用卡（如龙霸天、臻享白金系列）的贵宾厅权益，无限次使用改为限制名额。此举可能引发用户投诉，但预计不会像免年费卡那样难以预约，或可销卡退年费。畅用",
-      "link": "https://www.xinfinite.net/t/topic/18783",
-      "date": "2026-04-13",
-      "source": "机酒卡资讯",
+      "title": "Currensea希尔顿卡改进，送定级房晚",
+      "summary": "半年之前希尔顿重回英国市场、和Currensea合作推出了一张联名卡。个人对该卡片的评价是破烂一张，果然近期要升级了，看一看瞧一瞧吧。 首先是开卡奖励的变化： 5月29日之前有促销，高卡的开卡奖励翻倍&#46;&#46;&#46; The post Currensea希尔顿卡改进，送定级房晚 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/12/currensea-hilton-improvement/",
+      "date": "2026-04-12",
+      "source": "非常旅客",
       "tags": [
-        "广发"
+        "希尔顿"
       ],
-      "category": "card",
+      "category": "hotel",
       "price": null,
       "warnings": [],
       "safeArea": false,
       "priority": 0
     },
     {
-      "title": "万豪&其他酒店五一不加价套餐来袭，速囤速约！",
-      "summary": "万豪推出120家酒店通兑套餐，五一不加价！含早可拆分，速囤速约！另有多家酒店五一不加价套餐推荐，出行必备！ 原文标题：又整狠活，万豪出手解决刚需 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247518488 idx=1 sn=83aeb1f9fa44bc14de26442239bf5e2a 冷月清谈： 万豪推出了120家酒店的全国通兑套餐，主打五一不加价，有效期至5月31日。套餐价格根据酒店档次从588元到1588元不等，包含双早，并且可以拆分使用。文章列举了部分热门酒店及套餐价格，对比日历房有较",
-      "link": "https://www.xinfinite.net/t/topic/18781",
-      "date": "2026-04-13",
-      "source": "机酒卡资讯",
+      "title": "运通砍休息室，国泰买机票送里程",
+      "summary": "首先一则提醒：IHG的三倍积分闪促今天是预订的最后一天，抓紧时间哦！配合各种活动回报丰厚美滋滋，但注意中国地区的酒店不参与活动。 国泰航空 国泰航空最近有两个还不错的新活动，可以关注一下。 活动一： &#46;&#46;&#46; The post 运通砍休息室，国泰买机票送里程 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/11/amex-lounge-access-cut-cathay-pacfiic-offers/",
+      "date": "2026-04-11",
+      "source": "非常旅客",
       "tags": [
-        "万豪"
+        "IHG优悦会"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "【酒店体验】首尔朝昕威斯汀酒店",
+      "summary": "第一次来韩国，在首尔体验三天！因为完全人生地不熟，也不打算折腾刷房了，找一家综合条件不错的酒店蹲着吧。于是敲定了这家威斯汀，三天五千块钱的公司协议价还蛮划算——其实类似价位的还有君悦，风评也很不错，不&#46;&#46;&#46; The post 【酒店体验】首尔朝昕威斯汀酒店 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/10/stay-westin-josun-seoul/",
+      "date": "2026-04-10",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "雅高新活动，送8个房晚或者2,500分",
+      "summary": "雅高的新活动来了，有送房晚和送积分两个版本，按需取用哦！ 两个版本的基本规则相同： 区别在于针对不同等级会员： 注意必须订不可取消的预付价才能激活奖励，可以在活动页面上搜索酒店，有着粉红色Specia&#46;&#46;&#46; The post 雅高新活动，送8个房晚或者2,500分 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/04/09/accor-double-advantage-offer/",
+      "date": "2026-04-09",
+      "source": "非常旅客",
+      "tags": [
+        "雅高ALL"
       ],
       "category": "hotel",
       "price": null,
