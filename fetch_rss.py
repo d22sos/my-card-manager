@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-隐私支付管家 - RSS抓取器 V4.1 (稳定极速版)
-修复：移除导致 GitHub Action 超时卡死的公共 RSSHub 源，保留港卡优先算法
+隐私支付管家 - RSS抓取器 V4.2 (防屏蔽加强版)
+修复：增加浏览器级别 UA 伪装，添加异常日志
 """
 
 import json, re, sys, os
@@ -14,7 +14,6 @@ except ImportError:
     print("请先运行: pip install feedparser requests", file=sys.stderr)
     sys.exit(1)
 
-# 恢复绝对稳定的原生 RSS 源，剔除容易被风控挂起的 rsshub.app
 FEEDS = [
     {"name": "机酒卡资讯",       "url": "https://www.xinfinite.net/c/airlinehotelcard/6.rss"},
     {"name": "什么值得买·信用卡", "url": "https://www.smzdm.com/tag/%E4%BF%A1%E7%94%A8%E5%8D%A1/feed/"},
@@ -28,7 +27,8 @@ FILTER_KEYWORDS = [
     "返现","立减","满减","优惠","积分","酒店","通兑","日历房",
     "锦江","如家","IHG","优悦","雅高","心悦界","万豪","希尔顿",
     "云闪付","飞猪","汇丰","Pulse","中信国际","GBA","大湾区","港卡",
-    "外卡","境外消费","境外返现","HK版","ShopBack","万事达环球赏","Visa"
+    "外卡","境外消费","境外返现","HK版","ShopBack","万事达环球赏","Visa",
+    "活动", "羊毛", "神卡", "免年费" # 稍微放宽了过滤条件
 ]
 
 BANK_TAGS = {
@@ -52,6 +52,13 @@ HK_PRIORITY_KEYWORDS = [
 CHEAP_HOTEL_THRESHOLD = 150
 RISKY_LOCATION_KEYWORDS = ["城中村", "郊区", "偏远", "工业区", "远郊"]
 SAFE_AREA_KEYWORDS = ["福田", "南山", "深圳湾", "科技园", "香港", "西九龙", "广州南", "天河"]
+
+# 伪装成真实的桌面端浏览器
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+}
 
 def clean_text(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text)
@@ -84,18 +91,27 @@ def categorize(text: str) -> str:
 
 def main():
     all_items = []
+    print("🚀 开始抓取数据...")
     for feed in FEEDS:
         try:
-            # 严格超时控制，防止 GitHub Action 卡死
-            resp = requests.get(feed["url"], headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            resp = requests.get(feed["url"], headers=HEADERS, timeout=15)
             resp.encoding = resp.apparent_encoding
+            
+            if resp.status_code != 200:
+                print(f"[警告] {feed['name']} 返回状态码 {resp.status_code}，可能被反爬屏蔽")
+                continue
+                
             d = feedparser.parse(resp.text)
+            raw_entries_count = len(d.entries)
+            valid_entries = 0
+            
             for entry in d.entries[:25]:
                 title = clean_text(entry.get("title", ""))[:120]
                 summary = clean_text(entry.get("summary", entry.get("description", "")))[:300]
                 text = title + " " + summary
                 
                 if not any(kw in text for kw in FILTER_KEYWORDS): continue
+                valid_entries += 1
                 
                 pub = entry.get("published_parsed") or entry.get("updated_parsed")
                 price = extract_price_hint(text)
@@ -114,8 +130,9 @@ def main():
                     "safeArea": any(kw in text for kw in SAFE_AREA_KEYWORDS),
                     "priority": detect_priority(text),
                 })
+            print(f"[成功] {feed['name']}: 抓取到 {raw_entries_count} 条，匹配关键字保留 {valid_entries} 条")
         except Exception as e:
-            print(f"[跳过] {feed['name']} 暂时无法访问: {e}", file=sys.stderr)
+            print(f"[错误] {feed['name']} 访问异常: {e}", file=sys.stderr)
 
     seen = set()
     unique = []
@@ -130,17 +147,27 @@ def main():
     with open("rss_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    if os.path.exists("card-tracker.html"):
-        with open("card-tracker.html", "r", encoding="utf-8") as f: html = f.read()
+    # 兼容你的 HTML 文件名，请确保你使用的 HTML 文件名是下面的其中一个
+    target_html = None
+    for filename in ["card-tracker.html", "index.html"]:
+        if os.path.exists(filename):
+            target_html = filename
+            break
+
+    if target_html:
+        with open(target_html, "r", encoding="utf-8") as f: html = f.read()
         payload = json.dumps(data, ensure_ascii=False)
         script = f'<script id="rss-inject">window.RSS_DATA={payload};</script>'
         if '<script id="rss-inject">' in html:
             html = re.sub(r'<script id="rss-inject">.*?</script>', script, html, flags=re.DOTALL)
         else:
             html = html.replace("</body>", script + "\n</body>")
-        with open("card-tracker.html", "w", encoding="utf-8") as f: f.write(html)
+        with open(target_html, "w", encoding="utf-8") as f: f.write(html)
+        print(f"✅ 成功将数据注入前端文件：{target_html}")
+    else:
+        print("⚠️ 未找到 index.html 或 card-tracker.html，已生成 rss_data.json 数据文件。")
 
-    print(f"✅ 完成：抓取 {len(unique)} 条。")
+    print(f"🎉 任务完成：总共筛选出 {len(unique)} 条匹配信息。")
 
 if __name__ == "__main__":
     main()
