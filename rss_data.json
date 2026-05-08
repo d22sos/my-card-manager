@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-07 01:53",
+  "updated": "2026-05-08 01:59",
   "items": [
     {
       "title": "UeePay - 优易付投流专用卡 BIN，低费率高返现，支持 U 多链充值，支持白标代理商及 API 集成",
@@ -13,6 +13,22 @@
         "Visa Offers"
       ],
       "category": "daily",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "【入住体验】台北晶华&金普顿酒店",
+      "summary": "台北三日游开启，顺便刷一刷IHG包括双倍房晚在内的众多活动。万豪在台北的酒店还是蛮多的、包括网红W；IHG就没什么好纠结的了，市中心的两家高端酒店就是晶华（丽晶）和金普顿，刚好都体验一下。 从松山机场 The post 【入住体验】台北晶华&金普顿酒店 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/05/07/stay-regent-and-kimpton-taipei/",
+      "date": "2026-05-07",
+      "source": "非常旅客",
+      "tags": [
+        "IHG优悦会",
+        "万豪"
+      ],
+      "category": "hotel",
       "price": null,
       "warnings": [],
       "safeArea": false,
@@ -450,19 +466,6 @@
         "希尔顿"
       ],
       "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "【飞行体验】中华航空A330商务舱",
-      "summary": "年假回国之旅进入尾声，回伦敦复工之前先去台湾溜达一圈吧，毕竟还没去过呢！当然，飞行体验也是个重要因素——华航、长荣和星宇的声誉都非常高，这次成功打卡了前两者，至于星宇下次有机会再说吧！ 赴台选择的是中 The post 【飞行体验】中华航空A330商务舱 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/04/27/china-airlines-a330-business-class/",
-      "date": "2026-04-27",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
