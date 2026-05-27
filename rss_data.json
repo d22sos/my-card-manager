@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26 02:05",
+  "updated": "2026-05-27 02:13",
   "items": [
     {
       "title": "香港汇丰卓越信用卡万豪优惠：每季度立减200，注意账户门槛与货转成本",
@@ -32,6 +32,19 @@
       "warnings": [],
       "safeArea": false,
       "priority": 2
+    },
+    {
+      "title": "The Ivy送£40额度，Virgin Red新人奖励",
+      "summary": "维珍集团的Virgin Red近日推出限时新人奖励： Virgin Red的介绍可参考这篇文章，它是维珍集团下除了维珍航空以外其它业务使用的会员计划，购买火车票、网购等可以获得点数，也可以使用美国运通 The post The Ivy送£40额度，Virgin Red新人奖励 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/05/26/the-ivy-virgin-red/",
+      "date": "2026-05-26",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "希尔顿惠庭、雅高臻享卡等618酒店套餐汇总：低价通兑与SNP是重点",
@@ -494,19 +507,6 @@
       "price": null,
       "warnings": [],
       "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "【飞行体验】长荣航空787-10商务舱",
-      "summary": "上文说到在桃园机场的长荣休息室溜达的一圈，然后去免税店里买了点东西送人，准备去香港了。不过登机之前还有个小彩蛋——虽然T2是长荣的大本营，但其实这里还有另一家星空联盟的休息室，并且评价还不错：新加坡航 The post 【飞行体验】长荣航空787-10商务舱 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/05/18/eva-air-787-10-royal-laurel-class/",
-      "date": "2026-05-18",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": true,
       "priority": 0
     }
   ]
