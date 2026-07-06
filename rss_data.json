@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05 01:58",
+  "updated": "2026-07-06 02:04",
   "items": [
     {
       "title": "农行Visa全球支付尊享白上线：境外消费返现、贵宾厅与申请门槛梳理",
@@ -34,19 +34,81 @@
       "priority": 2
     },
     {
-      "title": "万事达「消费大挑战」年中升级：金卡白金卡也能刷境内消费领权益",
-      "summary": "万事达消费大挑战升级：金卡白金卡可用境内线下刷卡达标，5笔起领咖啡、会员、京东E卡等权益。 原文标题：金卡也能玩：刷5笔领京东e卡、星巴克和爱奇艺会员 原文作者：蓝翼说 原文链接： http://mp.weixin.qq.com/s?__biz=MzIxMDAyMzc5MA== mid=2660074985 idx=1 sn=d52fd4f72761490d4b82627760f25d96 冷月清谈： 万事达卡「消费大挑战」在2026年中调整规则，新增境内消费达标通道，并把部分权益开放给指定金卡、白金卡用户。金卡、白金卡持卡人从7月1日起，可通过境内线下POS刷卡或境外消费完成任务，微信、支付宝等线上交易不计入。门槛最低的尊享权益为当月境内或境外消费满5笔，次月可选咖啡茶饮、影音会员、打车券",
-      "link": "https://www.xinfinite.net/t/topic/20619",
-      "date": "2026-07-02",
+      "title": "ueepay-全球虚拟卡，低费率、支持 U 多链充值、支持白标代理商及 API 集成",
+      "summary": "优易付是与国际知名卡组织及发卡行联合推出的多币种企业支付卡，全量覆盖 Visa / Mastercard / Discover® Global Network 线上线下消费全场景。一卡即可打通广告投放、平台店租、货品采购、仓储物流、在线航旅等多场景跨境支付需求，让企业在全球范围内低成本、高效率完成付款。 注册链接： Loading Telegram: https://t.me/ukbao 平台特性 支持实体卡和虚拟卡（超多独享卡BIN） 实时开卡，最多支持无限卡位 支持 AVS / 3DS / 校验 支持 Apple Pay 和 Google Pay 支持线下 POS 刷卡消费 支持全球 ATM 现金取款 支持全球速汇，安全出金最佳选择 支持销卡后撤销退款 支持邀请返佣（最高可达30%） 支",
+      "link": "https://www.xinfinite.net/t/topic/20704",
+      "date": "2026-07-06",
       "source": "机酒卡资讯",
       "tags": [
-        "万事达环球赏"
+        "Apple Pay",
+        "万事达环球赏",
+        "Visa Offers"
       ],
       "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
-      "priority": 2
+      "priority": 0
+    },
+    {
+      "title": "万豪积分房大面积涨价：积分贬值后，会员还该不该继续玩？",
+      "summary": "万豪积分房大面积涨价，积分贬值加剧，囤分风险再次被放大。 原文标题：吃相难看？大家都在骂万豪 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247522026 idx=1 sn=68d10072d01a956f624c53154930647f 冷月清谈： 文章认为，万豪近期出现积分房大范围上涨，不只限于热门酒店或热门日期，很多地区的积分兑换成本都有明显提升，意味着万豪积分再次贬值。作者分析，酒店集团频繁通过季度活动、闪促等方式发放积分，容易造成积分过剩，而回收积分的主要方式仍是积分房兑换，因此涨价几乎不可避免。 文章也指出，万豪之所以仍有吸引力，主要依靠庞大的酒店规模、会员体系和白金权益共识，例如早",
+      "link": "https://www.xinfinite.net/t/topic/20703",
+      "date": "2026-07-05",
+      "source": "机酒卡资讯",
+      "tags": [
+        "万豪"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "7月信用卡与出行权益更新：AI新卡预告、燃油费下调、贵宾厅与里程加赠",
+      "summary": "7月信用卡和出行权益更新：AI新卡、燃油费下调、贵宾厅加码、里程兑换加赠。 原文标题：翼周刊｜不限次的贵宾厅，50%里程加赠，还有即将发行的新卡，你看好哪一个？ 原文作者：蓝翼说 原文链接： http://mp.weixin.qq.com/s?__biz=MzIxMDAyMzc5MA== mid=2660075006 idx=1 sn=54e669f92a891d42570cdd13efac57e2 冷月清谈： 本期主要梳理了7月信用卡和出行相关的几项变化：浦发与银联预告将推出面向AI开发者、数智科创人群的科技菁英信用卡云智版，主打“支付+算力+生态”，具体权益仍待公布；7月5日起国内航线燃油附加费下调，800公里及以下每段50元，800公里以上每段100元；农行部分Visa高端卡在2026",
+      "link": "https://www.xinfinite.net/t/topic/20702",
+      "date": "2026-07-05",
+      "source": "机酒卡资讯",
+      "tags": [
+        "农行",
+        "浦发",
+        "Visa Offers"
+      ],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "万豪积分兑换成本再上涨，业主压力或成贬值背后推手",
+      "summary": "万豪积分兑换成本再涨，联名卡收益与酒店业主成本矛盾浮出水面。 原文标题：常旅客 | 万豪积分大贬值 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495907 idx=1 sn=204a8f46b2b06a4445f28831c7908003 冷月清谈： 万豪酒店积分兑换近期再次出现普遍上涨，许多酒店所需积分变多，进一步削弱了万豪积分的实际价值。文章同时提到，万豪美国业主此前曾集体向万豪国际表达不满，认为联名信用卡业务带来的高额品牌授权收益主要归万豪国际所有，而酒店业主却承担了积分房入住、运营和服务成本。随着开卡奖励和积分发放规模持续扩大，积分房结算价格与现金房价之间的差距，也让业主压力进一步",
+      "link": "https://www.xinfinite.net/t/topic/20688",
+      "date": "2026-07-05",
+      "source": "机酒卡资讯",
+      "tags": [
+        "万豪"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "Trip夏日大促，机票酒店迪士尼通通半价",
+      "summary": "携程海外版Trip.com的夏日大促又来了，今天说下英国站和美国站一些还不错的活动，日期为当地时间（伦敦 / 太平洋）。 英国站 火车 机票 酒店 美国站 火车 机票 门票 酒店 其他 多数活动都必须 The post Trip夏日大促，机票酒店迪士尼通通半价 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/07/05/trip-summer-mega-sale/",
+      "date": "2026-07-05",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "IHG联名卡奖励房晚陆续到账：住10晚有机会解锁行政酒廊",
@@ -316,37 +378,6 @@
       "priority": 0
     },
     {
-      "title": "深航A350商业首航刷屏：从放票反转到客舱争议，首航当天发生了什么",
-      "summary": "深航A350首航因放票、贴纸、客舱秩序和纪念品争议刷屏。 原文标题：常旅客 | 深航A350首航那些事 群魔乱舞的一天 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495890 idx=1 sn=2396d91df7fb491bee2babdb32592fe0 冷月清谈： 7月1日，深圳航空A350迎来商业首航，原本是国航系航迷高度关注的新机型首秀，却因多起插曲引发大量讨论。文章梳理了首航前后几个争议点：开售初期一票难求，但临近起飞前突然释放大量余票；首航前一天机身宣传贴纸被拍到局部脱落；飞行过程中有旅客被指长时间停留在后舱操作间并与乘务组发生较多互动；落地后又出现“自称海军”、要求查看旅客",
-      "link": "https://www.xinfinite.net/t/topic/20626",
-      "date": "2026-07-02",
-      "source": "机酒卡资讯",
-      "tags": [],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": true,
-      "priority": 0
-    },
-    {
-      "title": "支持海外酒店预订/OTA代订/商务差旅高成功率虚拟卡（UeePay）",
-      "summary": "还在因为做海外酒店代订、常旅客刷单被频繁砍单、退单？或者担心线上订房信用卡被盗刷？ 强烈安利跨境、常旅客圈内都在悄悄用的优质虚拟卡平台 ------ UeePay 。 针对酒店/旅游场景的核心优势： 大厂通杀： 完美支持 Booking, Agoda, Expedia, Airbnb 等主流 OTA 平台，以及万豪、希尔顿、洲际官网预订。 无惧风控： 提供高权重企业级 Visa / MasterCard 专属卡头，极速过 AVS 账单地址校验，告别\"因支付不合规被取消订单\"。 安全控货： 随时随地一键开卡、随时销卡。支持设置单卡限额，彻底杜绝海外网站恶意扣费和盗刷风险。 资金灵活： 适合工作室批量跑旅游代订代充业务，开卡无上限。 无论你是个人海外差旅、玩常旅客羊毛，还是工作室专业做境外酒店代",
-      "link": "https://www.xinfinite.net/t/topic/20618",
-      "date": "2026-07-02",
-      "source": "机酒卡资讯",
-      "tags": [
-        "万事达环球赏",
-        "Visa Offers",
-        "万豪",
-        "希尔顿"
-      ],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
       "title": "雅高一住最多得7500分奖励！",
       "summary": "两个相当不错的雅高促销，奖励十分丰厚，关注一下哦！ 2500分促销 入住酒店必须在欧洲和中东，具体国家名单请参考条款。2,500分价值€50、回报率颇为不错，但是名额限制就比较恶心；而且根据条款，需要 The post 雅高一住最多得7500分奖励！ first appeared on 飞常旅客 VERYLVKE .",
       "link": "https://www.verylvke.com/2026/07/02/accor-europe-7500-bonus/",
@@ -354,23 +385,6 @@
       "source": "非常旅客",
       "tags": [
         "雅高ALL"
-      ],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "88VIP老会员可通过飞猪万豪消费满2000元开启白金体验挑战",
-      "summary": "88VIP老用户飞猪万豪消费满2000元，可开启万豪白金体验挑战。 原文标题：老客户福利，万豪白金又放水了 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247698498 idx=1 sn=d4047490ab6609fe3beab121dfecda90 冷月清谈： 飞猪万豪旗舰店上线面向88VIP老用户的万豪白金体验活动：2026年7月1日至8月31日期间，符合条件的88VIP用户在飞猪万豪旗舰店累计消费满2000元，可领取万豪白金体验并开启白金挑战，120天内住满8晚可升级为正式白金。 适用人群主要是2026年前已在淘宝、飞猪或支付宝绑定过万豪会员，当前等级低于白金，且历史未领取过白金体验",
-      "link": "https://www.xinfinite.net/t/topic/20606",
-      "date": "2026-07-01",
-      "source": "机酒卡资讯",
-      "tags": [
-        "飞猪",
-        "淘宝",
-        "万豪"
       ],
       "category": "hotel",
       "price": null,
@@ -431,19 +445,6 @@
       "source": "非常旅客",
       "tags": [],
       "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "Amazon Prime Day优惠促销活动小集合",
-      "summary": "又到了亚马逊的Prime Day，今天总结几个相关的促销吧。 学生会员 首先，如果你是学生或者在24周岁以下，别忘了申请Prime的学生会员： 可以省不少钱哦。 Audible 有声书籍Audible The post Amazon Prime Day优惠促销活动小集合 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/06/24/amazon-prime-day-roundup/",
-      "date": "2026-06-24",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
