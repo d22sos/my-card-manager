@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12 01:41",
+  "updated": "2026-07-13 01:44",
   "items": [
     {
       "title": "汇丰和巴克莱银行的switch offer",
@@ -17,36 +17,93 @@
       "priority": 2
     },
     {
-      "title": "香港汇丰Pulse疑似放宽申请：One账户+10万港币资产或可尝试",
-      "summary": "香港汇丰Pulse疑似降低申请门槛，One账户加10万港币资产或可尝试。 原文标题：神卡放水，搬砖就下？ 原文作者：帅帅说卡 原文链接： http://mp.weixin.qq.com/s?__biz=MzU0MzU0MTAwNQ== mid=2247542118 idx=1 sn=71e50d89a673429474fa6d013bd1d47a 冷月清谈： 文章称，近期香港汇丰Pulse银联双币钻石信用卡出现较明显的“放水”迹象，反馈显示申请门槛可能从原先的卓越理财客户+12万港币等值资产，降至汇丰One账户+10万港币等值资产，且不再强制要求客户等级。作者提醒这并不代表必下卡，搬砖后未获批仍可能面临资金留港、转回不便等风险。 文章同时回顾了Pulse的核心玩法：内地消费选择“最红自主奖赏",
-      "link": "https://www.xinfinite.net/t/topic/20717",
-      "date": "2026-07-06",
-      "source": "机酒卡资讯",
-      "tags": [
-        "汇丰",
-        "汇丰Pulse"
-      ],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": true,
-      "priority": 2
-    },
-    {
-      "title": "农行新Visa卡主打境外无限休息室，首刷礼和达标接送机权益一览",
-      "summary": "农行新卡主打境外无限休息室，并配套首刷礼、境外消费达标接送机等权益。 原文标题：省钱 | 农行新神卡，境外无限休息室 开卡还送境外接送机 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495910 idx=1 sn=a7dc7f3a77ffeaed141309f08cacbb6f 冷月清谈： 农行推出一张主打出境权益的新卡，目前申请需客户经理发码，文章称下卡相对容易。核心长期权益是持卡人本人可无限次使用境外机场贵宾厅，合作方为龙腾，但需起飞前6小时预约，每日限核销1次，单次2小时，不含携伴。2026年下半年首刷礼限量1000份，需首次申办并核发主卡、次月激活实体卡，再完成1笔Visa原生境外消",
-      "link": "https://www.xinfinite.net/t/topic/20713",
-      "date": "2026-07-06",
+      "title": "农行 Kimi 联名信用卡亮相：AI 权益扎堆上卡，但“消费即算力”还没真正落地",
+      "summary": "AI 卡扎堆上线，权益看似热闹，但真正好不好用还得看生态和落地。 原文标题：卡 | 扎堆群发ＡＩ卡，谁家 Token 最好用？ 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368936 idx=1 sn=3b10c9b3bd364a2829a8b910fe9daca3 冷月清谈： 文章梳理了近期银行围绕 AI 概念推出的多张卡产品。农行新出的运通 Kimi 联名信用卡分为联名卡和高端白金卡，主打 Kimi 月卡、公仔、积分包及部分出行和生活权益，但此前宣传的“消费即算力”、积分兑换 Token 等核心玩法目前尚未清晰落地。文章还对比了招行运通工程师信用卡、浦发科技菁英云智版、平安 AI ",
+      "link": "https://www.xinfinite.net/t/topic/20849",
+      "date": "2026-07-12",
       "source": "机酒卡资讯",
       "tags": [
         "农行",
-        "Visa Offers"
+        "浦发"
       ],
       "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
-      "priority": 2
+      "priority": 0
+    },
+    {
+      "title": "农行 Kimi 联名卡发布，兴业白金卡年费减免门槛调整，南航华住开启权益互通",
+      "summary": "农行Kimi联名卡亮相，兴业白金卡年费规则将放宽，南航与华住开启会员权益互通。 原文标题：翼周刊｜这些白金卡年费减免条件将调整，航司和酒店会员权益互通又多一对，此前剧透的这张卡终于露出真容。 原文作者：蓝翼说 原文链接： http://mp.weixin.qq.com/s?__biz=MzIxMDAyMzc5MA== mid=2660075037 idx=1 sn=9ce0a3eb58df4fc33d8880921298c8f2 冷月清谈： 本期主要关注三类信用卡与常旅客动态：一是农行运通 Kimi 联名卡正式发布，分为高端白金卡和普通联名卡，高端卡年费880元、可用20万积分抵扣，并附带农行尊然白金卡部分权益；普通卡首年免年费、刷10笔免次年。AI特色目前集中在Kimi会员、新模型内测、课",
+      "link": "https://www.xinfinite.net/t/topic/20848",
+      "date": "2026-07-12",
+      "source": "机酒卡资讯",
+      "tags": [
+        "农行",
+        "兴业"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "飞猪暑期放宽F4升级与保级：88VIP可领体验，非会员也能挑战",
+      "summary": "飞猪暑期放宽F4升级和保级门槛，可衔接万豪白挑。 原文标题：太简单！人均万豪白金，飞猪又送F4了 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247522236 idx=1 sn=a7acf1394a199d319d0053b422ed0ea3 冷月清谈： 飞猪在暑期推出F4升级和保级活动：当前F1/F2/F3用户若是88VIP，可直接领取F4体验会员，有效期至8月31日；非88VIP也可报名挑战，在规定期限内完成对应酒店订单金额后获得1年F4。F4身份可用于参与万豪白金挑战，部分路径无需120天白金体验和2000元消费门槛，适合想冲万豪白金或延长飞猪等级的用户。当前F4/F5用户也可参与保级挑战",
+      "link": "https://www.xinfinite.net/t/topic/20839",
+      "date": "2026-07-12",
+      "source": "机酒卡资讯",
+      "tags": [
+        "飞猪",
+        "万豪"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "海航调整国内航班非自愿退票规则：航班提前不再设15分钟门槛",
+      "summary": "海航国内非自愿退票规则调整：航班提前不再要求超过15分钟。 原文标题：常旅客 | 海航修改非自愿退票条款 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495927 idx=1 sn=e9827c7972d0b8fab671d9293db10773 冷月清谈： 海航近日修改了国内航班非自愿变更与退票相关条款，取消了此前“航班提前超过15分钟才可认定为非自愿航变”的限制。也就是说，国内航班只要因航司原因提前并影响旅客行程，乘客在申请免费退改时的依据会更宽松。不过，这一调整目前仅适用于国内版条款，国际版规则仍未同步变化。 此次修改源于一名19岁学生胡某某的维权经历。其所乘海航航班因航司原因提前10",
+      "link": "https://www.xinfinite.net/t/topic/20842",
+      "date": "2026-07-12",
+      "source": "机酒卡资讯",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "【入住体验】里尔傲途格L’Hermitage Gantois",
+      "summary": "还是趁着之前IHG三倍积分的活动，又恰巧碰上欧洲之星的闪促，就订了一趟去法国里尔的周末游——从伦敦往返七十多镑，确实实惠，比英国很多国内的火车票都便宜呢！ 不过酒店方面的方案产生了一些变化：毕竟里尔只 The post 【入住体验】里尔傲途格L’Hermitage Gantois first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/07/12/stay-lille-lhermitage-gantois/",
+      "date": "2026-07-12",
+      "source": "非常旅客",
+      "tags": [
+        "IHG优悦会"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "海航66666返利一路加码：员工任务、现金补贴与上车风险",
+      "summary": "海航66666返利持续加码，现金补贴诱人，但员工摊派与兑付风险也引发担忧。 原文标题：海航66666开始疯狂 原文作者：爱生活的燃烧 原文链接： http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw== mid=2247698962 idx=1 sn=72314a9bed1bd31d2853f8d386ec421a 冷月清谈： 文章记录了近期海航“66666”相关推广返利快速升温的情况。最初黄牛返利大约在1200积分左右，随后小红书、闲鱼等渠道出现更高补贴，从1300现金、1600现金，到多人组团可拿4000现金加3333积分，甚至有人谈到2300现金或海航金卡二选一。作者认为返利异常抬高，可能与部分海航员工被摊派销售任务、未完成会影响绩效或职级有关，",
+      "link": "https://www.xinfinite.net/t/topic/20834",
+      "date": "2026-07-11",
+      "source": "机酒卡资讯",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "法航会籍匹配再扩容：国航南航高卡可参与，但中国地区仍无缘白金",
@@ -371,19 +428,6 @@
       "priority": 0
     },
     {
-      "title": "华住会与南航联动：铂金会员可领选座券、休息室券，并支持积分兑里程",
-      "summary": "华住会铂金可领南航选座券、休息室券，并支持积分兑换南航里程。 原文标题：常旅客 | 南航华住会联动活动来了 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495913 idx=1 sn=fc0d05154b14504893555ee8fbcec5e1 冷月清谈： 华住会与南航推出联动活动，华住会铂金会员可领取南航选座券和休息室券各一张，同时活动中还出现了华住会积分按10:1比例兑换南航里程的权益。文章也提到，当前华住会铂金门槛较高，消费要求达到30000元，对主要靠自住累积的用户并不轻松。相比之下，早年华住会铂金获取难度低不少，有用户回忆十年前约20晚即可达到铂金，连续两年铂金还可升级终身铂金",
-      "link": "https://www.xinfinite.net/t/topic/20743",
-      "date": "2026-07-07",
-      "source": "机酒卡资讯",
-      "tags": [],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
       "title": "八大洲一住升金，雅典君悦好价，万豪贬值",
       "summary": "八大洲 八大洲的暑期品牌月活动短暂回归，再来提醒一下。如果你还不是八大洲的会员，记得扫码领取一张银卡： 首先是重点的“一住升金”活动： 体验金卡的权益有限，不过反正门槛这么低、顺手注册领一下吧。 航司 The post 八大洲一住升金，雅典君悦好价，万豪贬值 first appeared on 飞常旅客 VERYLVKE .",
       "link": "https://www.verylvke.com/2026/07/07/badazhou-grand-hyatt-athens-marriott-devaluation/",
@@ -392,34 +436,6 @@
       "tags": [
         "万豪"
       ],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "中行白金卡消费赠礼续期，福气值上线后积分玩法有变化",
-      "summary": "中行白金卡达标赠礼续期，积分升级为福气值后兑换玩法和价值也有新变化。 原文标题：惠 | 经典活动又续命，积分也有新玩法 原文作者：社会主义羊毛 原文链接： http://mp.weixin.qq.com/s?__biz=MjM5ODEwNDEzNw== mid=2654368918 idx=1 sn=7317a2e61457e545b30253b4b06bb55d 冷月清谈： 中行「白金信用卡消费达标赠礼」活动延长至7、8月：白金及以上信用卡每月消费3笔且每笔满199元，次月20日起有机会领取30元自选礼品，每人每月限1次。汽车主题卡、岁悦长情卡也有类似专属活动，礼品包括京东E卡、天猫券、会员月卡等。 7月还可叠加「越刷月返」活动，报名后当月消费满1万、3万、5万元且至少5笔，可参与微信立减",
-      "link": "https://www.xinfinite.net/t/topic/20730",
-      "date": "2026-07-06",
-      "source": "机酒卡资讯",
-      "tags": [
-        "中行"
-      ],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "贵州下半年旅行优惠汇总：门票、酒店券、消费券和低价机票怎么用",
-      "summary": "贵州下半年旅行优惠集中爆发，门票、酒店、消费券和低价机票都能叠加研究。 原文标题：领取成功，人均1660元大毛 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247522047 idx=1 sn=11975cfd6c73d9fad6a6658999478ce4 冷月清谈： 文章梳理了下半年去贵州旅行可叠加使用的几类优惠：省外游客可通过电影《四渡》票根在「一码游贵州」核验，获得贵州省内A级景区首道门票免票资格，有效期至12月31日，节假日也可预约；贵州还发放酒店消费券，每人可领多次100元券，部分OTA平台可用，并可能与酒店集团活动叠加；完成门票核验后还可获得500元消费券，覆盖住宿、餐饮、购物等场景",
-      "link": "https://www.xinfinite.net/t/topic/20729",
-      "date": "2026-07-06",
-      "source": "机酒卡资讯",
-      "tags": [],
       "category": "hotel",
       "price": null,
       "warnings": [],
@@ -446,21 +462,6 @@
       "date": "2026-07-05",
       "source": "非常旅客",
       "tags": [],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "IHG五万分定向，新酒店85折",
-      "summary": "IHG新的双倍房晚大家都注册上了吗？这次活动阵亡的速度快得出乎想象，不知道是集团反应过来了还是本身注册有名额上限，只希望后续不要出什么岔子吧。同样来自于@倍多分，一个新的定向活动： 目前IHG的里程碑 The post IHG五万分定向，新酒店85折 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/07/04/ihg-100n-50k-new-hotels-15-off/",
-      "date": "2026-07-04",
-      "source": "非常旅客",
-      "tags": [
-        "IHG优悦会"
-      ],
       "category": "hotel",
       "price": null,
       "warnings": [],
