@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26 01:45",
+  "updated": "2026-07-27 01:52",
   "items": [
     {
       "title": "HSBC Elite旅行5X疑似大缩水：多类交通和平台消费或仅剩2X",
@@ -34,22 +34,32 @@
       "priority": 2
     },
     {
-      "title": "国内万事达卡陆续支持 Apple Pay，平安、招行等境外消费活动同步上线",
-      "summary": "国内万事达卡开始扩容支持 Apple Pay，境外消费更方便，部分银行同步推出返现和首绑活动。 原文标题：省钱| 国内万事达卡扩容 原文作者：青蛙飞旅 原文链接： http://mp.weixin.qq.com/s?__biz=MzU4NDQ3MzM0NQ== mid=2247495962 idx=1 sn=bcc708accebfd5438ceade6444b5797d 冷月清谈： 国内发行的万事达卡开始扩容支持 Apple Pay，继此前 Visa 支持后，境内双标/外卡组织移动支付可用性进一步提升。首批涉及招商银行万事达借记卡、平安银行万事达信用卡等产品，未来可能扩展至更多境内万事达卡。 活动方面，平安银行在 2026 年 7 月 21 日至 12 月 31 日期间，境外 Apple ",
-      "link": "https://www.xinfinite.net/t/topic/21043",
-      "date": "2026-07-21",
+      "title": "全日空里程票5折：万豪积分转ANA，日本线寒假兑换出现高性价比玩法",
+      "summary": "全日空指定日本线里程票5折，万豪积分转ANA或成寒假赴日高性价比选择。 原文标题：积分翻倍升值，万豪又支棱起来了 原文作者：聪明旅行 原文链接： http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg== mid=2247522547 idx=1 sn=bdce2c21cac4231864611a62a464dc6a 冷月清谈： 全日空近期推出指定航线经济舱里程票5折兑换，兑换截止至7月29日，适用旅行日期为8月21日至2027年3月26日，部分国庆、元旦、春节日期不可用。中国大陆出发城市包括北京、上海、广州、深圳、青岛、大连，单程赴日最低4250全日空里程，往返最低8500里程。 亮点在于国内出发经东京或大阪转机前往日本其他城市时，转机航段可不额外收取",
+      "link": "https://www.xinfinite.net/t/topic/21150",
+      "date": "2026-07-26",
       "source": "机酒卡资讯",
       "tags": [
-        "招行",
-        "Apple Pay",
-        "万事达环球赏",
-        "Visa Offers"
+        "万豪"
       ],
-      "category": "daily",
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": true,
+      "priority": 0
+    },
+    {
+      "title": "阿提哈德头等舱好价：突尼斯-亚洲",
+      "summary": "来自于外网博客@YHBU的机票好价，值得分享一下： 这个行程比较小众，但主要有两点：首先突尼斯对中国护照免签，其次这个航线可以体验阿提哈德享誉盛名的头等舱！购买时注意机型，突尼斯到阿布扎比、以及如阿布 The post 阿提哈德头等舱好价：突尼斯-亚洲 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/07/26/etihad-tunis-asia-first-class/",
+      "date": "2026-07-26",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
-      "priority": 2
+      "priority": 0
     },
     {
       "title": "温德姆积分房将改为四档：5k低档上线，45k高档也来了",
@@ -461,21 +471,6 @@
       "source": "非常旅客",
       "tags": [
         "IHG优悦会"
-      ],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "运通offers：维珍、土航、希尔顿和文华东方等返现",
-      "summary": "好久没总结英国美运的商户返现offers们了，今天来简单总结一下，有用得上的记得保存一下。 交通 还是老生常谈提醒一下维珍，必须在网站上买票才能触发（包括出伙伴的里程票应该也可以），手机app或者打电 The post 运通offers：维珍、土航、希尔顿和文华东方等返现 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/07/15/amex-offers-virgin-atlantic-turkish-airlines-hilton-mandarin-oriental/",
-      "date": "2026-07-15",
-      "source": "非常旅客",
-      "tags": [
-        "希尔顿"
       ],
       "category": "hotel",
       "price": null,
