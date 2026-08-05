@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04 01:22",
+  "updated": "2026-08-05 01:28",
   "items": [
     {
       "title": "澳洲汇丰官宣退出，香港汇丰信用卡迎新与Pulse额度同步更新",
@@ -70,6 +70,19 @@
       "warnings": [],
       "safeArea": false,
       "priority": 2
+    },
+    {
+      "title": "美联航运通减£300，Lloyds Smart Wallet",
+      "summary": "首先一则快讯，Lloyds官网预告了即将开放的Smart Wallet新功能： 看着很眼熟？没错，这不就是刚刚被Lloyds收购的Curve嘛。反正先Register Interest看看能玩出什么花 The post 美联航运通减£300，Lloyds Smart Wallet first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/08/04/lloyds-smart-wallet-amex-united-300-offer/",
+      "date": "2026-08-04",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "实战：璞富腾钛金匹配，Scandic免房兑换",
@@ -372,19 +385,6 @@
       "price": null,
       "warnings": [],
       "safeArea": true,
-      "priority": 0
-    },
-    {
-      "title": "阿提哈德头等舱好价：突尼斯-亚洲",
-      "summary": "来自于外网博客@YHBU的机票好价，值得分享一下： 这个行程比较小众，但主要有两点：首先突尼斯对中国护照免签，其次这个航线可以体验阿提哈德享誉盛名的头等舱！购买时注意机型，突尼斯到阿布扎比、以及如阿布 The post 阿提哈德头等舱好价：突尼斯-亚洲 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/07/26/etihad-tunis-asia-first-class/",
-      "date": "2026-07-26",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
       "priority": 0
     },
     {
