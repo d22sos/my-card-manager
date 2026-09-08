@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07 01:44",
+  "updated": "2026-09-08 01:55",
   "items": [
     {
       "title": "农行YES主题信用卡上线：两档权益、申请门槛与搭配思路",
@@ -31,6 +31,19 @@
       "warnings": [],
       "safeArea": true,
       "priority": 2
+    },
+    {
+      "title": "海南航空回归阿拉斯加里程兑换平台",
+      "summary": "外航的宝藏里程计划其实不少，美国航司里我们介绍比较多的就是阿拉斯加航空：伙伴数量较多，并且由于里程来源单一所以一直保有较高价值。他家在中国大陆的合作航司为海南航空，但是兑换选项已经下架了好久，最近终于 The post 海南航空回归阿拉斯加里程兑换平台 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/09/07/alaska-air-miles-redeem-hainan/",
+      "date": "2026-09-07",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "【旅行体验】伦敦希思罗T2 / T3环亚休息室",
@@ -498,22 +511,6 @@
       "source": "非常旅客",
       "tags": [],
       "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "IHG双倍房晚，雅高奖励集合",
-      "summary": "双倍房晚 IHG针对企业客户的双倍房晚活动： 如果你已经注册了同期的同类活动，则无法叠加。感觉现在这种活动的注册都是限量的了，达到之后自动拉闸。 三倍积分 一个新的三倍积分促销： All Plus的会 The post IHG双倍房晚，雅高奖励集合 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/08/30/ihg-double-night-accor-offers/",
-      "date": "2026-08-30",
-      "source": "非常旅客",
-      "tags": [
-        "IHG优悦会",
-        "雅高ALL"
-      ],
-      "category": "hotel",
       "price": null,
       "warnings": [],
       "safeArea": false,
