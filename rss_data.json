@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27 02:22",
+  "updated": "2026-09-28 02:26",
   "items": [
     {
       "title": "招行华住会联名卡上线：新户礼、消费返积分与适用人群分析",
@@ -46,6 +46,19 @@
       "warnings": [],
       "safeArea": false,
       "priority": 2
+    },
+    {
+      "title": "Railcard减£15，ChatGPT半价，巴克莱新权益",
+      "summary": "Railcard 年轻的小伙伴们看过来：Trainline推出了新的促销活动，9月30日之前购买16-25 Railcard时输入优惠代码GET15OFF即可享受£15优惠，折后仅需£20就可以入手！ The post Railcard减£15，ChatGPT半价，巴克莱新权益 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/09/27/railcard-barclays-premier-no-fx-paypal-chatgpt/",
+      "date": "2026-09-27",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "希尔顿百万积分抽奖，雅高直升金卡！",
@@ -482,19 +495,6 @@
       "price": null,
       "warnings": [],
       "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "Trip.com礼品卡加赠促销活动",
-      "summary": "今天讲一个比较偏门的活动，也算是分享一个完成刷卡任务的小窍门。 携程海外版Trip.com的香港站有个中秋促销：10月6日之前，新用户的首个订单购买价值至少1,999港币的礼品卡可获得50港币的额外金 The post Trip.com礼品卡加赠促销活动 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/09/19/trip-com-gift-card-bonus/",
-      "date": "2026-09-19",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
-      "price": null,
-      "warnings": [],
-      "safeArea": true,
       "priority": 0
     }
   ]
