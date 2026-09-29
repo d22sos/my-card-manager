@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28 02:26",
+  "updated": "2026-09-29 03:09",
   "items": [
     {
       "title": "招行华住会联名卡上线：新户礼、消费返积分与适用人群分析",
@@ -46,6 +46,21 @@
       "warnings": [],
       "safeArea": false,
       "priority": 2
+    },
+    {
+      "title": "温德姆兑换系统调整，大批五千分酒店入场",
+      "summary": "温德姆酒店集团的兑换体系在过去十多年间经历过数次变迁：曾经有很多档位，后来变成全球所有酒店统一价格，再后来又划分成了三个档位。在现今几乎所有酒店集团都动态或者近动态、或者像雅高那样直接和现金挂钩的情况 The post 温德姆兑换系统调整，大批五千分酒店入场 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/09/28/wyndham-redemption-update-5000-hotels/",
+      "date": "2026-09-28",
+      "source": "非常旅客",
+      "tags": [
+        "雅高ALL"
+      ],
+      "category": "hotel",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "Railcard减£15，ChatGPT半价，巴克莱新权益",
@@ -474,23 +489,6 @@
       "date": "2026-09-21",
       "source": "非常旅客",
       "tags": [],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "IHG希尔顿Q4，雅高一住升白金",
-      "summary": "IHG IHG的Q4活动如约而至，赶紧注册哦： 注意从第二次入住开始的这个要求，有点膈应人。相对于每晚送X分的活动而言，三倍积分对于房费较高的入住更加友好；注意原则上付费入住每晚房费至少要三十美元。 The post IHG希尔顿Q4，雅高一住升白金 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/09/20/ihg-hilton-q4-accor-fast-track/",
-      "date": "2026-09-20",
-      "source": "非常旅客",
-      "tags": [
-        "IHG优悦会",
-        "雅高ALL",
-        "希尔顿"
-      ],
       "category": "hotel",
       "price": null,
       "warnings": [],
