@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02 03:00",
+  "updated": "2026-10-03 02:46",
   "items": [
     {
       "title": "10月运通酒店返现：IHG满1800返370，万豪满2000返500",
@@ -33,6 +33,34 @@
       "warnings": [],
       "safeArea": true,
       "priority": 2
+    },
+    {
+      "title": "汉莎开启新一轮里程挑战活动",
+      "summary": "汉莎Miles More有个比较特殊的功能叫做My Challenge，不定期向会员发放任务，完成后可以获得额外里程。今年年初的时候我们这些新上任的参议员都收到了十万里程挑战，尝到了甜头。 The post 汉莎开启新一轮里程挑战活动 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/10/02/lufthansa-my-challenge-202610/",
+      "date": "2026-10-02",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "card",
+      "price": null,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "速度！亚马逊Uber / Google等礼卡低至85折",
+      "summary": "亚马逊备受欢迎的第三方礼卡促销活动回归了，有需要的抓紧哦。优惠低至85折，有以下商户参与： 实用性最高的应该是优步，毕竟打车、外卖和火车票都能用，且85折的优惠力度很不错了。注意电子卡的风控比较严，购 The post 速度！亚马逊Uber / Google等礼卡低至85折 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/10/02/amazon-gift-card-sale-just-eat-uber-google-play/",
+      "date": "2026-10-02",
+      "source": "非常旅客",
+      "tags": [],
+      "category": "daily",
+      "price": 85,
+      "warnings": [
+        "低价85元"
+      ],
+      "safeArea": false,
+      "priority": 0
     },
     {
       "title": "IHG美国联名卡新增350美元年费档：消费2.5万美元可获35房晚与钻石会籍",
@@ -463,32 +491,6 @@
         "雅高ALL",
         "希尔顿"
       ],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "ASMALLWORLD 75折优惠，低价买汉莎里程",
-      "summary": "以前给大家说过ASMALLWORLD这个比较特殊的会员计划，付费加入之后可以获得航空里程、酒店会籍等旅行权益，并且可以参与线下的会员专属社交活动。 今天说的是他家刚刚推出的闪促： 付费入会后，里程将在 The post ASMALLWORLD 75折优惠，低价买汉莎里程 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/09/24/asmallworld-miles-and-more-25-off-flash-sale/",
-      "date": "2026-09-24",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "大仓日航酒店直升Exclusive会籍",
-      "summary": "白嫖酒店会籍的机会又来咯，这次的主角有点冷门：大仓日航酒店集团。先说说分布，在日本自然是遍地开花，看到XX日航酒店或者XX大仓酒店就是了。中国内地有七家日航酒店：苏州，无锡，常熟，泰州，厦门，成都和大 The post 大仓日航酒店直升Exclusive会籍 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/09/23/one-harmony-amex-status-match/",
-      "date": "2026-09-23",
-      "source": "非常旅客",
-      "tags": [],
       "category": "hotel",
       "price": null,
       "warnings": [],
