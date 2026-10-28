@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27 02:47",
+  "updated": "2026-10-28 02:55",
   "items": [
     {
       "title": "Apple Pay再扩三家银行，银联无界卡加入AI权益，国泰定向赠里数",
@@ -44,6 +44,21 @@
       "tags": [],
       "category": "hotel",
       "price": 900,
+      "warnings": [],
+      "safeArea": false,
+      "priority": 0
+    },
+    {
+      "title": "【入住体验】杜布罗夫尼克希尔顿帝国酒店",
+      "summary": "欧洲国家基本都去过了，少数没去过的里面除了冰岛也没什么兴趣。不过说到克罗地亚，我当时只去了首都扎格勒布，还住了绝版三千点SPG积分的喜来登，但这个城市对游客来说确实挺无聊。这次国庆假期有朋友从国内过来 The post 【入住体验】杜布罗夫尼克希尔顿帝国酒店 first appeared on 飞常旅客 VERYLVKE .",
+      "link": "https://www.verylvke.com/2026/10/27/stay-hilton-imperial-dubrovnik/",
+      "date": "2026-10-27",
+      "source": "非常旅客",
+      "tags": [
+        "希尔顿"
+      ],
+      "category": "hotel",
+      "price": null,
       "warnings": [],
       "safeArea": false,
       "priority": 0
@@ -439,19 +454,6 @@
         "希尔顿"
       ],
       "category": "hotel",
-      "price": null,
-      "warnings": [],
-      "safeArea": false,
-      "priority": 0
-    },
-    {
-      "title": "运通白金新增Oura / lululemon报销和Calm会员",
-      "summary": "作为英国市面上最高端、年费最贵的信用卡之一，运通白金的价值主要体现在其多种多样的权益上，其中最直接的可能就是报销福利了。自从推出以来，餐厅报销有增强也有削弱，Harvey Nichols则是已经退出了 The post 运通白金新增Oura / lululemon报销和Calm会员 first appeared on 飞常旅客 VERYLVKE .",
-      "link": "https://www.verylvke.com/2026/10/20/amex-platinum-oura-lululemon-calm/",
-      "date": "2026-10-20",
-      "source": "非常旅客",
-      "tags": [],
-      "category": "card",
       "price": null,
       "warnings": [],
       "safeArea": false,
